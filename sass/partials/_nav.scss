@@ -1,0 +1,40 @@
+.main-nav {
+    list-style: none;
+    &__item {
+    }
+    &__link{
+
+    }
+    &__sub-nav{
+      &-item{
+
+      }
+      &-link{
+
+      }
+    }
+}
+
+.breadcrumbs{
+  &__item{
+
+  }
+  &__link{
+    :after{
+      content:'\#187';
+    }
+  }
+}
+.see-also{
+  &:before{
+    content:'';
+  }
+  &__item{
+
+  }
+  &__link{
+    :after{
+      content:'\#187';
+    }
+  }
+}
