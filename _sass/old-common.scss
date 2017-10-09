@@ -377,7 +377,7 @@
         background-size: 15px 15px !important;
         transition: 2s;
         &:hover{
-            display: inline;
+            display: inline-block;
             width: 296px;
             overflow: hidden;
             background-position: 273px 9px;
@@ -400,7 +400,7 @@
                 background-position: 153px 9px;
             }
             div{
-                display: inline;
+                display: inline-block;
                 width: 296px;
                 overflow: hidden;
                 background-position: 273px 9px;
@@ -527,7 +527,6 @@
                 background-color: #fff;
                 font-weight: normal;
                 color: #000;
-                vertical-align: middle;
                 @media screen and (min-width: 1025px) and (max-width: 1280px) {
                     display: block;
                     width: 206px;
