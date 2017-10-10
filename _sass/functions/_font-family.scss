@@ -1,0 +1,17 @@
+@function font-family($family: sans) {
+    $sans: 'Open Sans', sans-serif;
+    $serif: 'Bitter', Times New Roman, serif;
+    $monospace: 'Lucida Console', monospace;
+  
+    $family: to_lower_case($family);
+    $families: (
+      // Sans Serif synonyms
+      default:      $sans,
+      sans:         $sans
+    );
+  
+    @return if(map-has-key($families, $family),
+                   map-get($families, $family),
+                   map-get($families, sans));
+  }
+  

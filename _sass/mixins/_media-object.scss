@@ -1,0 +1,11 @@
+.media-block {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    &__img{
+        margin-right: 1rem;
+    }
+    &__body{
+        flex: 1;
+    } 
+}

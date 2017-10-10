@@ -1,36 +1,31 @@
 .footer{
-    float: left;
-    width: 100%;
-    height: 393px;
-    margin: 100px 0 0 0;
-    font-size: 1em;
-    line-height: 1.3em;
-    background-color: #216ca7;
+    background-color: $blue;
     color: #fff;
+    font-size: 1em;
+    grid-area: footer;
+    margin-top: 2rem;
+    padding: 3em .5em;
     @include media(">768px", "<=1024px") {
-        height: 380px;
         font-size: .88em;
         line-height: 1.2em;
     }
     &__content{
-        width: 700px;
-        left: 280px;
+        display: flex;
+        justify-content: center;
         @include media(">1025px", "<=1280px") {
             width: 663px;
-            left: 245px;
         }
         @include media(">768px", "<=1024px") {
             width: 543px;
-            left: 216px;
         }
     }
     &__nav{
-        width: 162px;
-        padding: 0;
-        vertical-align: top;
         border-right: 1px solid #7aa7ca;
+        max-width: 162px;
+        padding: 0 1em;        
         &-headline{
             color: $secondary-color;
+            font-weight: bold;
         }
         &-item{
 
@@ -41,16 +36,14 @@
         }
     }
     &__copyright{
-        width: 294px;
-        padding: 0 20px 30px 20px;
-        vertical-align: top;
         border-right: 1px solid #7aa7ca;
+        max-width: 294px;
+        padding: 0 1em;
     }
     &__extra{
-        width: 240px;
-        padding: 0 0 0 20px;
-        vertical-align: top;
-            }
+        max-width: 240px;
+        padding: 0 1em;
+    }
     &__hon-code{
         width: 164px;
         float: right;

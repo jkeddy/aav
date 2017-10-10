@@ -32,11 +32,11 @@
             font-size: 1.1em;
             line-height: 1.6em;
             font-family: Open Sans, sans-serif;
-            @media screen and (min-width: 1025px) and (max-width: 1280px) {
+            @include media(">1025px", "<=1280px") {
                 margin-top: 12px;
                 width: 992px;
             }
-            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            @include media(">768px", "<=1024px") {
                 margin-top: 12px;
                 width: 872px;
             }
@@ -51,10 +51,10 @@
         #containerLeft {
             float: left;
             width: 700px;
-            @media screen and (min-width: 1025px) and (max-width: 1280px) {
+            @include media(">1025px", "<=1280px") {
                 width: 663px;
             }
-            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            @include media(">768px", "<=1024px") {
                 width: 543px;
             }
         }
@@ -69,11 +69,11 @@
         height: 416px;
         margin: 0 42px 2em 0;
         /*The large home pg image. The first bg setting is for Firefox, which is non-webkit.*/
-        @media screen and (min-width: 1025px) and (max-width: 1280px) {
+        @include media(">1025px", "<=1280px") {
             width: 663px;
             margin-top: 0;
         }
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @include media(">768px", "<=1024px") {
             width: 543px;
             margin-top: 0;
         }
@@ -85,13 +85,13 @@
             background-image: -webkit-image-set(url('IMAGE1/i/layout/home-aging-eyes-484x416.jpg') 1x, url('IMAGE1/i/layout/home-aging-eyes-484x416@2x.jpg') 2x, url('IMAGE1/i/layout/home-aging-eyes-484x416@3x.jpg') 3x);
             background-size: 484px 416px;
             background-repeat: no-repeat;
-            @media screen and (min-width: 1025px) and (max-width: 1280px) {
+            @include media(">1025px", "<=1280px") {
                 width: 447px;
                 background-image: url("IMAGE1/i/layout/home-aging-eyes-447x416.jpg");
                 background-image: -webkit-image-set(url('IMAGE1/i/layout/home-aging-eyes-447x416.jpg') 1x, url('IMAGE1/i/layout/home-aging-eyes-447x416@2x.jpg') 2x, url('IMAGE1/i/layout/home-aging-eyes-447x416@3x.jpg') 3x);
                 background-size: 447px 416px;
             }
-            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            @include media(">768px", "<=1024px") {
                 width: 327px;
                 background-image: url("IMAGE1/i/layout/home-aging-eyes-327x416.jpg");
                 background-image: -webkit-image-set(url('IMAGE1/i/layout/home-aging-eyes-327x416.jpg') 1x, url('IMAGE1/i/layout/home-aging-eyes-327x416@2x.jpg') 2x, url('IMAGE1/i/layout/home-aging-eyes-327x416@3x.jpg') 3x);
@@ -101,10 +101,10 @@
                 width: 484px;
                 height: 416px;
                 z-index: 3;
-                @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                @include media(">1025px", "<=1280px") {
                     width: 447px;
                 }
-                @media only screen and (min-width: 768px) and (max-width: 1024px) {
+                @include media(">768px", "<=1024px") {
                     width: 327px;
                 }
             }

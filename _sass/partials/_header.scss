@@ -1,89 +1,49 @@
 .header {
-  display: flex;
+  border-image-source: linear-gradient(to right, #004580 0%, #0f84b8 25%, #004580 50%, #0f84b8 75%, #004580 100%);
+  border-image-slice: 1;
+  border-top: 25px solid;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .5);
+  grid-area: header;
   width: 100%;
   &__logo {
     z-index: 1;
   }
   &__nav {
     list-style: none;
-    margin: 0 0 17px;
     &-item {
       &--product-profiles {}
       &--rebates {}
       &--find {}
     }
-    &-link {
-      display: block;
-      overflow: hidden;
-      height: 17px;
-      background: url('IMAGE1/i/layout/sprite-common-612x116-2017-10-02.png');
-      cursor: pointer;
-    }
   }
   &__search {
-    float: right;
-    top: 1px;
     width: 32px;
     height: 32px;
     border: 2px solid #e3e3e3;
-    outline: none;
     border-radius: 36px;
-    background: url('IMAGE1/i/layout/magnifier.svg') 9px 9px no-repeat;
-    background-size: 15px 15px;
-    transition: 2s;
+    background: url('IMAGE1/i/layout/magnifier.svg') center no-repeat;
+    overflow: hidden;
+    transition: 1.1s;
     &:hover {
-      display: inline-block;
-      width: 296px;
-      overflow: hidden;
-      background-position: 273px 9px;
+      background-position: 95% center;
+      max-width: 296px;
       transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
       transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
       @include media(">1025px",
       "<=1280px") {
         width: 246px;
-        background-position-x: 223px;
       }
       @include media(">768px",
       "<=1024px") {
         width: 176px;
-        background-position-x: 153px;
-      }
-      .header__search-input {
-        display: inline-block;
-        width: 296px;
-        overflow: hidden;
-        background-position: 273px 9px;
-        transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
-        transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
-        @include media(">1025px",
-        "<=1280px") {
-          width: 246px;
-          background-position-x: 223px;
-        }
-        @include media(">768px",
-        "<=1024px") {
-          width: 176px;
-          background-position-x: 153px;
-        }
       }
     }
   }
   &__search-input {
-    width: 240px;
-    height: 22px;
-    top: -10px;
-    padding: 0px 13px 0px 13px;
+    line-height: 2;
+    width: 100%;
     border: none;
-    background-image: url('IMAGE1/i/sp.gif');
-    background: transparent;
-    @include media(">1025px",
-    "<=1280px") {
-      width: 190px;
-    }
-    @include media(">768px",
-    "<=1024px") {
-      width: 120px;
-    }
+    opacity: 0;
   }
   &__search-submit {
     width: 24px;
