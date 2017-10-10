@@ -1,40 +1,127 @@
 .main-nav {
+  list-style: none;
+  width: 216px;
+  margin-top: 30px;
+  z-index: 999;
+  border-top: 1px solid #e3e3e3;
+  @include media(">1025px", "<=1280px") {
+    width: 206px;
+  }
+  @include media(">768px", "<=1024px") {
+    width: 176px;
+  }
+  &__item {
+    width: 216px;
+    height: 26px;
     list-style: none;
-    &__item {
+    font-size: 15px;
+    border-bottom: 1px solid #e3e3e3;
+    border-collapse: collapse;
+    @include media(">1025px", "<=1280px") {
+      width: 206px;
     }
-    &__link{
-
+    @include media(">768px", "<=1024px") {
+      width: 176px;
     }
-    &__sub-nav{
-      &-item{
-
+    &:hover {
+      ul {
+        &.megamenu {
+          left: 216px;
+          top: 0;
+          z-index: 99;
+          @include media(">1025px", "<=1280px") {
+            left: 206px;
+          }
+          @include media(">768px", "<=1024px") {
+            left: 176px;
+          }
+        }
       }
-      &-link{
-
+    }
+  }
+  &__link {
+    display: block;
+    width: 216px;
+    height: 26px;
+    background-color: #fff;
+    font-weight: normal;
+    color: #000;
+    @include media(">1025px", "<=1280px") {
+      width: 206px;
+    }
+    @include media(">768px", "<=1024px") {
+      width: 176px;
+    }
+    &:hover {
+      background-color: #2584d9;
+      color: #fff;
+      text-decoration: none;
+    }
+    span {
+      left: 10px;
+      top: 6px;
+    }
+    &.sfHover {
+      ul {
+        &.megamenu {
+          left: 216px;
+          top: 0;
+          z-index: 99;
+        }
       }
     }
+  }
+  &__sub-nav {
+    left: 216px;
+    top: 0;
+    z-index: 99;
+    &.megamenu {
+      position: absolute;
+      top: -999em;
+      width: auto;
+      @include media(">1025px", "<=1280px") {
+        left: 206px;
+      }
+      @include media(">768px", "<=1024px") {
+        left: 176px;
+      }
+      a {
+        background: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      li {
+        height: auto;
+        border: none;
+      }
+    }
+    &-item {}
+    &-link {}
+  }
 }
 
-.breadcrumbs{
-  &__item{
-
-  }
-  &__link{
-    :after{
-      content:'\#187';
+.breadcrumbs {
+  position: absolute;
+  top: -6px;
+  font-size: .8em;
+  &__item {}
+  &__link {
+    font-weight: normal;
+     :after {
+      content: '\#187';
     }
   }
 }
-.see-also{
-  &:before{
-    content:'';
-  }
-  &__item{
 
+.see-also {
+  &:before {
+    content: '';
   }
-  &__link{
-    :after{
-      content:'\#187';
+  &__item {}
+  &__link {
+     :after {
+      content: '\#187';
     }
   }
 }
