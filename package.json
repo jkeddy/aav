@@ -9,7 +9,8 @@
   "dependencies": {
     "browser-sync": "^2.18.13",
     "clean-css-cli": "^4.1.10",
-    "node-sass": "^4.5.3"
+    "node-sass": "^4.5.3",
+    "pug": "^2.0.0-rc.4"
   },
   "scripts": {
     "css": "node-sass -w _sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
