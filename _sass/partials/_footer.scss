@@ -1,10 +1,12 @@
 .footer{
     background-color: $blue;
     color: #fff;
-    font-size: 1em;
-    grid-area: footer;
+    font-size: .83em;
     margin-top: 2rem;
     padding: 3em .5em;
+    a{
+        color: #fff;
+    }
     @include media(">768px", "<=1024px") {
         font-size: .88em;
         line-height: 1.2em;
@@ -27,9 +29,6 @@
             color: $secondary-color;
             font-weight: bold;
         }
-        &-item{
-
-        }
         &-link{
             color: #fff;
             font-weight: normal;
@@ -41,84 +40,7 @@
         padding: 0 1em;
     }
     &__extra{
-        max-width: 240px;
+        max-width: 300px;
         padding: 0 1em;
-    }
-    &__hon-code{
-        width: 164px;
-        float: right;
-        @include media(">1025px", "<=1280px") {
-            width: 153px;
-        }
-        @include media(">768px", "<=1024px") {
-            width: 95px;
-        }
-    }
-    &__policy{
-            width: 164px;
-            float: right;
-            @include media(">1025px", "<=1280px") {
-                width: 153px;
-            }
-            @include media(">768px", "<=1024px") {
-                width: 105px;
-            }
-    }
-    &__social{
-        position: relative;
-        top: 5px;
-        a {
-            height: 21px;
-            display: block;
-        }
-        li {
-            height: 21px;
-            display: block;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            position: absolute;
-            top: 0;
-        }
-    }
-}
-#footFB {
-    left: 0px;
-    width: 21px;
-    background: url('IMAGE1/i/layout/sprite-common-612x116-2017-10-02.png') -288px -38px;
-    a{
-        &:hover{
-            background: url('IMAGE1/i/layout/sprite-common-612x116-2017-10-02.png') -288px -59px;
-        }
-    }
-}
-#footGP {
-    left: 34px;
-    width: 21px;
-    background: url('IMAGE1/i/layout/sprite-common-612x116-2017-10-02.png') -309px -38px;
-    a{
-        &:hover{
-            background: url('IMAGE1/i/layout/sprite-common-612x116-2017-10-02.png') -309px -59px;
-        }
-    }
-}
-#footTW {
-    left: 68px;
-    width: 21px;
-    background: url('IMAGE1/i/layout/sprite-common-612x116-2017-10-02.png') -330px -38px;
-    a{
-        &:hover{
-            background: url('IMAGE1/i/layout/sprite-common-612x116-2017-10-02.png') -330px -59px;
-        }
-    }
-}
-#footPN {
-    left: 102px;
-    width: 21px;
-    background: url('IMAGE1/i/layout/sprite-common-612x116-2017-10-02.png') -351px -38px;
-    a{
-        &:hover{
-            background: url('IMAGE1/i/layout/sprite-common-612x116-2017-10-02.png') -351px -59px;
-        }
     }
 }

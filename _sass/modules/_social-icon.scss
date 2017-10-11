@@ -1,0 +1,35 @@
+.social-icon{
+    border: .05em solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1;
+    height: 1.75em;
+    text-align: center;
+    padding-top: .35em;
+    width: 1.75em;
+    &--sm{
+        font-size: .75rem;
+    }
+    &--lg{
+        font-size: 1.5rem;
+    }
+    &--block{
+        display: block;
+    }
+    &--round{
+        border-radius: 50%;
+    }
+    &--fb{
+        background-color: $facebook;
+    }
+    &--tw{
+        background-color: $twitter;
+    }
+    &--gp{
+        background-color: $googleplus;
+    }
+    &--pn{
+        background-color: $pinterest;
+    }
+}

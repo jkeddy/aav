@@ -3,18 +3,33 @@
   border-image-slice: 1;
   border-top: 25px solid;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .5);
-  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem .5rem;
   width: 100%;
   &__logo {
     z-index: 1;
   }
   &__nav {
+    font-size: .9em;
     list-style: none;
-    &-item {
-      &--product-profiles {}
-      &--rebates {}
-      &--find {}
+  }
+  &__nav-item {
+    color: $text-color;
+    margin: 0 .5rem;
+    i{
+      color: $blue;
     }
+    &:hover{
+      color: $blue;
+      i{
+        color: $blue;
+      }
+    }
+    &--product-profiles {}
+    &--rebates {}
+    &--find {}
   }
   &__search {
     width: 32px;

@@ -9,8 +9,12 @@
   font-style: normal;
 }
 html{
+  font-family: font-family('sans');
   font-size: 16px;
   line-height: 1.3;
+}
+a{
+  text-decoration: none;
 }
 $default: 1rem;
 $sm: .8rem;
