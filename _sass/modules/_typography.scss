@@ -20,6 +20,17 @@ a{
     text-decoration: underline;
   }
 }
+.text{
+  &-left{
+    text-align: left;
+  }
+  &-center{
+    text-align: center;
+  }
+  &-right{
+    text-align: right;
+  }
+}
 $default: 1rem;
 $sm: .8rem;
 $lg: 1.1rem;
