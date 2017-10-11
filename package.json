@@ -1,0 +1,21 @@
+{
+  "name": "AllAboutVision.com",
+  "version": "1.0.0",
+  "description": "Front end development on the AllAboutVision.com property",
+  "main": "index.html",
+  "repository": "https://github.com/jkeddy/aav.git",
+  "author": "<jeff.keddy@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "clean-css-cli": "^4.1.10",
+    "node-sass": "^4.5.3"
+  },
+  "scripts": {
+    "css": "node-sass -w _sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
+    "browser": "browser-sync start --server dist"
+  },
+  "config": {
+    "port": "8080"
+  }
+}
