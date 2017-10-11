@@ -1,0 +1,26 @@
+.text-box{
+    border-bottom: .2em solid $grey;
+    color: #fff;
+    margin: 1em auto 0;
+    text-transform: uppercase;
+    &__body{
+        background: $red;
+        display: inline-block;
+        font-size: 1em;
+        line-height: 1.7;
+        margin: 0;
+        padding-left: .25em;
+        padding-right: .25em;
+    }
+    &--green{
+        .text-box__body{
+            background: $green;
+        }
+    }
+    &--sm{
+        font-size: .7em;
+    }
+    &--lg{
+        font-size: 1.2em;
+    }
+}
