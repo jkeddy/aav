@@ -2,10 +2,10 @@
     display: flex;
     align-items: flex-start;
     padding: 1rem;
-    &__img, img{
+    &__img{
         margin-right: 1rem;
     }
-    &__body, span{
+    &__body{
         flex: 1;
     } 
 }

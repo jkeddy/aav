@@ -1,0 +1,24 @@
+/*Default values*/
+
+.video-container{
+    &__full{
+        &--4-3{
+            @include responsive-ratio(320,480);
+        }
+        &--16-9{
+            @include responsive-ratio(480,720);
+        }
+    }
+    &__constrained{
+        &--4-3{
+            @include responsive-ratio(320,480,30em);
+        }
+        &--16-9{
+            @include responsive-ratio(480,720,30em);
+        }
+    }
+    &__content,iframe {
+        display: block;
+        margin: 0 auto 1em;
+      }
+}

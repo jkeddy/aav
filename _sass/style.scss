@@ -1,32 +1,8 @@
 
-/*----------------------------------
-CONFIG MODULES & FUNCTIONS
-----------------------------------*/
-@import 'functions/_font-family.scss';
-@import 'mixins/_media-object.scss'; // Temp
-@import 'modules/_normalize.scss';
-@import 'modules/_box-sizing.scss';
-@import 'modules/_clearfix.scss';
-@import 'modules/_grid.scss';
-@import 'modules/_colors.scss';
-@import 'modules/_breakpoints.scss';
-@import 'modules/_buttons.scss';
-@import 'modules/_text-box.scss';
-@import 'modules/_typography.scss';
-@import 'modules/_social-icon.scss';
-@import 'modules/_content-box.scss';
-@import 'modules/_misc.scss';
-
-/*----------------------------------
-PARTIALS
-----------------------------------*/
-
-@import 'partials/_header.scss';
-@import 'partials/_nav.scss';
-@import 'partials/_main.scss';
-@import 'partials/_sidebar.scss';
-@import 'partials/_footer.scss';
-@import 'partials/_hacks.scss';
+@import 'functions/functions.scss';
+@import 'mixins/mixins.scss';
+@import 'modules/modules.scss';
+@import 'partials/partials.scss';
 /*----------------------------------
 VENDOR
 ----------------------------------*/
