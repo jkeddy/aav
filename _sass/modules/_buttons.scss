@@ -1,14 +1,49 @@
-.btn{
+.button{
+    align-items: center;
+    background-color: #fff;
+    border: .1em solid $text-color;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em; 
+    line-height: 1.5;
+    padding: .35em .6em;
+    text-align: center;
+    transition: background-color 250ms ease-in-out;
+    &:hover{
+        border-color: lighten($text-color, 70%);
+        transition: background-color 250ms ease-in-out;
+    }
     &--sm{
-
+        font-size: .8rem;
     }
     &--md{
-
+        font-size: 1.1rem;
     }
-    &--lrg{
-
+    &--lg{
+        font-size: 1.5rem;
     }
     &--xl{
-        
+        font-size: 2rem;
+    }
+    &--rounded{
+        border-radius: .25em;
+    }
+    &--primary{
+        background-color: $primary-color;
+        border: none;
+        color: #fff;
+        &:hover{
+            background-color: lighten($primary-color, 10%);
+            border: none;
+        }
+    }
+    &--secondary{
+        background-color: $secondary-color;
+        border: none;
+        color: $text-color;
+        &:hover{
+            background-color: lighten($secondary-color, 10%); 
+            border: none;
+        }
     }
 }
