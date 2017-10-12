@@ -1,5 +1,7 @@
 /*----------------------------------
 MIXINS
 ----------------------------------*/
+@import '_font-styles.scss';
 @import '_responsive-ratio.scss';
-@import '_font-styles.scss'
+@import '_visually-hidden.scss';
+@import '_position.scss';
