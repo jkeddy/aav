@@ -14,7 +14,8 @@
   },
   "scripts": {
     "css": "node-sass -w _sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
-    "browser": "browser-sync start --server dist"
+    "browser": "browser-sync start --server dist",
+    "test": "node-sass"
   },
   "config": {
     "port": "8080"

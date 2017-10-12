@@ -35,6 +35,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
 # Project Specific #
 ######################
 _site
@@ -42,3 +43,4 @@ _site
 .jekyll-metadata
 dist
 .log
+node_modules
