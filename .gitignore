@@ -42,3 +42,5 @@ _site
 .jekyll-metadata
 dist
 .log
+
+node_modules/
