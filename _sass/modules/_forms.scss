@@ -1,0 +1,50 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    &__label,
+    &__legend{
+        font-size: .8rem;
+        margin-right: .5rem;
+    }
+    &__fieldset{
+        border: none;
+        margin: 0;
+        padding: .25em .35em;
+    }
+    &__text{
+        $p:.25em;
+        border: 1px solid $grey;
+        font-size: .9rem;
+        line-height: 1.4;
+        margin-top: .2rem;
+        margin-bottom: .2rem;
+        padding-left: $p;
+        position: relative;
+    }
+    &__radio{
+        font-size: 1rem;
+    }
+    &__checkbox{
+        font-size: 1rem;
+        margin-right: .25rem;
+    }
+    &__select{
+        border: 1px solid $grey;
+        font-size: .9rem;
+        margin-top: .2rem;
+        margin-bottom: .2rem;
+        option{
+            
+        }
+    }
+    &__textarea{
+        border: 1px solid $grey;
+        display: block;
+        font-size: .9rem;
+        margin-top: .2rem;
+        margin-bottom: .2rem;
+        padding-left: .25rem;
+    }
+}
