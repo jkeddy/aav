@@ -1,12 +1,24 @@
-$primary-color: #05396B;
-$secondary-color: #FFE701;
-$text-color: #000;
-$red: #d92525;
-$green: #4b9d49;
-$blue: #2584d9;
-$grey: #e3e3e3;
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
 
-$facebook:#3b5998;
-$twitter:#1da1f2;
-$pinterest:#bd081c;
-$googleplus:#dd4b39;
+$red: hsl(0, 70.9%, 49.8%);
+$green: hsl(118.5, 36.6%, 45.1%);
+$blue: hsl(208.3, 70.9%, 49.8%);
+$grey: lighten($black, 70%);
+
+$primary-color: hsl(209.4, 90.9%, 22%);
+$secondary-color: hsl(54.4, 100%, 50.2%);
+$text-color: $black;
+
+$light: hsl(0, 0%, 96%);
+$dark: hsl(0, 0%, 21%);
+$link: hsl(217, 71%, 53%);
+$info: hsl(204, 86%, 53%);
+$success: hsl(141, 71%, 48%);
+$warning: hsl(48, 100%, 67%);
+$danger: hsl(348, 100%, 61%);
+
+$facebook:hsl(220.6, 44.1%, 41.3%);
+$twitter:hsl(202.8, 89.1%, 53.2%);
+$pinterest:hsl(353.3, 92%, 38.6%);
+$googleplus:hsl(6.5, 70.7%, 54.6%);
