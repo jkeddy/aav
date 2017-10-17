@@ -1,0 +1,13 @@
+/*
+Author: Jeff Keddy
+Date: 10/16/2017
+Description: A function for generating sane z-index values. Not allowed to exceed 20000 (20 levels). 
+High values utilized for legibility but can be reduced if that's your jam.
+*/
+
+@function z-index($z: 0) {
+    @if $z <= 20{
+        @return $z*1000;
+    }
+    @warn "z-index cannot be higher than 20000 (z-20). Please lower your value.";
+}

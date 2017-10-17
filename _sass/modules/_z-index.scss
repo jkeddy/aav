@@ -1,0 +1,7 @@
+/* 10 levels of clean z-index (1000 - 10000). Add class .z-1 */
+
+@for $i from 1 through 10 {
+    .z-#{$i} {
+        z-index: z-index($i);
+    }
+}
