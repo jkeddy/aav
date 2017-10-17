@@ -1,3 +1,9 @@
+/*
+Author: Jeff Keddy
+Date: 10/16/2017
+Description: Some common position mixins.
+*/
+
 @mixin abs-center{
     margin: auto;
     position: absolute;
@@ -5,4 +11,11 @@
         right: 0;
         bottom: 0;
         left: 0;
+}
+@mixin abs-vert-center{
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+        top: 0;
+        bottom: 0;
 }
