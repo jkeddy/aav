@@ -15,5 +15,7 @@ function toggleNav(){
         document.getElementById(scrim).addEventListener('mouseup',toggleNav);
     }
 }
-var navToggle=document.getElementById('main-nav-toggle');
-navToggle.addEventListener('mouseup',toggleNav);
+var navToggle=document.getElementsByClassName('main-nav__toggle');
+for (var i = 0; i < navToggle.length; i++) {
+    navToggle[i].addEventListener('mouseup',toggleNav);
+}

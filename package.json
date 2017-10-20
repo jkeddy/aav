@@ -9,11 +9,13 @@
   "dependencies": {
     "browser-sync": "^2.18.13",
     "clean-css-cli": "^4.1.10",
+    "include-media": "^1.4.9",
     "node-sass": "^4.5.3",
-    "pug": "^2.0.0-rc.4"
+    "uglify-js": "^3.1.4"
   },
   "scripts": {
-    "css": "node-sass -w _sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
+    "css": "node-sass --source-map true -w src/_sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
+    "js": "uglifyjs src/_js/*.js -w -c -m --source-map -o dist/assets/js/main.js",
     "browser": "browser-sync start --server dist",
     "test": "node-sass"
   },

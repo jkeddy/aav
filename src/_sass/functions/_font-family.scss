@@ -1,14 +1,21 @@
+/*
+Author: Jeff Keddy
+Date: 10/16/2017
+Description: Pass in keywords, receive fonts.
+*/
+
 @function font-family($family: sans) {
     $sans: 'Open Sans', sans-serif;
     $serif: 'Bitter', Times New Roman, serif;
-    $monospace: 'Lucida Console', monospace;
     $icon: FontAwesome, "FontAwesome", "Font Awesome";
   
     $family: to_lower_case($family);
     $families: (
       // Sans Serif synonyms
-      default:      $sans,
-      sans:         $sans
+      default: $sans,
+      serif: $serif,
+      icon: $icon,
+      sans: $sans
     );
   
     @return if(map-has-key($families, $family),

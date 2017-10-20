@@ -1,0 +1,107 @@
+.footer{
+    background-color: $blue;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: .83em;
+    margin-top: 2rem;
+    padding: 3em .5em;
+    a{
+        color: #fff;
+    }
+    @include media("<=tablet"){
+        padding: #{$phi}rem #{1/$phi}rem;
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 1fr;
+        grid-gap: .5rem;
+        grid-template-areas: "col-1 col-2 col-3";
+        max-width: 1100px;
+        @include media("<=tablet") {
+            grid-template-areas: 
+            "col-1 col-1 col-1"
+            "col-2 col-2 col-3";
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include media("<=600px") {
+            grid-template-areas: 
+            "col-1 col-1"
+            "col-2 col-3";
+            grid-template-columns: 1fr 1fr;
+        }
+        @include media("<=screen-sm") {
+            grid-template-areas: 
+            "col-1"
+            "col-2"
+            "col-3";
+            grid-template-columns: 1fr;
+        }
+    }
+    &__nav{
+        border-right: 1px solid #7aa7ca;
+        grid-area: col-1;
+        max-width: 162px;
+        padding: 0 1em;
+        @include media("<=tablet") {
+            border-right: none;
+            max-width: none;
+            text-align: center;
+        }     
+        @include media("<=screen-sm") {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 320px;
+        }
+        &-headline{
+            color: $secondary-color;
+            font-weight: bold;
+            @include media("<=tablet") {
+                font-size: 1.2em;
+            }
+        }
+        &-link{
+            color: #fff;
+            display: block;
+            font-weight: normal;
+            &:hover{
+                text-decoration: underline;
+            }
+            @include media("<=tablet") {
+                display: inline-block;
+                margin: 0 .25rem;
+            }
+        }
+    }
+    &__copyright{
+        border-right: 1px solid #7aa7ca;
+        max-width: 294px;
+        grid-area: col-2;
+        padding: 0 1em;
+        @include media("<=tablet") {
+            border-right: none;
+            max-width: none;
+        }
+    }
+    &__social{
+        @include media("<=screen-sm"){
+            text-align: center;
+        }
+        .social-icon{
+            font-size: 1.25rem;
+            margin: 0 .5em;
+        }
+    }
+    &__extra{
+        grid-area: col-3;
+        max-width: 300px;
+        padding: 0 1em;
+        @include media("<=tablet") {
+            border-right: none;
+            max-width: none;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.side-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    @include media("<=tablet"){
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    &__social-icons{
+        margin-top: 1rem;
+        padding-left: .5rem;
+        @include media("<=tablet"){
+            display: flex;
+            justify-content: space-evenly;
+            flex-basis: 40%;
+        }
+    }
+    &__poll{
+        @include media("<=tablet"){
+            display: flex;
+            flex-basis: 100%;
+            justify-content: center;
+        }
+    }
+    &__ad-space{
+
+    }
+    &__recomm{
+
+    }
+    &__recomm-img{
+
+    }
+    &__recomm-link{
+        
+    }
+}

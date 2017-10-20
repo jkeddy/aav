@@ -1,0 +1,66 @@
+.hp-main-feature{
+    overflow: hidden;
+    @include media("<=screen-lg"){
+        font-size: .9em;
+        max-width: 484px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include media("<=screen-sm"){
+        max-width: 350px;
+    }
+    &__img{
+        display: block;
+        @include media("<=screen-sm"){
+            max-height: 300px;
+        }
+    }
+    &__right{
+        background: $black;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        @include media("<=screen-lg"){
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    &__title{
+        color: #fff;
+        font-size: $lg;
+        font-weight: bold;
+        line-height: 2;
+        margin: 0 auto;
+        @include media("<=screen-lg"){
+            display: none;
+        }
+    }
+    &__link{
+        @include font-serif(1em, false, false, 1.33);
+        border-top: 1px solid $grey;
+        color: #fff;
+        flex: 1;
+        padding: .66rem #{$phi}rem;
+        &:hover{
+            background: $blue;
+        }
+        @include media(">=screen-sm","<=screen-lg"){
+            border-right: 1px solid $grey;
+            flex-basis: 33%;
+            $p: $phi/2;
+            padding: .33em #{$p}em;
+            &:nth-of-type(3n){
+                border-right: none;
+            }
+        }
+        @include media("<=screen-sm"){
+            border-right: 1px solid $grey;
+            flex-basis: 50%;
+            $p: $phi/2;
+            padding: .33em #{$p}em;
+            &:nth-of-type(2n){
+                border-right: none;
+            }
+        }
+    }
+}

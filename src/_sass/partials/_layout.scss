@@ -1,0 +1,80 @@
+.site-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: .25fr 1fr 3fr 1fr .25fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:    "header header header header header"
+                            " . main-nav article aside . "
+                            "footer footer footer footer footer";
+    @include media(">=screen-lg") {
+        grid-template-columns: 1fr 216px 700px 300px 1fr;
+        
+    }
+    @include media("<=screen-md") {
+        grid-template-columns:  1fr 2fr .6fr;
+        grid-template-areas:
+        "header header header"
+        "main-nav article aside"
+        "footer footer footer"; 
+    }
+    @include media("<=tablet") {
+        grid-template-columns: 1fr #{$phi}fr;
+        grid-template-areas:
+        "header header"
+        "main-nav article"
+        "aside aside"
+        "footer footer";
+    }
+    @include media("<=screen-sm") {
+        grid-gap:.25em;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "main-nav"
+        "article"
+        "aside"
+        "footer";
+    }
+    
+}
+/* Something to reconsider. Would require extremely odd Masonry style JS. Neat though. Migrate out of here pre-push.
+.home .container{
+    grid-template-areas:    
+    "header header header header header"
+    ". main-nav hp-hero aside-ad ."
+    ". nav-ad article aside ."
+    "footer footer footer footer footer";
+}
+.post-navigation{
+    grid-area: nav-ad;
+}
+.side-content-top{
+    grid-area: aside-ad;
+}
+.hp-main{
+    grid-area: hp-hero;
+}
+*/
+
+.header{
+    grid-area: header;
+}
+.footer{
+    grid-area: footer;
+}
+.main-nav-wrapper {
+    grid-area: main-nav;
+}
+.main-content {
+    grid-area: article;
+}
+.side-content{
+    grid-area: aside;
+}
+.inner-wrapper{
+    max-width: 1300px;
+}

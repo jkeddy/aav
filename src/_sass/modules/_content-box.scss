@@ -1,0 +1,22 @@
+.box{
+    @include font-sans(1rem,$text-color,false,1.3);
+    background: $grey;
+    margin-top: 1rem;
+    padding: 1.25rem .7rem;
+    &__title{
+       @include font-serif(2.2em,$text-color,600);
+       margin: 0 0 1rem;
+    }
+    &__subtitle{
+        font-weight: bold;
+    }
+    &--primary{
+        background: $primary-color;
+        .box__title{
+            color: $white;
+        }
+    }
+    &--secondary{
+        background: $secondary-color;
+    }
+}

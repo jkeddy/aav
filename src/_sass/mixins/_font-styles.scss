@@ -5,6 +5,13 @@
     @if $weight { font-weight: $weight; }
     @if $lh { line-height: $lh; }
 }
+@mixin font-serif($size: false, $color: false, $weight:false, $lh: false) {
+    font-family: font-family('serif');
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
 @mixin font-icon($size: false, $color: false, $lh: false) {
     font-family: font-family('icon');
     @if $size { font-size: $size; }
