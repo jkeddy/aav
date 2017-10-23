@@ -44,20 +44,19 @@
         &:hover{
             background: $blue;
         }
-        @include media(">=screen-sm","<=screen-lg"){
+        @include media(">=screen-sm"){
             border-right: 1px solid $grey;
-            flex-basis: 33%;
             $p: $phi/2;
             padding: .33em #{$p}em;
+        }
+        @include media(">=screen-sm","<=screen-lg"){
+            flex-basis: 33%;
             &:nth-of-type(3n){
                 border-right: none;
             }
         }
         @include media("<=screen-sm"){
-            border-right: 1px solid $grey;
             flex-basis: 50%;
-            $p: $phi/2;
-            padding: .33em #{$p}em;
             &:nth-of-type(2n){
                 border-right: none;
             }
