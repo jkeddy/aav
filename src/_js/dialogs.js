@@ -7,6 +7,7 @@ function destroyScrim(n){
         var scrim = document.getElementById('scrim');
     }
     scrim.parentNode.removeChild(scrim);
+    document.body.classList.remove('scrim-active');
     return false;
 }
 function createScrim(n){
@@ -18,5 +19,6 @@ function createScrim(n){
     }
     scrim.classList.add('scrim');
     document.body.appendChild(scrim);
+    document.body.classList.add('scrim-active');
     return scrim;
 }
