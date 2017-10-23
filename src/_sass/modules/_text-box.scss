@@ -7,8 +7,7 @@
     &__body{
         background: $red;
         display: inline-block;
-        font-size: 1em;
-        line-height: 1.7;
+        @include font-sans(1em,false,false,1.7)
         margin: 0;
         padding-left: .25em;
         padding-right: .25em;

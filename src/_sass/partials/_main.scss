@@ -3,7 +3,7 @@
     padding: 0 .5rem;
     &__article{
         > *{
-            margin-bottom: $phi;
+            margin-bottom: #{$phi}rem;
         }
     }
     &__title{
@@ -13,6 +13,7 @@
 
     }
     &__byline{
+        @include font-serif(1rem,false,false,1.4)
         &--review{
 
         }
@@ -21,7 +22,13 @@
 
     }
     &__social{
-
+        border-top: 1px solid $grey;
+        border-bottom: 1px solid $grey;
+        @include font-serif(1rem,false,bold,false);
+        padding: .75rem .25rem;
+        .social-icon{
+            margin-right: .5rem;
+        }
     }
     &__author{
         &-img{
@@ -29,7 +36,21 @@
         }
     }
 }
-
+.content-nav{
+    &__title{
+        @include font-serif(false,false,bold,1.3);
+    }
+    &__link{
+        &:after{
+            content:' \2022 ';
+        }
+        &:last-of-type{
+            &:after{
+                content:'';
+            }
+        }
+    }
+}
 .updated{
     
 }

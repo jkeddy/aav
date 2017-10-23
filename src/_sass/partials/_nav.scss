@@ -144,7 +144,7 @@ $mobileNavSize: 100 / $phi;
     padding: 0;
     position: absolute;
     left: 100%;
-    top: 0;
+    top: -1rem;
     width: 0;
     transition: opacity 350ms ease-in-out;
     @include media ("<=screen-sm") {
@@ -187,13 +187,16 @@ $mobileNavSize: 100 / $phi;
       color: #000;
     }
     &-toggle {
-      $mr: $phi/2;
-      background: none;
-      border: none;
-      font-size: $lg;
-      margin-right: #{$mr}rem;
-      &.active{
-        color: $white;
+      display: none;
+      @include media("<=screen-sm"){
+        $mr: $phi/2;
+        background: none;
+        border: none;
+        font-size: $lg;
+        margin-right: #{$mr}rem;
+        &.active{
+          color: $white;
+        }
       }
     }
   }
@@ -212,9 +215,7 @@ $mobileNavSize: 100 / $phi;
 }
 
 .breadcrumbs {
-  position: absolute;
-  top: -6px;
-  font-size: .8em;
+  font-size: .8rem;
   &__item {}
   &__link {
     font-weight: normal;
