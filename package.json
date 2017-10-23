@@ -8,16 +8,25 @@
   "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.18.13",
+    "browserify": "^14.5.0",
     "clean-css-cli": "^4.1.10",
+    "concurrently": "^3.5.0",
     "include-media": "^1.4.9",
+    "mkdirp": "^0.5.1",
     "node-sass": "^4.5.3",
-    "uglify-js": "^3.1.4"
+    "rimraf": "^2.6.2",
+    "uglify-js": "^3.1.4",
+    "watchify": "^3.9.0"
   },
   "scripts": {
-    "css": "node-sass --source-map true -w src/_sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
-    "js": "uglifyjs src/_js/*.js -w -c -m --source-map -o dist/assets/js/main.js",
+    "build:clean": "rimraf dist/assets/css/*, /dist/assets/js/_js/* && mkdirp dist/assets/css/ | mkdirp /dist/assets/js/",
+    "build:css": "node-sass --source-map true src/_sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
+    "build:bundle": "browserify ./src/_js/*.js | uglifyjs -c --source-map -o ./dist/assets/js/main.js",
+    "watch:css": "node-sass --source-map true -w src/_sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
+    "watch:bundle": "watchify ./src/_js/*.js -o 'uglifyjs -c --source-map > ./dist/assets/js/main.js' -v",
     "browser": "browser-sync start --server dist",
-    "test": "node-sass"
+    "build": "yarn build:css && yarn build:bundle",
+    "watch": "concurrently \"yarn watch:css\" \"yarn watch:bundle\""
   },
   "config": {
     "port": "8080"
