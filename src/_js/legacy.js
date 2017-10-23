@@ -1,3 +1,8 @@
+/*
+Description: Legacy js polyfills and fall backs.
+TODO:   Add accessibility        
+*/
+
 function hasClass(element, c) {
     return (' ' + element.className + ' ').indexOf(' ' + c+ ' ') > -1;
 }

@@ -1,4 +1,11 @@
-/* Basic dialog JS system. */
+/*
+Author: Jeff Keddy
+Date: 10/23/2017
+Description: Basic dialog popping system. Includes scrim creation.
+TODO:   Create actual dialog windows
+        Add ajaxing content
+        Build smart system for video pop ups
+*/
 
 function destroyScrim(n){
     if(n){
