@@ -1,3 +1,11 @@
 @import '_colors.scss';
-//@import '_breakpoints.scss';
-$phi: 1.6180339887498948482;
+@import '_typography.scss';
+$phi: 1.61803398874989;
+$space: $phi;
+$spacing: (
+    1: $space,
+    2: $space / 2,
+    3: $space / 3,
+    4: $space / 4,
+    5: $space / 5 
+  );
