@@ -1,4 +1,4 @@
-@function padding($num,$type) {
+@function pad($num,$type) {
     $val: map-get($spacing, $num);
     @if $type==rem or $type==false {
         $val:#{$val}rem;
