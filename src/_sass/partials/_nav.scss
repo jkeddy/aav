@@ -1,4 +1,4 @@
-$mobileNavSize: 100 / $phi;
+$mobileNavSize: 100 / $space;
 .main-nav {
   border-top: .05em solid $grey;
   max-width: 216px;
@@ -125,6 +125,9 @@ $mobileNavSize: 100 / $phi;
   }
   &__link {
     color: #000;
+    &:hover{
+      text-decoration: none;
+    }
     @include media("<=screen-sm") {
       display: block;
       line-height: 2.3;
@@ -189,11 +192,10 @@ $mobileNavSize: 100 / $phi;
     &-toggle {
       display: none;
       @include media("<=screen-sm"){
-        $mr: $phi/2;
         background: none;
         border: none;
         font-size: $lg;
-        margin-right: #{$mr}rem;
+        margin-right: margin(-2,rem);
         &.active{
           color: $white;
         }

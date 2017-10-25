@@ -1,7 +1,7 @@
 .media-block {
     display: flex;
     align-items: flex-start;
-    padding: 1rem;
+    padding: pad(-2,rem);
     &--tall,&--vertical{
         align-items: center;
         flex-direction: column;
@@ -10,7 +10,7 @@
         flex-direction: row-reverse;
     }
     &__img{
-        margin-right: 1rem;
+        margin-right: margin(-2,rem);
     }
     &__body{
         flex: 1;

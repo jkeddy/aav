@@ -1,9 +1,9 @@
 .header {
   background: #fff;
-  border-image-source: linear-gradient(to right, #004580 0%, #0f84b8 25%, #004580 50%, #0f84b8 75%, #004580 100%);
+  border-image-source: linear-gradient(to right, darken($blue,20%) 0%, lighten($blue,10%) 25%, darken($blue,20%) 50%, lighten($blue,10%) 75%, darken($blue,20%) 100%);
   border-image-slice: 1;
-  border-top: 25px solid;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .5);
+  border-top: 1.2rem solid;
+  box-shadow: 0 0.125rem 0.1875rem 0 rgba(0, 0, 0, .5);
   padding: 1rem .5rem;
   width: 100vw;
   z-index: z-index(13);
@@ -25,16 +25,20 @@
       margin-right: auto;
       justify-items: center;
     }
+    @include media(">=screen-md","<=screen-lg"){
+      grid-template-columns: 1fr 1.75fr .5fr;
+      grid-gap: .5rem;
+    }
     @include media("<=screen-md"){
       grid-template-areas: 
       "logo logo search"
       "header-nav header-nav header-nav";
-      grid-template-columns: 1fr 1fr 1.5fr;
+      grid-template-columns: 1fr 1fr #{$space}fr;
     }
     @include media("<=screen-sm") {
       grid-template-areas: 
       "nav-toggle logo search";
-      grid-template-columns: .25fr 1fr #{$phi}fr;
+      grid-template-columns: .25fr 1fr #{$space}fr;
     }
   }
   .main-nav__toggle{
@@ -60,12 +64,13 @@
   }
   &__nav-item {
     color: $text-color;
-    margin: 0 .5rem;
+    margin: 0 margin(-3,rem);
     i{
-      color: $blue;
+      color: darken($blue,10%);
     }
     &:hover{
       color: $blue;
+      text-decoration: none;
       i{
         color: $blue;
       }

@@ -25,17 +25,10 @@
             flex-basis: 100%;
             justify-content: center;
         }
-    }
-    &__ad-space{
-
-    }
-    &__recomm{
-
-    }
-    &__recomm-img{
-
-    }
-    &__recomm-link{
-        
+        .box{
+            @include media("<=screen-xs"){
+                max-width: 300px;
+            }
+        }
     }
 }

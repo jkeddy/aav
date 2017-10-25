@@ -9,8 +9,8 @@
         display: inline-block;
         @include font-sans(1em,false,false,1.7)
         margin: 0;
-        padding-left: .25em;
-        padding-right: .25em;
+        padding-left: pad(-3,em);
+        padding-right: pad(-3,em);
     }
     &--green{
         .text-box__body{

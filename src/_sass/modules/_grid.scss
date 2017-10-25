@@ -5,9 +5,9 @@ $gutter: 1rem;
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -$gutter/#{$phi};
-  margin-right: -$gutter/#{$phi};
-  margin-bottom: -$gutter;
+  /*margin-left: $gutter/#{$phi};
+  margin-right: $gutter/#{$phi};*/
+  margin-bottom: margin(1,rem);
  
   &--eq-height {
     @extend .row;
@@ -60,9 +60,9 @@ $gutter: 1rem;
 }
 .col {
     flex: 1;
-    padding-left: $gutter/#{$phi};
-    padding-right: $gutter/#{$phi};
-    margin-bottom: $gutter;
+    padding-left: pad(-3,rem);
+    padding-right: pad(-3,rem);
+    margin-bottom: margin(1,rem);
   }
    
   @for $i from 1 to 13 {

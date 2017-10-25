@@ -1,36 +1,34 @@
-.box{
-    $pad-v: $phi;
-    $pad-h: $phi/2;
-    @include font-sans(1rem,$text-color,false,1.3);
+.box {
+    @include font-sans(false, $text-color, false, 1.3);
     background: $grey;
-    margin-top: 1rem;
-    padding: #{$pad-v}rem #{$pad-h}rem;
-    &__title{
-       @include font-serif(2.2em,$text-color,600);
-       margin: 0 0 #{$pad-h}rem;
+    margin-top: margin(1,rem);
+    padding: pad(1,rem) pad(-2,rem);
+    &__title {
+        @include font-serif(1.8rem,false,false,false);
+        margin: 0 0 pad(-2,rem);
     }
-    &__subtitle{
+    &__subtitle {
         font-weight: bold;
     }
-    &--primary{
+    &--primary {
         background: $primary-color;
-        .box__title{
+        .box__title {
             color: $white;
         }
     }
-    &--secondary{
+    &--secondary {
         background: $secondary-color;
     }
-    &--border{
+    &--border {
         background: none;
         border-top: 3px solid $grey;
         border-bottom: 3px solid $grey;
         padding: 0;
-        .box__title{
+        .box__title {
             border-bottom: 3px solid $grey;
         }
     }
-    &--sm{
+    &--sm {
         font-size: .8rem;
     }
 }

@@ -22,11 +22,11 @@
         "footer footer footer"; 
     }
     @include media("<=tablet") {
-        grid-template-columns: 1fr #{$phi}fr;
+        grid-template-columns: 1fr #{$space}fr;
         grid-template-areas:
         "header header"
         "main-nav article"
-        "aside aside"
+        "main-nav aside"
         "footer footer";
     }
     @include media("<=screen-sm") {
@@ -41,25 +41,6 @@
     }
     
 }
-/* Something to reconsider. Would require extremely odd Masonry style JS. Neat though. Migrate out of here pre-push.
-.home .container{
-    grid-template-areas:    
-    "header header header header header"
-    ". main-nav hp-hero aside-ad ."
-    ". nav-ad article aside ."
-    "footer footer footer footer footer";
-}
-.post-navigation{
-    grid-area: nav-ad;
-}
-.side-content-top{
-    grid-area: aside-ad;
-}
-.hp-main{
-    grid-area: hp-hero;
-}
-*/
-
 .header{
     grid-area: header;
 }

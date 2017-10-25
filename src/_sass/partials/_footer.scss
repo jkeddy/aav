@@ -1,18 +1,18 @@
 .footer{
-    background-color: $blue;
+    background-color: darken($blue,10%);
     color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     font-size: .83em;
-    margin-top: 2rem;
-    padding: 3em .5em;
+    margin-top: margin(1,rem);
+    padding: pad(2,em) pad(-2,em);
     a{
         color: #fff;
     }
     @include media("<=tablet"){
-        padding: #{$phi}rem #{1/$phi}rem;
+        padding: pad(1,rem) pad(-2,rem);
     }
     &__content{
         display: grid;
@@ -45,7 +45,7 @@
         border-right: 1px solid #7aa7ca;
         grid-area: col-1;
         max-width: 162px;
-        padding: 0 1em;
+        padding: 0 pad(-2,em);
         @include media("<=tablet") {
             border-right: none;
             max-width: none;
@@ -72,7 +72,7 @@
             }
             @include media("<=tablet") {
                 display: inline-block;
-                margin: 0 .25rem;
+                margin: 0 margin(-3,rem);
             }
         }
     }
@@ -80,7 +80,7 @@
         border-right: 1px solid #7aa7ca;
         max-width: 294px;
         grid-area: col-2;
-        padding: 0 1em;
+        padding: 0 pad(-2,em);
         @include media("<=tablet") {
             border-right: none;
             max-width: none;
@@ -92,13 +92,13 @@
         }
         .social-icon{
             font-size: 1.25rem;
-            margin: 0 .5em;
+            margin: 0 margin(-3,em);
         }
     }
     &__extra{
         grid-area: col-3;
         max-width: 300px;
-        padding: 0 1em;
+        padding: 0 pad(-2,em);
         @include media("<=tablet") {
             border-right: none;
             max-width: none;
