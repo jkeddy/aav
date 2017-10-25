@@ -1,58 +1,117 @@
-.button{
+.button {
     background-color: #fff;
-    border: .1em solid $text-color;
+    border: .1rem solid $text-color;
     display: inline-flex;
     justify-content: center;
     font-size: 1rem;
-    height: 2.25em; 
+    height: 2.25em;
     line-height: 1.5;
     padding: .35em .6em;
+    text-transform: uppercase;
     transition: background-color 250ms ease-in-out;
-    &:hover{
+    &:hover {
         border-color: lighten($text-color, 70%);
         transition: background-color 250ms ease-in-out;
+        text-decoration: none;
+        &:after {
+            transition: border-color 250ms ease-in-out;
+        }
     }
-    &--sm{
+    &--sm {
         font-size: .8rem;
     }
-    &--md{
+    &--md {
         font-size: 1.1rem;
     }
-    &--lg{
+    &--lg {
         font-size: 1.5rem;
     }
-    &--xl{
+    &--xl {
         font-size: 2rem;
     }
-    &--rounded{
+    &--rounded {
         border-radius: .25em;
     }
-    &--primary{
+    &--primary {
         background-color: $primary-color;
         border: none;
-        color: #fff;
-        &:hover{
+        color: $white;
+        &:hover {
             background-color: lighten($primary-color, 10%);
             border: none;
         }
     }
-    &--secondary{
+    &--secondary {
         background-color: $secondary-color;
         border: none;
         color: $text-color;
-        &:hover{
-            background-color: lighten($secondary-color, 10%); 
+        &:hover {
+            background-color: lighten($secondary-color, 10%);
             border: none;
         }
     }
-    &--submit{
+    &--green {
+        background-color: $green;
+        border: none;
+        color: $white;
+        &:hover {
+            background-color: lighten($green, 10%);
+            border: none;
+        }
+    }
+    &--submit {
         background-color: $blue;
         border: none;
         color: #fff;
         max-width: 176px;
-        &:hover{
+        &:hover {
             background-color: darken($blue, 10%);
             border: none;
+        }
+    }
+}
+
+
+/* Arrow buttons. Used for mininav toggles currently. Separate for easy removal. */
+
+.button--arrow {
+    $s: 18px !default;
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        transition: border-color 250ms ease-in-out;
+    }
+    &-right {
+        @extend .button--arrow;
+        &:after {
+            border-top: $s solid transparent;
+            border-bottom: $s solid transparent;
+            border-left: $s solid $primary-color;
+            @include abs-vert-center;
+            right: -$s;
+        }
+        &:hover{
+            &:after{
+                border-left-color: lighten($primary-color, 10%);
+            }
+        }
+    }
+    &-left {
+        @extend .button--arrow;
+        &:after {
+            border-top: $s solid transparent;
+            border-bottom: $s solid transparent;
+            border-right: $s solid $primary-color;
+            @include abs-vert-center;
+            left: -$s;
+        }
+        &:hover{
+            &:after{
+                border-right-color: lighten($primary-color, 10%);
+            }
         }
     }
 }
