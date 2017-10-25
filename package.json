@@ -1,12 +1,14 @@
 {
   "name": "AllAboutVision.com",
   "version": "1.0.0",
-  "description": "Front end development on the AllAboutVision.com property",
-  "main": "index.html",
+  "description": "Front end development on the AllAboutVision.com and associated properties including AAV Labs.",
+  "main": "main.js",
   "repository": "https://github.com/jkeddy/aav.git",
   "author": "<jeff.keddy@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "a11y-toggle": "^2.1.0",
+    "autoprefixer": "^7.1.6",
     "browser-sync": "^2.18.13",
     "browserify": "^14.5.0",
     "clean-css-cli": "^4.1.10",
@@ -14,13 +16,14 @@
     "include-media": "^1.4.9",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.1",
     "rimraf": "^2.6.2",
     "uglify-js": "^3.1.4",
     "watchify": "^3.9.0"
   },
   "scripts": {
-    "build:clean": "rimraf dist/assets/css/*, /dist/assets/js/_js/* && mkdirp dist/assets/css/ | mkdirp /dist/assets/js/",
-    "build:css": "node-sass --source-map true src/_sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
+    "build:clean": "rimraf dist/assets/css/, /dist/assets/js/_js/",
+    "build:css": "node-sass --source-map true src/_sass/style.scss -o dist/assets/css/ && postcss dist/assets/css/style.css --use autoprefixer -d dist/assets/css/",
     "build:bundle": "browserify ./src/_js/*.js | uglifyjs -c --source-map -o ./dist/assets/js/main.js",
     "watch:css": "node-sass --source-map true -w src/_sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
     "watch:bundle": "watchify ./src/_js/*.js -o 'uglifyjs -c --source-map > ./dist/assets/js/main.js' -v",
