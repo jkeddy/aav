@@ -1,0 +1,45 @@
+/*
+Author: Jeff Keddy
+Date: 10/24/2017
+Description:    Simple toggle for boxes. Named details after the default element.
+                Based on the a11y toggle system: https://github.com/edenspiekermann/a11y-toggle
+*/
+
+.toggle {
+    @include font-sans(1em, false, false, 1.3);
+    &__content {
+        border: 3px solid $primary-color;
+        @include media(">=screen-sm"){
+            position: relative;
+                top: -36px;
+        }
+        &[aria-hidden=true] {
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+        &[aria-hidden=false] {
+            padding: pad(1,rem);
+            overflow: hidden;
+            opacity: 1;
+            max-height: 80em;
+            visibility: visible;
+            transition:
+              visibility 0s ease,
+              max-height 1s ease,
+              opacity    1s ease;
+
+              @include media(">=screen-sm"){
+                padding-top: pad(2,rem);
+            }
+        }
+        > *{
+            margin-bottom: pad(-3,rem);
+        }
+    }
+    &--mininav{
+        .toggle__link{
+            display: block;
+        }
+    }
+}
