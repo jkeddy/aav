@@ -5,7 +5,7 @@ $red: hsl(0, 70.9%, 49.8%);
 $green: hsl(119.2, 33.9%, 45.7%);
 $blue: hsl(208.3, 70.9%, 49.8%);
 
-$cyan: hsl(182.8, 100%, 50%);
+$cyan: hsl(188.3, 66.2%, 43%);
 $magenta: hsl(289.6, 100%, 50%);
 $orange: hsl(30.5, 94.2%, 53.8%);
 $yellow: hsl(52.6, 99%, 60%); // Logo Yellow
@@ -20,7 +20,7 @@ $text-color: $black;
 $light: hsl(0, 0%, 96%);
 $dark: hsl(0, 0%, 21%);
 $link: $blue;
-$info: hsl(204, 86%, 53%);
+$info: $cyan;
 $success: $green;
 $warning: $yellow;
 $danger: $red;
