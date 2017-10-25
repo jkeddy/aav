@@ -1,6 +1,6 @@
 /*Default values*/
 
-.video-container{
+.embed-container{
     &__full{
         &--4-3{
             @include responsive-ratio(320,480);
