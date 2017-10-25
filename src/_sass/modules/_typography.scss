@@ -4,7 +4,8 @@ html{
 a{
   color: $primary-color;
   text-decoration: none;
-  &.underline{
+  &.underline,
+  &:hover{
     text-decoration: underline;
   }
   &.alt-link{
@@ -13,8 +14,14 @@ a{
 }
 h1,.h1{
   color: inherit;
-  @include font-serif(2.4rem,false, bold, 1.5);
+  @include font-serif(2.4rem,false,bold, 1.5);
   margin: 0 auto;
+  @include media("<=screen-md"){
+    font-size: 2rem;
+  }
+  @include media("<=screen-xs"){
+    font-size: 1.6rem;
+  }
   a{
     color: inherit;
   }
@@ -23,21 +30,39 @@ h2,.h2{
   color: inherit;
   @include font-serif(2rem,false,bold,1.5);
   margin: 0 auto;
+  @include media("<=screen-md"){
+    font-size: 1.7rem;
+  }
+  @include media("<=screen-xs"){
+    font-size: 1.5rem;
+  }
   a{
     color: inherit;
   }
 }
 h3,.h3{
   color: inherit;
-  @include font-serif(1.8rem,false,false,1.3);
+  @include font-serif(1.7rem,false,bold,1.3);
   margin: 0 auto;
+  @include media("<=screen-md"){
+    font-size: 1.5rem;
+  }
+  @include media("<=screen-xs"){
+    font-size: 1.4rem;
+  }
   a{
     color: inherit;
   }
 }
 h4,.h4{
   color: inherit;
-  @include font-sans(1.8rem,false,false,1.3);
+  @include font-sans(1.7rem,false,bold,1.3);
+  @include media("<=screen-md"){
+    font-size: 1.5rem;
+  }
+  @include media("<=screen-xs"){
+    font-size: 1.3rem;
+  }
   margin: 0 auto;
   a{
     color: inherit;
@@ -45,7 +70,13 @@ h4,.h4{
 }
 h5,.h5{
   color: inherit;
-  @include font-sans(1.5rem,false,false,1.3);
+  @include font-sans(1.5rem,false,bold,1.3);
+  @include media("<=screen-md"){
+    font-size: 1.3rem;
+  }
+  @include media("<=screen-xs"){
+    font-size: 1.2rem;
+  }
   margin: 0 auto;
   a{
     color: inherit;
@@ -53,7 +84,10 @@ h5,.h5{
 }
 h6,.h6{
   color: inherit;
-  @include font-sans(1.3rem,false,false,1.3);
+  @include font-sans(1.3rem,false,bold,1.3);
+  @include media("<=screen-md"){
+    font-size: 1.1rem;
+  }
   margin: 0 auto;
   a{
     color: inherit;
@@ -65,17 +99,6 @@ h6,.h6{
     @include font-icon(false,false,false);
   }
 }
-.text{
-  &-left{
-    text-align: left;
-  }
-  &-center{
-    text-align: center;
-  }
-  &-right{
-    text-align: right;
-  }
-}
 .def{
   border-bottom: 1px dashed inherit;
   &:after{
@@ -83,7 +106,6 @@ h6,.h6{
     @include font-icon(false,false,false);
   }
 }
-$default: 1rem;
-$sm: .8rem;
-$lg: 1.1rem;
-$xl: 1.4rem;
+.update{
+  @extend small;
+}
