@@ -1,11 +1,12 @@
 /*----------------------------------
 CONFIG MODULES & FUNCTIONS
 ----------------------------------*/
+@import '_breakpoints.scss';
+
 @import '_normalize.scss';
 @import '_box-sizing.scss';
 @import '_clearfix.scss';
 @import '_typography.scss';
-@import '_breakpoints.scss';
 @import '_dialogs.scss';
 @import '_grid.scss';
 @import '_buttons.scss';
@@ -15,6 +16,7 @@ CONFIG MODULES & FUNCTIONS
 @import '_media-object.scss';
 @import '_content-box.scss';
 @import '_responsive-video.scss';
-@import '_z-index.scss';
 @import '_advertising.scss';
+@import '_details.scss';
+@import '_utilities.scss';
 @import '_misc.scss';

@@ -1,0 +1,163 @@
+/*
+Author: Jeff Keddy
+Date: 10/25/2017
+Description:    Helper classes for AAV editorial content.
+*/
+
+
+/* For centering, floating, and doing crazy wide hero images */
+
+.elem {
+    &-right {
+        float: right;
+        margin-left: margin(-2, rem);
+    }
+    &-left {
+        float: left;
+        margin-right: margin(-2, rem);
+    }
+    &-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-full {
+        /* Strange */
+        margin-left: calc(-48vw + 50%);
+        margin-right: calc(-52vw + 50%);
+        max-width: none;
+        width: 100vw;
+    }
+}
+
+/* Controls for text. Positioning, sizing, etc. Sizing is all relative. */
+
+.text {
+    /* Position */
+    &-left {
+        text-align: left;
+    }
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+    /* Size */
+    &-xs {
+        @extend small;
+    }
+    &-sm {
+        font-size: .8em;
+    }
+    &-md {
+        font-size: 1.1em;
+    }
+    &-lg {
+        font-size: 1.2em;
+    }
+    &-xl {
+        font-size: 1.4em;
+    }
+    /* Color */
+    &-white {
+        color: $white;
+    }
+    &-black {
+        color: $black;
+    }
+    &-orange {
+        color: $orange;
+    }
+    &-primary {
+        color: $primary-color;
+    }
+    &-secondary {
+        color: $secondary-color;
+    }
+    &-info {
+        color: $link;
+    }
+    &-success {
+        color: $info;
+    }
+    &-warning {
+        color: $warning;
+    }
+    &-danger {
+        color: $danger;
+    }
+}
+/* Put a bird(bg) on it */
+.bg {
+    &-black{
+        background-color: $black;
+    }
+    &-white{
+        background-color: $white;
+    }
+    &-grey{
+        background-color: $grey;
+    }
+    &-primary {
+        background-color: $primary-color;
+    }
+    &-secondary {
+        background-color: $secondary-color;
+    }
+    &-info {
+        background-color: $info;
+    }
+    &-success {
+        background-color: $info;
+    }
+    &-warning {
+        background-color: $warning;
+    }
+    &-danger {
+        background-color: $danger;
+    }
+}
+
+
+/* Padding Assistance. Matches positive spacing values. */
+@for $j from 1 through 5 {
+    .p-#{$j} {
+        padding: pad($j, rem);
+    }
+    .p-t-#{$j}{
+        padding-top: pad($j, rem);
+    }
+    .p-r-#{$j}{
+        padding-right: pad($j, rem);
+    }
+    .p-l-#{$j}{
+        padding-left: pad($j, rem);
+    }
+    .p-b-#{$j}{
+        padding-bottom: pad($j, rem);
+    }
+}
+@for $j from 1 through 5 {
+    .m-#{$j} {
+        margin: margin($j, rem);
+    }
+    .m-t-#{$j}{
+        margin-top: margin($j, rem);
+    }
+    .m-r-#{$j}{
+        margin-right: margin($j, rem);
+    }
+    .m-l-#{$j}{
+        margin-left: margin($j, rem);
+    }
+    .m-b-#{$j}{
+        margin-bottom: margin($j, rem);
+    }
+}
+/* 10 levels of clean z-index (1000 - 10000). Add class .z-# Can never be higher than header, fixed items, dialogs, etc */
+@for $i from 1 through 10 {
+    .z-#{$i} {
+        z-index: z-index($i);
+    }
+}
