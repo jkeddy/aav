@@ -2,21 +2,28 @@ $white: rgb(255, 255, 255);
 $black: hsl(0, 0%, 0%);
 
 $red: hsl(0, 70.9%, 49.8%);
-$green: hsl(118.5, 36.6%, 45.1%);
+$green: hsl(119.2, 33.9%, 45.7%);
 $blue: hsl(208.3, 70.9%, 49.8%);
+
+$cyan: hsl(182.8, 100%, 50%);
+$magenta: hsl(289.6, 100%, 50%);
+$orange: hsl(30.5, 94.2%, 53.8%);
+$yellow: hsl(52.6, 99%, 60%); // Logo Yellow
+
+$dark-blue: hsl(209.4, 84.3%, 22.4%); // Logo Blue
 $grey: lighten($black, 90%);
 
-$primary-color: hsl(209.4, 90.9%, 22%);
-$secondary-color: hsl(54.4, 100%, 50.2%);
+$primary-color: $dark-blue;
+$secondary-color: $yellow;
 $text-color: $black;
 
 $light: hsl(0, 0%, 96%);
 $dark: hsl(0, 0%, 21%);
-$link: hsl(217, 71%, 53%);
+$link: $blue;
 $info: hsl(204, 86%, 53%);
-$success: hsl(141, 71%, 48%);
-$warning: hsl(48, 100%, 67%);
-$danger: hsl(348, 100%, 61%);
+$success: $green;
+$warning: $yellow;
+$danger: $red;
 
 $facebook:hsl(220.6, 44.1%, 41.3%);
 $twitter:hsl(202.8, 89.1%, 53.2%);
