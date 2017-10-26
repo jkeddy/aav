@@ -45,7 +45,7 @@ Description:    Simple toggle for boxes. Named details after the default element
             display: block;
         }
         .toggle__content[aria-hidden="false"]{
-            padding-top:pad(3,rem);
+            padding-top:pad(5,rem);
             .row,.col{
                 margin-bottom: 0;
             }
