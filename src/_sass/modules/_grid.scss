@@ -1,16 +1,17 @@
-/* Bootstrap style. But Flexbox */
+/*
+Author: Jeff Keddy
+Date: 10/26/2017
+Description: Bootstrap style. But Flexbox. Ignoring BEM naming conventions temporarily.
+*/
 $grid-cols: 100% / 12;
 $gutter: 1rem;
  
 .row {
   display: flex;
   flex-wrap: wrap;
-  /*margin-left: $gutter/#{$phi};
-  margin-right: $gutter/#{$phi};*/
   margin-bottom: margin(1,rem);
  
   &--eq-height {
-    @extend .row;
     align-items: stretch;
  
     > .col, > *[class*="col-"] {
@@ -23,34 +24,38 @@ $gutter: 1rem;
       }
     }
   }
- 
+  &--no-padding {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+   
+    > .col, > [class*="col-"] {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0;
+    }
+  }
   &--align-top {
-    @extend .row;
     align-items: flex-start;
   }
  
   &--align-center {
-    @extend .row;
     align-items: center;
   }
  
   &--align-bottom {
-    @extend .row;
     align-items: flex-end;
   }
  
   &--justify-start {
-    @extend .row;
     justify-content: flex-start;
   }
  
   &--justify-center {
-    @extend .row;
     justify-content: center;
   }
  
   &--justify-end {
-    @extend .row;
     justify-content: flex-end;
   }
  
@@ -67,7 +72,6 @@ $gutter: 1rem;
    
   @for $i from 1 to 13 {
     .col-#{$i} {
-      @extend .col;
       width: $grid-cols*$i;
       max-width: $grid-cols*$i;
       min-width: $grid-cols*$i;
@@ -119,18 +123,5 @@ $gutter: 1rem;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;
       }
-    }
-  }
-  .row--no-padding {
-    @extend .row;
-   
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-   
-    > .col, > [class*="col-"] {
-      padding-left: 0;
-      padding-right: 0;
-      margin-bottom: 0;
     }
   }
