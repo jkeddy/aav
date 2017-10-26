@@ -61,16 +61,6 @@
             border-color: lighten($green, 10%);
         }
     }
-    &--submit {
-        background-color: $blue;
-        border-color: $blue;
-        color: #fff;
-        max-width: 176px;
-        &:hover {
-            background-color: darken($blue, 10%);
-            border-color: darken($blue,10%);
-        }
-    }
 }
 
 
