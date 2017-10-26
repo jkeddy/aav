@@ -1,61 +1,127 @@
-.form{
+.form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
-    font-size: 1rem;
-    &__label,
-    &__legend{
-        font-size: .8em;
-        margin-right: .5rem;
+    font-size: 1em;
+    &__label {
+        margin-right: margin(-2, rem);
+        margin-bottom: margin(-3, rem);
     }
-    &__fieldset{
-        border: none;
+    &__legend {
+        display: block;
+        margin-right: margin(-2, rem);
+    }
+    &__fieldset {
+        background: lighten($black, 95%);
+        border: 1px solid $black;
+        border-radius: .15rem;
+        display: flex;
         margin: 0;
-        padding: .25em .35em;
+        margin-bottom: margin(-3, rem);
+        padding: pad(-3, em) pad(-3, em) pad(-2, em);
+        box-shadow: 0 .2rem .3rem fade-out($black, .9);
+        .form__label{
+            margin-right: margin(-4,rem);
+        }
     }
-    &__text{
-        $p:.25em;
-        border: none;
-        border-bottom: 1px solid $primary-color;
-        font-size: .9em;
-        line-height: 1.4;
-        margin-top: .2rem;
-        margin-bottom: .2rem;
-        padding-left: $p;
+    &__input {
+        background: lighten($black, 95%);
+        border: 1px solid $black;
+        box-shadow: 0 .2rem .3rem fade-out($black, .9);
+        border-radius: .15rem;
+        line-height: 2.3;
+        margin-bottom: margin(-3, rem);
+        padding-left: pad(-3, em);
         position: relative;
+        transition: box-shadow ease-in 200ms;
+        &:focus,
+        &:hover {
+            box-shadow: 0 .2rem .3rem fade-out($black, .75);
+            transition: box-shadow ease-in 200ms;
+        }
+        &:invalid {
+            background-color: lighten($danger, 40%);
+        }
     }
-    &__radio{
-        font-size: 1em;
+    &__submit{
+        background-color: $blue;
+        border-color: $blue;
+        color: #fff;
+        max-width: 176px;
+        &:hover {
+            background-color: darken($blue, 10%);
+            border-color: darken($blue,10%);
+        }
     }
-    &__checkbox{
-        font-size: 1em;
-        margin-right: .25rem;
+    &__radio {
+        font-size: 1rem;
+        margin-right: margin(-4, rem);
     }
-    &__select{
+    &__checkbox {
+        font-size: 1rem;
+        margin-right: margin(-2, rem);
+    }
+    &__select {
         /* For testing purposes */
         appearance: none;
-        -moz-appearance:none;
-        -webkit-appearance:none;
-        background: url('https://maxcdn.icons8.com/Share/icon/win8/Arrows//collapse_arrow1600.png') right 2% center no-repeat;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background: lighten($black, 95%) url('https://maxcdn.icons8.com/Share/icon/win8/Arrows//collapse_arrow1600.png') right 2% center no-repeat;
         background-size: 3%;
         /* For testing purposes */
         border: none;
-        border-bottom: 1px solid $primary-color;
-        border-radius: 0;
-        font-size: .9em;
-        margin-top: .2rem;
-        margin-bottom: .2rem;
+        border: 1px solid $black;
+        border-radius: .15rem;
+        box-shadow: 0 .2rem .3rem fade-out($black, .9);
+        margin-bottom: margin(-3, rem);
+        padding: pad(-4, rem) 0 pad(-4, rem) pad(-5, rem);
         position: relative;
+        &:focus,
+        &:hover {
+            box-shadow: 0 .2rem .3rem fade-out($black, .75);
+            transition: box-shadow ease-in 200ms;
+        }
+        option {
+            &[disabled] {
+                color: $danger;
+            }
+        }
     }
-    &__textarea{
-        border: 1px solid $primary-color;
+    &__textarea {
+        background: lighten($black, 95%);
+        border: 1px solid $black;
+        border-radius: .15rem;
+        box-shadow: 0 .2rem .3rem fade-out($black, .9);
         display: block;
-        font-size: .9em;
-        margin-top: .2rem;
-        margin-bottom: .2rem;
+        margin-bottom: margin(-3, rem);
         max-width: 100%;
         min-height: 8.3em;
-        padding: .25rem;
+        padding: pad(-3, rem);
+        &:focus,
+        &:hover {
+            box-shadow: 0 .2rem .3rem fade-out($black, .75);
+            transition: box-shadow ease-in 200ms;
+        }
+    }
+    /* Safety measures for forms built with grid */
+    .row {
+        margin-bottom: 0;
+        .col {
+            margin-bottom: 0;
+            >.form__label {
+                display: block;
+            }
+            .form__fieldset{
+                display: block;
+            }
+            .form__input,
+            .form__fieldset,
+            .form__select,
+            .form__textarea,
+            .form__submit {
+                width: 100%;
+            }
+        }
     }
 }
