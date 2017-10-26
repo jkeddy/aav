@@ -47,7 +47,7 @@
         }
         @include media(">=screen-sm"){
             border-right: 1px solid $grey;
-            padding: .33em pad(-2,em);
+            padding: .66em pad(-2,em);
         }
         @include media(">=screen-sm","<=screen-lg"){
             flex-basis: 33%;
