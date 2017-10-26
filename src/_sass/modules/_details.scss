@@ -33,13 +33,22 @@ Description:    Simple toggle for boxes. Named details after the default element
                 padding-top: pad(2,rem);
             }
         }
-        > *{
-            margin-bottom: pad(-3,rem);
+        > *:not(.row){
+            margin-bottom: margin(-3,rem);
         }
+    }
+    &__link{
+        margin-bottom: margin(-3,rem);
     }
     &--mininav{
         .toggle__link{
             display: block;
+        }
+        .toggle__content[aria-hidden="false"]{
+            padding-top:pad(3,rem);
+            .row,.col{
+                margin-bottom: 0;
+            }
         }
     }
 }

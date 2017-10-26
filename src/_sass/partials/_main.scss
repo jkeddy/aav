@@ -56,6 +56,7 @@
         color: $link;
         &:after {
             content: ' \2022 ';
+            color: $text-color;
         }
         &:last-of-type {
             &:after {

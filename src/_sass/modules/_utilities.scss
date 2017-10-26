@@ -118,8 +118,6 @@ Description:    Helper classes for AAV editorial content.
         background-color: $danger;
     }
 }
-
-
 /* Padding Assistance. Matches positive spacing values. */
 @for $j from 1 through 5 {
     .p-#{$j} {
@@ -138,6 +136,7 @@ Description:    Helper classes for AAV editorial content.
         padding-bottom: pad($j, rem);
     }
 }
+/* Margin assistance. Matches positive spacing values */
 @for $j from 1 through 5 {
     .m-#{$j} {
         margin: margin($j, rem);
