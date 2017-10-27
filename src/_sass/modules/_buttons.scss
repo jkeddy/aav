@@ -67,7 +67,8 @@
 /* Arrow buttons. Used for mininav toggles currently. Separate for easy removal. */
 
 .button--arrow {
-    $s: 18px !default;
+    $s: 18px !default; // Implied use is 36px tall button
+    border: none;
     position: relative;
     &:after {
         content: '';
@@ -77,7 +78,6 @@
         transition: border-color 250ms ease-in-out;
     }
     &-right {
-        @extend .button--arrow;
         &:after {
             border-top: $s solid transparent;
             border-bottom: $s solid transparent;
@@ -92,7 +92,6 @@
         }
     }
     &-left {
-        @extend .button--arrow;
         &:after {
             border-top: $s solid transparent;
             border-bottom: $s solid transparent;
