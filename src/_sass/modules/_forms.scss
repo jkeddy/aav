@@ -21,8 +21,8 @@
         margin-bottom: margin(-3, rem);
         padding: pad(-3, em) pad(-3, em) pad(-2, em);
         box-shadow: 0 .2rem .3rem fade-out($black, .9);
-        .form__label{
-            margin-right: margin(-4,rem);
+        .form__label {
+            margin-right: margin(-4, rem);
         }
     }
     &__input {
@@ -34,24 +34,141 @@
         margin-bottom: margin(-3, rem);
         padding-left: pad(-3, em);
         position: relative;
-        transition: box-shadow ease-in 200ms;
+        transition: box-shadow ease-in 200ms
+        background-color ease-in 200ms;
         &:focus,
         &:hover {
             box-shadow: 0 .2rem .3rem fade-out($black, .75);
             transition: box-shadow ease-in 200ms;
         }
-        &:invalid {
+        &[required]:focus:invalid {
             background-color: lighten($danger, 40%);
+            transition: background-color ease-in 200ms;
+        }
+        &[required]:valid {
+            background-color: lighten($success, 40%);
+            transition: background-color ease-in 200ms;
+        }
+        &[required] {
+
         }
     }
-    &__submit{
-        background-color: $blue;
-        border-color: $blue;
+    &__submit {
+        background-color: $info;
+        border-color: darken($info,20%);
         color: #fff;
         max-width: 176px;
         &:hover {
-            background-color: darken($blue, 10%);
-            border-color: darken($blue,10%);
+            background-color: darken($info, 10%);
+            border-color: darken($info, 25%);
+        }
+        &--success{
+            background-color: $success;
+            border-color: $success;
+            &:hover {
+                background-color: $success;
+                border-color: $success;
+            }
+        }
+        &[disabled]{
+            cursor: auto;
+        }
+    }
+    &__inline {
+        /* Custom Radio Buttons */
+        &--radio {
+            .form__label{
+                margin-right: margin(2, rem);
+                position: relative;
+                &:after{
+                    content: '\f1db';
+                    @include font-icon(1.2em, $primary-color, 1.3);
+                    @include abs-vert-center;
+                        right: -1.5rem;
+                    z-index: z-index(4);
+                }
+                &:before{
+                    content: '\f058';
+                    @include font-icon(1.2em, $primary-color, 1.3);
+                    @include abs-vert-center;
+                    right: -1.5rem;
+                    transform: scale(.25);
+                    opacity: 0;
+                    z-index: z-index(5);
+                    transition: 300ms all ease-in-out;
+                }
+            }
+            .form__radio:checked + .form__label{
+                &:before{
+                    color: $success;
+                    font-size: 1.2em;
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                &:after{
+                    opacity: 0;
+                    transition-delay: 300ms;
+                }
+            }
+            .form__radio:focus + .form__label,
+            .form__label:focus{
+                text-decoration: underline;
+                text-decoration-color: $info;
+                &:after{
+                    color: $info;
+                }
+            }
+            .form__radio{
+                @include visually-hidden;
+            }
+        }
+        /* Custom Checkboxes */
+        &--checkbox {
+            .form__label{
+                margin-right: margin(2, rem);
+                position: relative;
+                &:after {
+                    content: '\f096';
+                    @include font-icon(1.2em, $primary-color, 1.3);
+                    @include abs-vert-center;
+                        right: -1.5rem;
+                    z-index: z-index(4);
+                }
+                &:before{
+                    content: '\f14a';
+                    @include font-icon(1.2em, $primary-color, 1.3);
+                    @include abs-vert-center;
+                        right: -1.5rem;
+                    transform: scale(.25);
+                    opacity: 0;
+                    transition: 250ms all ease-in-out;
+                    z-index: z-index(5);
+                }
+            }
+            .form__checkbox:checked + .form__label{
+                &:before{
+                    color: $success;
+                    font-size: 1.2em;
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                &:after{
+                    opacity: 0;
+                    transition-delay: 300ms;
+                }
+                
+            }
+            .form__checkbox:focus + .form__label,
+            .form__label:focus{
+                text-decoration: underline;
+                text-decoration-color: $info;
+                &:after{
+                    color: $info;
+                }
+            }
+            .form__checkbox{
+                @include visually-hidden;
+            }
         }
     }
     &__radio {
@@ -112,7 +229,7 @@
             >.form__label {
                 display: block;
             }
-            .form__fieldset{
+            .form__fieldset {
                 display: block;
             }
             .form__input,
