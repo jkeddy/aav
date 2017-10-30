@@ -4,7 +4,6 @@ Date: 10/23/2017
 Description: Mobile navigation functions.
 TODO:   Add accessibility        
 */
-
 function toggleNav(){
     var mainNav = document.getElementById('main-nav');
     var navOpen = mainNav.classList.contains('active');
