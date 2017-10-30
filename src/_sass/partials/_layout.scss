@@ -4,14 +4,16 @@
 }
 .container{
     display: grid;
-    grid-template-columns: .25fr 1fr 3fr 1fr .25fr;
-    grid-template-rows: 1fr;
-    grid-gap: 1rem;
+    grid-template-columns: [start] margin(-2,em) [main-start] 1fr 3fr [main-end] 1fr [end] margin(-2,em);
+    grid-gap: #{$space}rem;
     grid-template-areas:    "header header header header header"
                             " . main-nav article aside . "
                             "footer footer footer footer footer";
     @include media(">=screen-lg") {
-        grid-template-columns: 1fr 216px 700px 300px 1fr;
+        grid-template-columns: [start] .5fr [main-start] 216px 700px [main-end] 300px [end] .5fr;
+        grid-template-areas:    "header header header header header"
+        " . main-nav article aside . "
+        "footer footer footer footer footer";
         
     }
     @include media("<=screen-md") {
