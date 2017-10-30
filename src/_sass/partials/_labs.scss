@@ -1,17 +1,28 @@
+body{
+    background: $white;
+    background-image:linear-gradient(175deg, $white 0%,lighten($secondary-color,30%) 85%,lighten($secondary-color,40%) 100%);
+    color: lighten($black,35%);
+    font-family: "Noto Sans";
+    overflow-x: hidden;
+}
 h1,h2,h3,h4,h5,h6{
     font-family: "Noto Sans";
     font-weight: 100;
 }
-body{
-    background: $white;
-    color: lighten($black,35%);
-    font-family: "Noto Sans";
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+figure{
+    margin: 0;
 }
 .site-wrapper{
     
 }
 .container{
-    
+    padding-bottom: 500px;
 }
 .header{
     background: rgba($white,.5);
@@ -24,4 +35,49 @@ body{
 }
 .main-content{
     padding: 0 pad(5,rem);
+    text-align: center;
+}
+.labs-home-menu{
+    text-align: left;
+    margin: margin(1,rem) 0;
+    &__item{
+        $width: 700px;
+        align-items: center;
+        background: rgba($primary-color,1);
+        border-top: 1px solid lighten($primary-color,50%);
+        border-bottom: 1px solid lighten($primary-color,50%);
+        color: $white;
+        margin-bottom: margin(3,rem);
+        position: relative;
+        &:hover{
+            background: lighten($primary-color,5%);
+            &:before,
+            &:after{
+                background: lighten($primary-color,5%);
+            }
+        }
+        &:before,
+        &:after {
+            content  : '';
+            border-top: 1px solid lighten($primary-color,50%);
+            border-bottom: 1px solid lighten($primary-color,50%);
+            background : rgba($primary-color,1);
+            margin: auto;
+            position : absolute;
+            top      : -1px;
+            bottom   : -1px;
+            width    : 100vw;
+            z-index: z-index(4);
+        }
+        &:before {
+            right: 100%;            
+        }
+        &:after {
+            left: 100%;
+        }
+    }
+    &__title{
+        display: block;
+        font-size: 1.67em;
+    }
 }
