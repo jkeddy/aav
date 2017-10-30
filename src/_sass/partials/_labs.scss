@@ -1,0 +1,27 @@
+h1,h2,h3,h4,h5,h6{
+    font-family: "Noto Sans";
+    font-weight: 100;
+}
+body{
+    background: $white;
+    color: lighten($black,35%);
+    font-family: "Noto Sans";
+}
+.site-wrapper{
+    
+}
+.container{
+    
+}
+.header{
+    background: rgba($white,.5);
+    box-shadow: 0 0.05rem 0.2rem 0 rgba(0, 0, 0, .5);
+    padding: pad(-2,rem) pad(1,rem);
+    position: sticky;
+        top: 0;
+    width: 100vw;
+    z-index: z-index(13);
+}
+.main-content{
+    padding: 0 pad(5,rem);
+}
