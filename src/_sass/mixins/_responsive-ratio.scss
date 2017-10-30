@@ -4,16 +4,15 @@ Date: 10/12/2017
 Description: A responsive ratio mixin. Commonly used for videos. 
 See Miriam Suzanne's CodePen (https://codepen.io/mirisuzanne/pen/XRPzvY) for more information on the technique.
 */
-@mixin responsive-ratio($w,$h,$cwidth:false) {
-  $ratio: #{$h}/#{$w};
+@mixin responsive-ratio($h,$w,$cwidth:false) {
+  $ratio: $h/$w;
   @if $cwidth{
     height: calc(100vw * #{$ratio});
     max-height: calc(#{$cwidth} * #{$ratio});
-    width: 100%;
     max-width: #{$cwidth};
-    width: #{$cwidth};
+    width: 100%;
   } @else {
-    height: calc(100vw*#{$ratio});
+    height: calc(100vw * #{$ratio});
     width: 100vw;
   }
 } 
