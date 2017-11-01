@@ -5,7 +5,7 @@
   {{>head}}
 </head>
 
-<body id="homepage" class="home">
+<body id="" class="">
   <div class="site-wrapper">
     <main class="container">
       {{>header}}
@@ -24,7 +24,10 @@
       <!-- /left -->
       <!--START OF LEFT SIDE STUFF-->
       <section class="main-content">
+          <nav class="breadcrumbs"></nav>
         <article class="main-content__article">
+            <h1>{{{ title }}}</h1>
+              <p class="byline"><strong>Section Editor</strong>: {{author}}</p>
           {{{ contents }}}
         </article>
         <!--/popTopics-->

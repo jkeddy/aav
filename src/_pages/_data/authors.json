@@ -1,0 +1,551 @@
+[
+    {
+        "name":"Ron Walker",
+        "qualifications":"",
+        "title":"Publisher",
+        "image":"http://cdna.allaboutvision.com/i/masthead/walker-150x200.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/+RonWalkerSD",
+        "email":"",
+        "role":"Publishing Team"
+    },
+    {
+        "name":"Tom Meinert",
+        "qualifications":"",
+        "title":"Associate Publisher",
+        "image":"http://cdna.allaboutvision.com/i/masthead/meinert-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Publishing Team"
+    },
+    {
+        "name":"Liz Segre",
+        "qualifications":"",
+        "title":"Editorial Director",
+        "image":"http://cdna.allaboutvision.com/i/masthead/segre-150x200.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/+LizSegre",
+        "email":"",
+        "role":"Editorial Team"
+    },
+    {
+        "name":"Gary Heiting",
+        "qualifications":"OD",
+        "title":"Senior Editor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/heiting-150x200.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/107444293839372632254",
+        "email":"",
+        "role":"Editorial Team"
+    },
+    {
+        "name":"Stephen Bagi",
+        "qualifications":"",
+        "title":"Design Director",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Editorial Team"
+    },
+    {
+        "name":"Kara Perricone",
+        "qualifications":"",
+        "title":"Practitioner Relations Coordinator",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Editorial Team"
+    },
+    {
+        "name":"Matt Grubb",
+        "qualifications":"",
+        "title":"Advertising Operations",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Editorial Team"
+    },
+    {
+        "name":"Richard Adler",
+        "qualifications":"MD, FACS",
+        "title":"Section Editor",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-adler-150x200.jpg",
+        "blurb":"Dr. Richard A. Adler, member of the All About Vision Editorial Advisory Board",
+        "gplus":"",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Vance Thompson",
+        "qualifications":"MD, FACS",
+        "title":"Section Editor",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-thompson-150x200.jpg",
+        "blurb":"Dr. Vance Thompson, member of the All About Vision Editorial Advisory Board",
+        "gplus":"https://plus.google.com/u/0/107505180950031699330",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Joseph T. Barr",
+        "qualifications":"OD, MS, FAAO",
+        "title":"Section Editor",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-barr-100x133.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Brian S. Boxer Wachler",
+        "qualifications":"MD",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-boxer-wachler-150x200.jpg",
+        "blurb":"Dr. Brian Boxer Wachler, member of the All About Vision Editorial Advisory Board",
+        "gplus":"https://plus.google.com/+DrBoxerWachler",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Brian Chou",
+        "qualifications":"OD, FAAO",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-chou-150x200.jpg",
+        "blurb":"Dr. Brian Chou, member of the All About Vision Editorial Advisory Board",
+        "gplus":"https://plus.google.com/+BrianChouOD",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Michael DePaolis",
+        "qualifications":"OD, FAAO",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-depaolis-100x133.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Burt Dubow",
+        "qualifications":"OD, FAAO",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-dubow-150x200.jpg",
+        "blurb":"Dr. Burt Dubow, member of the All About Vision Editorial Advisory Board",
+        "gplus":"https://plus.google.com/115367086714459672066",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Pravin Dugel",
+        "qualifications":"MD",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-dugel-150x200.jpg",
+        "blurb":"Dr. Pravin U. Dugel, member of the All About Vision Editorial Advisory Board",
+        "gplus":"",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Robert L. Epstein",
+        "qualifications":"MD, FACS",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-epstein-robert-100x133.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Valerie Kattouf",
+        "qualifications":"OD, FAAO",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-kattouf-100x133.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":""
+    },
+    {
+        "name":"Chris A. Knobbe",
+        "qualifications":"MD",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-knobbe-150x200.jpg",
+        "blurb":"Dr. Chris Knobbe, member of the All About Vision Editorial Advisory Board",
+        "gplus":"https://plus.google.com/108946292611290767854",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Mark Mattison-Shupnick",
+        "qualifications":"ABOM",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-mattison-shupnick-100x133.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Craig W. Norman",
+        "qualifications":"FCLSA",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-norman-150x200.jpg",
+        "blurb":"Craig Norman, FCLSA, member of the All About Vision Editorial Advisory Board",
+        "gplus":"",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Charles B. Slonim",
+        "qualifications":"MD",
+        "title":"",
+        "image":"http://cdna.allaboutvision.com/i/advisors/ab-slonim-100x133.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Advisory Board"
+    },
+    {
+        "name":"Edward S. Bennett",
+        "qualifications":"OD, MSEd",
+        "title":"Special Contributor and Content Reviewer",
+        "image":"http://cdna.allaboutvision.com/i/masthead/bennett-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"John Berdahl",
+        "qualifications":"MD",
+        "title":"Special Contributor and Content Reviewer",
+        "image":"http://cdna.allaboutvision.com/i/masthead/berdahl-john-150x190.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Joseph L. Bruneni",
+        "qualifications":"FNAO",
+        "title":"Special Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/bruneni-150x206.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Laurie Capogna",
+        "qualifications":"OD",
+        "title":"Special Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/capogna-laurie-150x200.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/+LaurieCapognaeyefoods",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Liz Martinez DeFranco",
+        "qualifications":"ABOC, NCLC",
+        "title":"Technical Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/defranco-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Arthur B. Epstein",
+        "qualifications":"OD, FAAO",
+        "title":"Contributor & Content Reviewer",
+        "image":"http://cdna.allaboutvision.com/i/masthead/epstein-150x218.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/+ArtEpstein",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Mary Lou Jackson",
+        "qualifications":" MD",
+        "title":"Content Reviewer",
+        "image":"http://cdna.allaboutvision.com/i/masthead/jackson-mary-lou-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Jason Jedlicka",
+        "qualifications":"OD, FAAO",
+        "title":"Special Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/jedlicka-jason-150x200.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/101138718463188147373",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Shereen Jegtvig",
+        "qualifications":"Certified Nutrition Specialist (CNS)",
+        "title":"Contributing Writer",
+        "image":"http://cdna.allaboutvision.com/i/masthead/jegtvig-180x190.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/+ShereenJegtvig",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Sayed Jovkar",
+        "qualifications":"MD, FICS",
+        "title":"Content Reviewer",
+        "image":"http://cdna.allaboutvision.com/i/masthead/jovkar-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Jennifer Palombi",
+        "qualifications":"OD",
+        "title":"Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/palombi-129x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Barbara Pelletier",
+        "qualifications":"OD",
+        "title":"Special Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/pelletier-barbara-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"James E. Sheedy",
+        "qualifications":"OD, PhD, FAAO",
+        "title":"Special Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/sheedy-james-150x186.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Donald S. Teig",
+        "qualifications":"OD, FAAO",
+        "title":"Content Reviewer",
+        "image":"http://cdna.allaboutvision.com/i/masthead/teig-donald-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"William B. Trattler",
+        "qualifications":"MD",
+        "title":"Special Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/trattler-140x196.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/105578607494537365456",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Geoffrey Tufty",
+        "qualifications":"MD",
+        "title":"Content Reviewer",
+        "image":"http://cdna.allaboutvision.com/i/masthead/tufty-geoffrey-160x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Larry K. Wan",
+        "qualifications":"OD",
+        "title":"Special Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/wan-larry-150x144.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Expert Contributor"
+    },
+    {
+        "name":"Diane Donofrio Angelucci",
+        "qualifications":"",
+        "title":"Special Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/angelucci-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Gretchyn Bailey",
+        "qualifications":"NCLC, FAAO",
+        "title":"Eye Health Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/bailey-gretchyn-150x150.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/115408710247498703519",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Nichole Baxter",
+        "qualifications":"",
+        "title":"Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/baxter-nichole-150x200.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/+NicholeBeebe",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Frank Celia",
+        "qualifications":"",
+        "title":"Contributing Writer",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Keith Croes",
+        "qualifications":"",
+        "title":"Contributing Writer",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Nancy Del Pizzo",
+        "qualifications":"",
+        "title":"Contact Lens Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/delpizzo-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Marilyn Haddrill",
+        "qualifications":"",
+        "title":"Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/haddrill-150x200.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/109560450638145917357",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Amy Hellem",
+        "qualifications":"",
+        "title":"Eye Health Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/hellem-amy-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Jessica Hill",
+        "qualifications":"",
+        "title":"Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/hill-jessica-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Judith Lee",
+        "qualifications":"",
+        "title":"Eye Health Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/lee-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Sean McKinney",
+        "qualifications":"",
+        "title":"Contributing Writer",
+        "image":"http://cdna.allaboutvision.com/i/masthead/mckinney-150x200.jpg",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Erinn Morgan",
+        "qualifications":"",
+        "title":"Fashion Contributor",
+        "image":"http://cdna.allaboutvision.com/i/masthead/morgan-150x200.jpg",
+        "blurb":"",
+        "gplus":"https://plus.google.com/u/0/107704986442363139771",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Rob Murphy",
+        "qualifications":"",
+        "title":"Contributing Editor",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Michelle Stephenson",
+        "qualifications":"",
+        "title":"Contributing Writer",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Madeleine Vessel",
+        "qualifications":"",
+        "title":"Contributing Writer",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Christie Walker",
+        "qualifications":"",
+        "title":"Contributing Editor",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    },
+    {
+        "name":"Gina White",
+        "qualifications":"",
+        "title":"Contributor",
+        "image":"",
+        "blurb":"",
+        "gplus":"",
+        "email":"",
+        "role":"Additional Contributor"
+    }
+]

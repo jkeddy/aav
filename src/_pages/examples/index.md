@@ -2,12 +2,12 @@
 layout: aav-home.html 
 title: All About Vision - Complete Guide To Vision and Eye Care 
 ---
-# An H1 Worthy Headline
-## An H2 Worthy Headline
-### An H3 Worthy Headline
-#### An H4 Worthy Headline
-##### An H5 Worthy Headline
-###### An H6 Worthy Headline
+<h1>An H1 Worthy Headline</h1>
+<h2>An H2 Worthy Headline</h2>
+<h3>An H3 Worthy Headline</h3>
+<h4>An H4 Worthy Headline</h4>
+<h5>An H5 Worthy Headline</h5>
+<h6>An H6 Worthy Headline</h6>
 
 <p class="main-content__byline">Typical byline</p>
 <div class="content-nav">
@@ -20,7 +20,7 @@ title: All About Vision - Complete Guide To Vision and Eye Care
     <a class="content-nav__link" href="#internal-links">Internal Page Nav Link</a>
 </div>
 
-## Mininavs Aren't The Worst Anymore!
+<h2>Mininavs Aren't The Worst Anymore!</h2>
 
 <nav class="toggle toggle--mininav">
     <button class="button button--primary button--arrow button--arrow-right" data-a11y-toggle="mini-nav-dryeye">More Dry Eye Articles</button>
@@ -84,7 +84,9 @@ title: All About Vision - Complete Guide To Vision and Eye Care
         </div>
     </div>
 </nav>
-## Make boxes
+
+<h2>Make Boxes</h2>
+
 <div class="box">
     <p class="box__title">Box Title</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales neque purus, vitae varius orci convallis in. Quisque
@@ -96,7 +98,9 @@ title: All About Vision - Complete Guide To Vision and Eye Care
         Praesent arcu purus, sollicitudin ac lorem ut, iaculis rutrum sapien.
     </p>
 </div>
-### There's two of 'em!
+
+<h3>There's two of 'em!</h3>
+
 <div class="box box--border box--sm">
     <p class="box__title">Box Title</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales neque purus, vitae varius orci convallis in. Quisque
@@ -108,8 +112,11 @@ title: All About Vision - Complete Guide To Vision and Eye Care
         Praesent arcu purus, sollicitudin ac lorem ut, iaculis rutrum sapien.
     </p>
 </div>
-## Position your images!!!
-### Right!
+
+<h2>Position your images!!!</h2>
+
+<h3>Right!</h3>
+
 <p>
     <img class="elem-right" src="http://via.placeholder.com/350x150">Nunc congue lorem vel lorem venenatis, eu convallis lorem imperdiet. Nullam rutrum posuere eros a dignissim. Suspendisse
     non diam et augue ullamcorper fringilla. In vestibulum urna nec luctus iaculis. Curabitur vitae purus sit amet lectus
@@ -117,7 +124,9 @@ title: All About Vision - Complete Guide To Vision and Eye Care
     scelerisque leo mollis in. Vestibulum aliquet mauris arcu. In viverra sapien tempus ipsum placerat pulvinar. Suspendisse
     a libero gravida, dictum felis id, pulvinar massa. Etiam vitae turpis libero. Maecenas fringilla aliquet augue sed vestibulum.
     Nulla ac lobortis velit, non consectetur purus.</p>
-### Left! 
+
+<h3>Left!</h3>
+
 <p>
     <img class="elem-left" src="http://via.placeholder.com/350x250">Nunc congue lorem vel lorem venenatis, eu convallis lorem imperdiet. Nullam rutrum posuere eros a dignissim. Suspendisse
     non diam et augue ullamcorper fringilla. In vestibulum urna nec luctus iaculis. Curabitur vitae purus sit amet lectus
@@ -127,7 +136,9 @@ title: All About Vision - Complete Guide To Vision and Eye Care
     Nulla ac lobortis velit,
     <strong>Watch your widows!</strong>
 </p>
-### Centered!
+
+<h3>Centered!</h3>
+
 <p>
     <strong>Center your images around gibberish that I've randomly generated to make a point! No default margins though so add those
         with our m-side-# classes.</strong> eu convallis lorem imperdiet. Nullam rutrum posuere eros a dignissim. Suspendisse
@@ -173,7 +184,9 @@ title: All About Vision - Complete Guide To Vision and Eye Care
 <p class="bg-success text-white">
     And your padding
 </p>
-## Make a Form. Get that Data!
+
+<h2>Make a Form. Get that Data!</h2>
+
 <form action="#form-default" class="form" id="form-default">
     <label class="form__label" for="form-default-full-name">Full Name</label>
     <input class="form__input" id="form-default-full-name" name="full-name" placeholder="eg. Jerry Smith" required type="text">
@@ -225,7 +238,7 @@ title: All About Vision - Complete Guide To Vision and Eye Care
     <input class="button button--submit form__submit" type="submit" value="Send">
 </form>
 
-### Build your form fancy like with the grid system!
+<h3>Build your form fancy like with the grid system!</h3>
 <form action="#form-fancy" class="form" id="form-fancy">
     <div class="row row--justify-center">
         <div class="col col-4">
@@ -293,7 +306,7 @@ title: All About Vision - Complete Guide To Vision and Eye Care
         </div>
     </div>
 </form>
-## Get your share on!</h2>
+<h2>Get your share on!</h2>
 <div class="main-content__social">
     <a class="social-icon social-icon--lg social-icon--round social-icon--fb" href="https://www.facebook.com/allaboutvision"
         target="_blank">
@@ -312,7 +325,7 @@ title: All About Vision - Complete Guide To Vision and Eye Care
     </a>
     <span class="main-content__social-text">Like This Page? Please Share!</span>
 </div>
-## Build something insane with 12 columns</h2>
+<h2>Build something insane with 12 columns</h2>
 <div class="row row--eq-height">
     <div class="bg-black col col-1 p-t-3 p-b-3">
         <span class="text-white text-center">Why?</span>

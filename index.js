@@ -1,38 +1,50 @@
-var Metalsmith  = require('metalsmith');
-var collections = require('metalsmith-collections');
+const Metalsmith  = require('metalsmith');
 const collect = require('metalsmith-auto-collections');
-var layouts     = require('metalsmith-layouts');
-var markdown    = require('metalsmith-markdown');
-var permalinks  = require('metalsmith-permalinks');
+const layouts     = require('metalsmith-layouts');
+const markdown    = require('metalsmith-markdown');
+const permalinks  = require('metalsmith-permalinks');
+const watch = require('metalsmith-watch');
+const helpers = require('metalsmith-register-helpers')
+const metadata = require('metalsmith-metadata');
 
 
-Metalsmith(__dirname)         // __dirname defined by node.js:
-                              // name of current working directory
-  .metadata({                 // add any variable you want
-                              // use them in layout-files
+Metalsmith(__dirname)
+
+  .metadata({
     sitename: "All About Vision Labs",
     siteurl: "http://labs.allaboutvision.com/",
-    description: "Storage for allaboutvision.com ideas, frameworks, UI elements, and advertising.",
-    generatorname: "Metalsmith",
-    generatorurl: "http://metalsmith.io/"
+    description: "Storage for allaboutvision.com ideas, frameworks, UI elements, and advertising."
   })
-  .source('./src/_pages')            // source directory
-  .destination('./dist')     // destination directory
-  .clean(true)                // clean destination before
+  .source('./src/_pages')
+  .destination('./dist')
+  .clean(false)
+  .use(metadata({
+      authors: '_data/authors.json'
+    }
+  ))
   .use(collect({
     pattern: ['**/*.md','!*.md']
   }
-  ))                        // use `collections.posts` in layouts
-  .use(markdown())            // transpile all md into html
-  .use(permalinks({           // change URLs to permalink URLs
-    relative: false           // put css only in /css
+  ))
+  .use(markdown())
+  .use(permalinks({
+    relative: false
   }))
-  .use(layouts({              // wrap layouts around html
-    engine: 'handlebars',       // use the layout engine you like
+  .use(layouts({
+    engine: 'handlebars',
     directory: 'src/_templates',
     partials: 'src/_templates/_partials',
     partialExtension: ".html"
   }))
-  .build(function(err) {      // build process
-    if (err) throw err;       // error handling is required
+  .use(helpers({
+    directory: "src/_templates/_helpers"
+  }))
+  .use(watch({
+    paths: {
+      "${source}/**/*":true,
+      "src/_templates/**/*": "**/*",
+    }
+  }))
+  .build(function(err) {
+    if (err) throw err;
   });

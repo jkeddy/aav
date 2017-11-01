@@ -20,7 +20,10 @@
     "metalsmith-collections": "^0.9.0",
     "metalsmith-layouts": "^1.8.1",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metadata": "^0.0.4",
     "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-register-helpers": "^0.4.0",
+    "metalsmith-watch": "^1.0.3",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.1.1",
@@ -35,9 +38,9 @@
     "watch:css": "node-sass --source-map true -w src/_sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
     "watch:bundle": "watchify ./src/_js/*.js -o 'uglifyjs -c --source-map > ./dist/assets/js/main.js' -v",
     "browser": "browser-sync start --server dist",
-    "metalsmith": "node index.js",
+    "metalsmith": "node index.js && node-sass --source-map true src/_sass/labs.scss -o dist/assets/css/",
     "build": "concurrently \"yarn build:css\" \"yarn metalsmith\" \"yarn browser\"",
-    "watch": "concurrently \"yarn watch:css\" \"yarn watch:bundle\""
+    "watch": "concurrently \"yarn watch:css\" \"yarn metalsmith\" \"yarn browser\""
   },
   "config": {
     "port": "8080"
