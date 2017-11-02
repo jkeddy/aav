@@ -17,7 +17,7 @@ npm manifest:
   {
     "name": "AllAboutVision.com",
     "version": "1.0.0",
-    "description": "Front end development on the AllAboutVision.com property",
+    "description": "Front end development on the AllAboutVision.com and associated properties including AAV Labs.",
     "main": "main.js",
     "repository": "https://github.com/jkeddy/aav.git",
     "author": "<jeff.keddy@gmail.com>",
@@ -39,8 +39,8 @@ npm manifest:
     },
     "scripts": {
       "build:clean": "rimraf dist/assets/css/, /dist/assets/js/_js/",
-      "build:css": "node-sass --source-map true src/_sass/style.scss -o dist/assets/css/ && postcss dist/assets/css/*.css --use autoprefixer -d dist/assets/css/",
-      "build:bundle": "browserify ./src/_js/main.js",// | uglifyjs -c --source-map -o ./dist/assets/js/main.js",
+      "build:css": "node-sass --source-map true src/_sass/style.scss -o dist/assets/css/ && postcss dist/assets/css/style.css --use autoprefixer -d dist/assets/css/",
+      "build:bundle": "uglifyjs ./src/_js/*.js -c --source-map -o ./dist/assets/js/main.js", 
       "watch:css": "node-sass --source-map true -w src/_sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
       "watch:bundle": "watchify ./src/_js/*.js -o 'uglifyjs -c --source-map > ./dist/assets/js/main.js' -v",
       "browser": "browser-sync start --server dist",
@@ -51,6 +51,7 @@ npm manifest:
       "port": "8080"
     }
   }
+  //browserify ./src/_js/*.js |
 
 yarn manifest: 
   No manifest
@@ -3616,7 +3617,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
 Trace: 
-  SyntaxError: /Users/jeffk/aav/package.json: Unexpected token / in JSON at position 954
+  SyntaxError: /Users/jeffk/aav/package.json: Unexpected token / in JSON at position 1522
       at JSON.parse (<anonymous>)
       at /usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:770:59
       at Generator.next (<anonymous>)

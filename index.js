@@ -19,7 +19,12 @@ Metalsmith(__dirname)
   .destination('./dist')
   .clean(false)
   .use(metadata({
-      authors: '_data/authors.json'
+    "files":{
+      authors: './src/_data/authors.json'
+    },
+    "config": {
+      isExternalSrc: true
+    }
     }
   ))
   .use(collect({
