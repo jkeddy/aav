@@ -26,10 +26,11 @@
     "build:css": "node-sass --source-map true src/_sass/style.scss -o dist/assets/css/ && postcss dist/assets/css/style.css --use autoprefixer -d dist/assets/css/",
     "build:bundle": "browserify ./src/_js/*.js | uglifyjs -c --source-map -o ./dist/assets/js/main.js",
     "watch:css": "node-sass --source-map true -w src/_sass/style.scss -o dist/assets/css/ && cleancss -o dist/assets/css/style.min.css dist/assets/css/style.css",
-    "watch:bundle": "watchify ./src/_js/*.js -o 'uglifyjs -c --source-map > ./dist/assets/js/main.js' -v",
+    "watch:bundle": "uglifyjs ./src/_js/*.js -c --source-map -o ./dist/assets/js/main.js",
     "browser": "browser-sync start --server dist",
     "build": "yarn build:css && yarn build:bundle",
-    "watch": "concurrently \"yarn watch:css\" \"yarn watch:bundle\""
+    "watch": "concurrently \"yarn watch:css\" \"yarn watch:bundle\"",
+    "server": "yarn build:clean && concurrently \"yarn watch:css\" \"yarn watch:bundle\" \"yarn browser\""
   },
   "config": {
     "port": "8080"
