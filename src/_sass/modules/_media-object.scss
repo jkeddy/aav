@@ -9,8 +9,14 @@
     &--right, &--reverse{
         flex-direction: row-reverse;
     }
+    &--center{
+        align-items: center;
+    }
     &__img{
         margin-right: margin(-2,rem);
+        &--sm{
+            max-width: 56px;
+        }
     }
     &__body{
         flex: 1;
