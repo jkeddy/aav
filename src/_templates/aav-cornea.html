@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width">
+    <title>AAV Cornea UI Framework - {{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/cornea.css" media="all">
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <main class="container">
+            <nav class="main-nav">
+                <a class="main-nav__logo" href="/">
+                    <img src="assets/img/cornea-logo.png" alt="Cornea UI Framework">
+                </a>
+                <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                        <button class="main-nav__toggle">Functions</button>
+                        <ul class="main-nav__sub-list">
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Font Controls</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Margin/Padding</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Z-Index</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item">
+                        <button class="main-nav__toggle">Mixins</button>
+                        <ul class="main-nav__sub-list">
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Breakpoints</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Font Styling</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Hardware Acceleration</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Placeholder Text</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Position Controls</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Responsive Embeds</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">A11y Hiding</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item">
+                        <button class="main-nav__toggle">Modules</button>
+                        <ul class="main-nav__sub-list">
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Buttons</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Content Box</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Details</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Dialogs</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Forms</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Grid</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Media Object</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Social Icons</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Tables</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Text Box</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Typography</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item">
+                        <button class="main-nav__toggle">Variables</button>
+                        <ul class="main-nav__sub-list">
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Breakpoints</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Colors</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Spacing</a>
+                            </li>
+                            <li class="main-nav__sub-item">
+                                <a href="" class="main-nav__link">Typography</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <article class="main-content">
+                <div class="hero">
+                    <h1>{{ title }}</h1>
+                    <span class="hero__sub">{{sub-title}}</span>
+                </div>
+
+                {{{ contents }}}
+            </article>
+            <footer class="footer">
+                <p class="text-center">
+                    <small>&copy; 2000-2017 AAV Media, LLC.</small>
+                </p>
+            </footer>
+        </main>
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
