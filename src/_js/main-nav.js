@@ -46,5 +46,5 @@ for (var i = 0; i < navToggle.length; i++) {
 }
 var subNavToggle=document.getElementsByClassName('main-nav__sub-nav-toggle');
 for (var j = 0; j < subNavToggle.length; j++) {
-    subNavToggle[j].addEventListener('click',toggleSubNav);
+    subNavToggle[j].addEventListener('click,mouseup',toggleSubNav);
 }

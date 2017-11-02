@@ -22,11 +22,15 @@ Description:    Helper classes for AAV editorial content.
         margin-right: auto;
     }
     &-full {
-        /* Strange */
-        margin-left: calc(-48vw + 50%);
-        margin-right: calc(-52vw + 50%);
+        margin-left: calc(-50vw + 50%); // Odd percentage due to a CSS Grid rendering issue.
+        margin-right: calc(-50vw + 50%);
         max-width: none;
         width: 100vw;
+        @include media (">=screen-sm","<=tablet"){
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+        }
     }
 }
 

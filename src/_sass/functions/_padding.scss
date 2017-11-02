@@ -1,5 +1,10 @@
-@function pad($num,$type) {
-    $val: map-get($spacing, $num);
+@function pad($num,$type,$cwidth:0) {
+    $val:default;
+    @if $cwidth>0{
+        $val: $cwidth / $space;
+    }@else{
+        $val: map-get($spacing, $num);
+    }
     @if $type==rem or $type==false {
         $val:#{$val}rem;
     }@else if $type==em{
