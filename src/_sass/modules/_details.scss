@@ -53,7 +53,9 @@ Description:    Simple toggle for boxes. Named details after the default element
             display: block;
         }
         .toggle__content{
-            padding-top:pad(5,rem);
+            @include media(">=screen-sm"){
+                padding-top:pad(5,rem);
+            }
             &[aria-hidden="false"]{
                 .row,.col{
                     margin-bottom: 0;

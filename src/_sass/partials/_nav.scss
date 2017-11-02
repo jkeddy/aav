@@ -132,7 +132,7 @@ $mobileNavSize: 100 / $space;
     }
     @include media("<=screen-sm") {
       display: block;
-      line-height: 2.3;
+      line-height: 2.5;
       padding-left: .25em;
     }
   }
@@ -196,10 +196,12 @@ $mobileNavSize: 100 / $space;
       @include media("<=screen-sm"){
         background: none;
         border: none;
+        display: block;
         font-size: $lg;
-        margin-right: margin(-2,rem);
+        margin-right: .5rem;
         &.active{
           color: $white;
+          margin-right: .4rem;
         }
       }
     }

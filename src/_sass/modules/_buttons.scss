@@ -67,6 +67,7 @@
 /* Arrow buttons. Used for mininav toggles currently. Separate for easy removal. */
 
 .button--arrow {
+    @include media(">=screen-sm"){
     $s: 18px !default; // Implied use is 36px tall button
     border: none;
     position: relative;
@@ -105,4 +106,5 @@
             }
         }
     }
+}
 }
