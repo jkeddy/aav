@@ -1,3 +1,169 @@
-.table{
-    
+$light-border: 1px solid lighten($grey, 2%);
+$dark-border: 2px solid $grey;
+.data-table {
+    /*-webkit-overflow-scrolling: touch; // scrolling shadows
+    background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+    background-size: 1em 100%, 1em 100%;
+    background-attachment: scroll, scroll;
+    background-repeat: no-repeat;*/
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: inline-block;
+    @include font-sans($default, false, false, 1.3);
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    vertical-align: top;
+    &--sm {
+        font-size: $sm;
+    }
+    &--md {
+        font-size: $md;
+    }
+    &--lg {
+        font-size: $lg;
+    }
+    &--xl {
+        font-size: $xl;
+    }
+    &__caption {
+        font-size: 1.2em;
+        margin-bottom: margin(-3, rem);
+        text-align: left;
+
+        /*background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        background-size: 1.2em 100%;*/
+    }
+    &__head {
+        border-bottom: $dark-border;
+        font-weight: bold;
+        text-align: left;
+        .data-table__cell {
+            background: lighten($grey, 4%);
+            /*&:first-of-type {
+                background-image: linear-gradient(to right, lighten($grey, 4%) 50%, rgba(255, 255, 255, 0) 100%);
+                background-repeat: no-repeat;
+                background-size: 1.2em 100%;
+            }
+            &:last-of-type {
+                background-image: linear-gradient(to left, lighten($grey, 4%) 50%, rgba(255, 255, 255, 0) 100%);
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+                background-size: 1.2em 100%;
+            }*/
+        }
+    }
+    &__body {
+        //background: $white;
+    }
+    &__row {
+        border-bottom: $light-border;
+        &--right {
+            text-align: right;
+        }
+        /*&:first-child {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: no-repeat;
+            background-size: 1.2em 100%;
+        }
+        &:last-child {
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+            background-size: 1.2em 100%;
+        }*/
+        .data-table__cell:first-of-type {
+            border-right: $light-border;
+        }
+    }
+    &__cell {
+        padding: pad(-5, rem);
+        &--left {
+            text-align: left;
+        }
+        &--right {
+            text-align: right;
+        }
+        /*&:first-child {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: no-repeat;
+            background-size: 1.2em 100%;
+        }
+        &:last-child {
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+            background-size: 1.2em 100%;
+        }*/
+    }
+    &__foot {
+        .data-table__cell {
+            background: darken($grey, 8%);
+            font-weight: bold;
+            &:first-of-type {
+                border-right: 1px solid darken($grey, 12%);
+            }
+            /*&:first-of-type {
+                border-right: 1px solid darken($grey, 12%);
+                background-image: linear-gradient(to right, darken($grey, 8%) 50%, rgba(255, 255, 255, 0) 100%);
+                background-repeat: no-repeat;
+                background-size: 1.2em 100%;
+            }
+            &:last-of-type {
+                background-image: linear-gradient(to left, darken($grey, 8%) 50%, rgba(255, 255, 255, 0) 100%);
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+                background-size: 1.2em 100%;
+            }*/
+        }
+    }
+    &--flip{
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        .data-table__caption{
+            width: 100%;
+        }
+        .data-table__head{
+            border-bottom: none;
+            display: flex;
+            flex-shrink: 0;
+            min-width: min-content;
+            .data-table__cell{
+                border-right: $dark-border;
+            }
+        }
+        .data-table__foot{
+            display: flex;
+            flex-shrink: 0;
+            min-width: min-content;
+            .data-table__row .data-table__cell:first-of-type{
+                border-bottom: 1px solid darken($grey, 12%);
+            }
+        }
+        .data-table__body{
+            display: flex;
+            flex: 1;
+            position: relative;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        .data-table__row{
+            border-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            min-width: min-content;
+            flex-shrink: 0;
+            .data-table__cell:first-of-type{
+                border-bottom: $light-border;
+            }
+        }
+        .data-table__cell{
+            border-bottom: 0;  
+            background-image: none;
+            display: block;
+        }
+    }
 }
