@@ -39,7 +39,7 @@
     "watch:bundle": "uglifyjs ./src/_js/*.js -c --source-map -o ./dist/assets/js/main.js",
     "browser": "browser-sync start --server dist",
     "server": "yarn build:clean && concurrently \"yarn watch:css\" \"yarn watch:bundle\" \"yarn browser\"",
-    "metalsmith": "node index.js && node-sass --source-map true src/_sass/labs.scss -o dist/assets/css/",
+    "metalsmith": "node index.js && node-sass --source-map true src/_sass/cornea.scss -o dist/assets/css/",
     "build": "concurrently \"yarn build:css\" \"yarn metalsmith\" \"yarn browser\"",
     "watch": "concurrently \"yarn watch:css\" \"yarn metalsmith\" \"yarn browser\""
   },
