@@ -1,5 +1,12 @@
+/* Sizes */
 $default: 1rem !default;
 $sm: .8rem !default;
 $md: 1.1rem !default;
 $lg: 1.2rem !default;
 $xl: 1.4rem !default;
+
+/* Font Faces */
+$sans: 'Open Sans', sans-serif !default;
+$serif: 'Bitter', Times New Roman, serif !default;
+$icon: FontAwesome, "FontAwesome", "Font Awesome" !default;
+$mono: 'Source Code Pro', monospace !default;

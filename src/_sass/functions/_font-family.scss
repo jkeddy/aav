@@ -5,10 +5,6 @@ Description: Pass in keywords, receive fonts.
 */
 
 @function font-family($family: sans) {
-    $sans: 'Open Sans', sans-serif;
-    $serif: 'Bitter', Times New Roman, serif;
-    $icon: FontAwesome, "FontAwesome", "Font Awesome";
-  
     $family: to_lower_case($family);
     $families: (
       // Sans Serif synonyms
