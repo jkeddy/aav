@@ -1,6 +1,6 @@
 .text-box{
     border-bottom: $grey-border;
-    color: #fff;
+    @include font-sans(1rem,$white,600,1.7)
     margin-left: auto;
     margin-right: auto;
     text-transform: uppercase;
@@ -8,13 +8,16 @@
     &__body{
         background: $red;
         display: inline-block;
-        @include font-sans(1em,false,false,1.7)
         margin: 0;
         padding-left: pad(-3,em);
         padding-right: pad(-3,em);
     }
     &--border{
+        color: $black;
         border-top: $grey-border;
+        .text-box__body{
+            background: none;
+        }
     }
     &--green{
         .text-box__body{
