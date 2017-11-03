@@ -2,7 +2,6 @@
 CONFIG MODULES & FUNCTIONS
 ----------------------------------*/
 @import '_breakpoints.scss';
-
 @import '_normalize.scss';
 @import '_box-sizing.scss';
 @import '_clearfix.scss';
@@ -15,6 +14,7 @@ CONFIG MODULES & FUNCTIONS
 @import '_social-icon.scss';
 @import '_media-object.scss';
 @import '_content-box.scss';
+//@import '_tables.scss';
 @import '_responsive-video.scss';
 @import '_advertising.scss';
 @import '_details.scss';
