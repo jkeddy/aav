@@ -12,8 +12,9 @@
         }
     }
     &__article {
-        >* {
+        > * {
             margin-bottom: margin(1, rem);
+            margin-top: 0;
         }
     }
     &__title {
