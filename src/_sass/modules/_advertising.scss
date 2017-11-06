@@ -1,5 +1,6 @@
-.monKey{
-    @include media("<=tablet") {
-        display: none;
+.aavd{
+    &:before{
+        content:url('http://cdnb.allaboutvision.com/i/pan-tone.png');
+        display: block;
     }
 }
