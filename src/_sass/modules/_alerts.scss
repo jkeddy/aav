@@ -3,47 +3,47 @@
     border-width: 2px;
     border-style: solid;
     padding: pad(-2,em);
-    &__primary{
+    &--primary{
         border-color: $primary-color;
         background: lighten($primary-color, 70%);
         color: $primary-color;
     }
-    &__secondary{
+    &--secondary{
         border-color: darken($secondary-color,20%);
         background: lighten($secondary-color, 38%);
         color: darken($secondary-color,20%);
     }
-    &__success{
+    &--success{
         border-color: $success;
         background: lighten($success, 50%);
         color: $success;
     }
-    &__warning{
+    &--warning{
         color: darken($warning,15%);
         background: lighten($warning, 45%);
         color: darken($warning,15%);
     }
-    &__danger{
+    &--danger{
         border-color: $danger;
         background: lighten($danger, 45%);
         color: $danger;
     }
-    &__info{
+    &--info{
         border-color: $info;
         background: lighten($info, 55%);
         color: $info;
     }
-    &__light{
+    &--light{
         border: none;
         background: lighten($light, 70%);
         color: darken($light,30%);
     }
-    &__dark{
+    &--dark{
         border-color: $dark;
         background: lighten($dark, 70%);
         color: $dark;
     }
-    &__link{
+    &--link{
         font-weight: bold;
         text-decoration: none;
         &:hover{
