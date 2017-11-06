@@ -1,0 +1,56 @@
+.alert{
+    @include font-sans(1rem, $text-color, normal, 1.3);
+    border-width: 2px;
+    border-style: solid;
+    padding: pad(-2,em);
+    &__primary{
+        border-color: $primary-color;
+        background: lighten($primary-color, 70%);
+        color: $primary-color;
+    }
+    &__secondary{
+        border-color: darken($secondary-color,20%);
+        background: lighten($secondary-color, 38%);
+        color: darken($secondary-color,20%);
+    }
+    &__success{
+        border-color: $success;
+        background: lighten($success, 50%);
+        color: $success;
+    }
+    &__warning{
+        color: darken($warning,15%);
+        background: lighten($warning, 45%);
+        color: darken($warning,15%);
+    }
+    &__danger{
+        border-color: $danger;
+        background: lighten($danger, 45%);
+        color: $danger;
+    }
+    &__info{
+        border-color: $info;
+        background: lighten($info, 55%);
+        color: $info;
+    }
+    &__light{
+        border: none;
+        background: lighten($light, 70%);
+        color: darken($light,30%);
+    }
+    &__dark{
+        border-color: $dark;
+        background: lighten($dark, 70%);
+        color: $dark;
+    }
+    &__link{
+        font-weight: bold;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &--rounded{
+        border-radius: .25em;
+    }
+}

@@ -3,18 +3,20 @@ $black: hsl(0, 0%, 0%);
 
 $red: hsl(0, 70.9%, 49.8%);
 $green: hsl(119.2, 33.9%, 45.7%);
-$blue: hsl(208.3, 70.9%, 49.8%);
+$blue: hsl(208, 72%, 50%);
 
 $cyan: hsl(188.3, 66.2%, 43%);
 $magenta: hsl(289.6, 100%, 50%);
 $orange: hsl(30.5, 94.2%, 53.8%);
-$yellow: hsl(52.6, 99%, 60%); // Logo Yellow
+$yellow: hsl(54, 100%, 50%);
 
-$dark-blue: hsl(209.4, 84.3%, 22.4%); // Logo Blue
+$logo-blue: hsl(209.4, 84.3%, 22.4%);
+$logo-yellow: hsl(52.6, 99%, 60%);
+$dark-blue: $logo-blue;
 $grey: lighten($black, 90%);
 
 $primary-color: $dark-blue;
-$secondary-color: $yellow;
+$secondary-color: $logo-yellow;
 $text-color: $black;
 
 $light: hsl(0, 0%, 96%);
