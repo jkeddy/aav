@@ -7,8 +7,8 @@
     @include media("<=tablet"){
         flex-direction: row;
         justify-content: space-evenly;
-        padding-left: .5rem;
-        padding-right: .5rem;
+        padding-left: pad(-2,rem);
+        padding-right: pad(-2,rem);
     }
     &__inner{
         @include media(">=tablet"){
@@ -19,8 +19,8 @@
         }
     }
     &__social-icons{
-        margin-top: 1rem;
-        padding-left: .5rem;
+        margin-top: margin(-2,rem);
+        margin-bottom: margin(-2,rem);
         @include media("<=tablet"){
             display: flex;
             justify-content: space-evenly;

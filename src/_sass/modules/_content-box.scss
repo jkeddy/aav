@@ -1,7 +1,6 @@
 .box {
     @include font-sans(false, $text-color, false, 1.3);
     background: $grey;
-    margin-top: margin(1,rem);
     padding: pad(1,rem) pad(-2,rem);
     &__title {
         @include font-serif(1.8rem,false,false,false);
