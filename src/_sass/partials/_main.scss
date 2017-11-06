@@ -1,6 +1,6 @@
 .main-content {
     font-size: 0.875em;
-    padding: 0 pad(-3,rem);
+    /*padding: 0 pad(-3,rem);*/
     @include media("<screen-xs") {
         padding: 0 pad(-2, rem)
     }
@@ -12,7 +12,11 @@
         }
     }
     &__article {
+        display: grid;
+        grid-template-columns: [content-start] pad(1,em) [article-start] 1fr [article-end] 1fr [content-end] pad(1,em);
+        justify-content: start;
         > * {
+            grid-column: article-start/content-end;
             margin-bottom: margin(1, rem);
             margin-top: 0;
         }
