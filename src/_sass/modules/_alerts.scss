@@ -34,7 +34,7 @@
         color: $info;
     }
     &--light{
-        border: none;
+        border-color: none;
         background: lighten($light, 70%);
         color: darken($light,30%);
     }
