@@ -58,6 +58,7 @@ sub-title:
     <input class="button button--submit form__submit" type="submit" value="Send">
 </form>
 </div>
+
 ### Build your form fancy like with the grid system!
 
 <div class="example-box">

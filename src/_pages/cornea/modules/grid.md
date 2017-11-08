@@ -3,6 +3,12 @@ layout: aav-cornea.html
 title: Grid
 sub-title: 12 Column Grid Run by Flexbox (for now)
 ---
+<style>
+    .example-box .col{
+        background: #aaa;
+        min-height: 50px;   
+    }
+</style>
 
 ## 12 Columns
 

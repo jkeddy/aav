@@ -17,16 +17,10 @@ sub-title: A collection of useful context-less classes.
     Suspendisse non diam et augue ullamcorper fringilla.<img class="elem-center m-t-4 m-b-4" src="http://via.placeholder.com/450x250"> In vestibulum urna nec luctus iaculis. Curabitur vitae purus sit amet lectus dapibus pharetra. Sed turpis turpis, commodo quis luctus in, sollicitudin in mi. Suspendisse egestas semper odio, eget scelerisque leo mollis in. Vestibulum aliquet mauris arcu. In viverra sapien tempus ipsum placerat pulvinar. Suspendisse a libero gravida, dictum felis id, pulvinar massa. Etiam vitae turpis libero. Maecenas fringilla aliquet augue sed vestibulum. Nulla ac lobortis velit, non consectetur purus.</p>
 </div>
 
-<div class="example-box">
-    <img class="elem-full z-4" src="http://via.placeholder.com/2000x386">
-</div>
-
-Be careful of z-index when using the large "hero" images.
-
 ### Text Colors
 
 <div class="example-box">
-    <p>This text exists to demonstrate the text controls available. See
+    <p>This text exists to demonstrate the text controls available.<br>See
         <span class="text-danger">your</span>
         <span class="text-orange">text</span>
         <span class="text-secondary">in</span>
@@ -38,7 +32,7 @@ Be careful of z-index when using the large "hero" images.
 
 ### Text Alignment
 
-.text-left, .text-right, and .text-center classes provide easy alignment.
+*.text-left*, *.text-right*, and *.text-center* classes provide easy alignment.
 
 <div class="example-box">
     <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id scelerisque metus. Mauris felis justo, aliquet id ipsum at, mattis dapibus sapien. Donec mauris mauris, fermentum quis enim eu, dictum hendrerit dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in sodales leo. Mauris hendrerit risus dolor, vel pretium ex molestie commodo. Quisque ac magna est.</p>
@@ -48,15 +42,15 @@ Be careful of z-index when using the large "hero" images.
 
 ### Text Sizing
 
-.text-xs, .text-sm, .text-lg, .text-xl provide easy resizing.
+*.text-xs*, *.text-sm*, *.text-lg*, *.text-xl* provide easy resizing.
 
 <div class="example-box">
     <p>Consider making your text <span class="text-lg">various sizes</span> that <span class="text-xs">scale</span> to the container they're in! Meaning they'll always be <span class="text-sm">reasonably close</span> to the original font size <span class="text-xl">no matter what</span>.</p>
 </div>
 
-### Alerts/Backgrounds
+### Backgrounds
 
-Write something or move this
+Background colors are different than alerts. Backgrounds like this to not provide context, padding, margin, or any styling except a background color.
 
 <div class="example-box">
     <p class="bg-warning p-1">Put your text on a background if you want!</p>
@@ -71,20 +65,20 @@ Add consistent margin to any element with margin classes.
 
 #### All Around
 
-.m-(1-5)
+*.m-(1-5)*
 
 #### Left
 
-.m-l-(1-5)
+*.m-l-(1-5)*
 
 #### Right
 
-.m-r-(1-5)
+*.m-r-(1-5)*
 
 #### Top
 
-.m-t-(1-5)
+*.m-t-(1-5)*
 
 #### Bottom
 
-.m-b-(1-5)
+*.m-b-(1-5)*
