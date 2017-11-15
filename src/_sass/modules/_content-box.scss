@@ -4,19 +4,10 @@
     padding: pad(1,rem) pad(-2,rem);
     &__title {
         @include font-serif(1.8rem,false,false,false);
-        margin: 0 0 pad(-2,rem);
+        margin: 0 0 margin(-2,rem);
     }
     &__subtitle {
         font-weight: bold;
-    }
-    &--primary {
-        background: $primary-color;
-        .box__title {
-            color: $white;
-        }
-    }
-    &--secondary {
-        background: $secondary-color;
     }
     &--border {
         background: none;
@@ -27,7 +18,19 @@
             border-bottom: 3px solid $grey;
         }
     }
+    &--xs {
+        font-size: $xs;
+    }
     &--sm {
-        font-size: .8rem;
+        font-size: $sm;
+    }
+    &--md{
+        font-size: $md;
+    }
+    &--lg{
+        font-size: $lg;
+    }
+    &--xl{
+        font-size: $xl;
     }
 }

@@ -1,10 +1,10 @@
 .button {
     background-color: #fff;
     border: .1rem solid $text-color;
-    cursor:pointer;
+    cursor: pointer;
     display: inline-flex;
     justify-content: center;
-    font-size: 1rem;
+    font-size: $default;
     height: 2.25em;
     line-height: 1.5;
     padding: .35em .6em;
@@ -19,17 +19,20 @@
             transition: border-color 250ms ease-in-out;
         }
     }
+    &--xs {
+        font-size: $xs;
+    }
     &--sm {
-        font-size: .8rem;
+        font-size: $sm;
     }
     &--md {
-        font-size: 1.1rem;
+        font-size: $md;
     }
     &--lg {
-        font-size: 1.5rem;
+        font-size: $lg;
     }
     &--xl {
-        font-size: 2rem;
+        font-size: $xl;
     }
     &--rounded {
         border-radius: .25em;
@@ -52,59 +55,99 @@
             border-color: lighten($secondary-color, 10%);
         }
     }
-    &--green {
-        background-color: $green;
-        border-color: $green;
+    &--success {
+        border-color: $success;
+        background-color: $success;
         color: $white;
         &:hover {
-            background-color: lighten($green, 10%);
-            border-color: lighten($green, 10%);
+            background-color: lighten($success, 10%);
+            border-color: lighten($success, 10%);
+        }
+    }
+    &--warning {
+        border-color: $warning;
+        background-color: $warning;
+        color: $white;
+        &:hover {
+            background-color: lighten($warning, 10%);
+            border-color: lighten($warning, 10%);
+        }
+    }
+    &--danger {
+        border-color: $danger;
+        background-color: $danger;
+        color: $white;
+        &:hover {
+            background-color: lighten($danger, 10%);
+            border-color: lighten($danger, 10%);
+        }
+    }
+    &--info {
+        border-color: $info;
+        background-color: $info;
+        color: $white;
+        &:hover {
+            background-color: lighten($info, 10%);
+            border-color: lighten($info, 10%);
+        }
+    }
+    &--light {
+        border-color: none;
+        background-color: $light;
+        color: $dark;
+        &:hover {
+            background-color: lighten($light, 10%);
+            border-color: lighten($light, 10%);
+        }
+    }
+    &--dark {
+        border-color: $dark;
+        background: $dark;
+        color: $light;
+        &:hover {
+            background-color: lighten($dark, 10%);
+            border-color: lighten($dark, 10%);
         }
     }
 }
 
 
-/* Arrow buttons. Used for mininav toggles currently. Separate for easy removal. */
+/* Arrow buttons. Used for mininav toggles currently. Can have both arrows because why not? */
 
 .button--arrow {
-    @include media(">=screen-sm"){
-    $s: 18px !default; // Implied use is 36px tall button
-    border: none;
-    position: relative;
-    &:after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 0;
-        transition: border-color 250ms ease-in-out;
-    }
-    &-right {
-        &:after {
-            border-top: $s solid transparent;
-            border-bottom: $s solid transparent;
-            border-left: $s solid $primary-color;
-            @include abs-vert-center;
-            right: -$s;
+    @include media(">=screen-sm") {
+        $s: 18px !default; // Implied use is 36px tall button
+        border-style: none;
+        position: relative;
+        &-right {
+            &:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                transition: border-color 250ms ease-in-out;
+                border-top: $s solid transparent;
+                border-bottom: $s solid transparent;
+                border-left: $s solid;
+                border-left-color: inherit;
+                @include abs-vert-center;
+                right: -$s;
+            }
         }
-        &:hover{
-            &:after{
-                border-left-color: lighten($primary-color, 10%);
+        &-left {
+            &:before {
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                transition: border-color 250ms ease-in-out;
+                border-top: $s solid transparent;
+                border-bottom: $s solid transparent;
+                border-right: $s solid;
+                border-right-color: inherit;
+                @include abs-vert-center;
+                left: -$s;
             }
         }
     }
-    &-left {
-        &:after {
-            border-top: $s solid transparent;
-            border-bottom: $s solid transparent;
-            border-right: $s solid $primary-color;
-            @include abs-vert-center;
-            left: -$s;
-        }
-        &:hover{
-            &:after{
-                border-right-color: lighten($primary-color, 10%);
-            }
-        }
-    }
-}
 }

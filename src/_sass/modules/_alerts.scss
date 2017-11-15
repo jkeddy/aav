@@ -3,6 +3,9 @@
     border-width: 2px;
     border-style: solid;
     padding: pad(-2,em);
+    &--rounded{
+        border-radius: .25em;
+    }
     &--primary{
         border-color: $primary-color;
         background: lighten($primary-color, 70%);
@@ -19,7 +22,7 @@
         color: $success;
     }
     &--warning{
-        color: darken($warning,15%);
+        border-color: darken($warning,15%);
         background: lighten($warning, 45%);
         color: darken($warning,15%);
     }
@@ -49,8 +52,5 @@
         &:hover{
             text-decoration: underline;
         }
-    }
-    &--rounded{
-        border-radius: .25em;
     }
 }

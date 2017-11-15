@@ -36,7 +36,7 @@ Description:    Helper classes for AAV editorial content.
             transition: filter 250ms ease-in-out
         }
     }
-    &-round{
+    &-circle{
         border-radius: 50%;
     }
 }
@@ -56,7 +56,7 @@ Description:    Helper classes for AAV editorial content.
     }
     /* Size */
     &-xs {
-        @extend small;
+        font-size: .6em;
     }
     &-sm {
         font-size: .8em;
@@ -90,13 +90,19 @@ Description:    Helper classes for AAV editorial content.
         color: $link;
     }
     &-success {
-        color: $info;
+        color: $success;
     }
     &-warning {
         color: $warning;
     }
     &-danger {
         color: $danger;
+    }
+    &-light{
+        color: $light;
+    }
+    &-dark{
+        color: $dark;
     }
 }
 /* Put a bird(bg) on it */
@@ -120,7 +126,7 @@ Description:    Helper classes for AAV editorial content.
         background-color: $info;
     }
     &-success {
-        background-color: $info;
+        background-color: $success;
     }
     &-warning {
         background-color: $warning;
@@ -165,7 +171,7 @@ Description:    Helper classes for AAV editorial content.
         margin-bottom: margin($j, rem);
     }
 }
-/* 10 levels of clean z-index (1000 - 10000). Add class .z-# Can never be higher than header, fixed items, dialogs, etc */
+/* 10 levels of sane z-index (1000 - 10000). Add class .z-# Can never be higher than header, fixed items, dialogs, etc */
 @for $i from 1 through 10 {
     .z-#{$i} {
         z-index: z-index($i);
