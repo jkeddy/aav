@@ -4,12 +4,12 @@ Date: 10/26/2017
 Description: Bootstrap style. But Flexbox. Ignoring BEM naming conventions temporarily.
 */
 $grid-cols: 100% / 12;
-$gutter: 1rem;
+$gutter: margin(1,rem);
  
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: margin(1,rem);
+  margin-bottom: $gutter;
  
   &--eq-height {
     align-items: stretch;
@@ -68,7 +68,7 @@ $gutter: 1rem;
     flex: 1;
     padding-left: pad(-3,rem);
     padding-right: pad(-3,rem);
-    margin-bottom: margin(1,rem);
+    margin-bottom: $gutter;
   }
    
   @for $i from 1 to 13 {
