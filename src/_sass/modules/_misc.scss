@@ -1,21 +1,18 @@
 ::selection{
-  background: #333;
+  background: $logo-blue;
   color: #fff;
   text-shadow: none;
 }
 ::-moz-selection{
-  background: #333;
+  background: $logo-blue;
   color: #fff;
   text-shadow: none;
 }
 ::-webkit-selection{
-  background: #333;
+  background: $logo-blue;
   color: #fff;
   text-shadow: none;
 }
 img{
   max-width: 100%;
-}
-small{
-  font-size: .75em;
 }
