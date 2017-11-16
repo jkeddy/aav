@@ -1,5 +1,39 @@
-.scrim{
-    background: #000;
+.dialog{
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0,0,0,.25);
+    display: block;
+    height: 90vh;
+    margin: auto;
+    padding: pad(1,rem);
+    max-height: 720px;
+    max-width: 1280px;
+    position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    width: 90vw;
+    z-index: z-index(19);
+    &__inner{
+        display: block;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    &__close{
+        box-shadow: 0 0 1rem rgba(0,0,0,.25);
+        position: absolute;
+            top: -2%;
+            right: -2%;
+    }
+    &--rounded{
+        border-radius: .25em;
+    }
+}
+
+.scrim,
+.dialog::backdrop{
+    background: $black;
     display: block;
     height: 100%;
     opacity: .7;
@@ -9,8 +43,9 @@
         bottom: 0;
         left: 0;
     width: 100%;
-    z-index: z-index(15);
+    z-index: z-index(18);
 }
+/* Body Classes */
 .scrim-active{
     overflow: hidden;
 }
