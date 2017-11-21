@@ -1,6 +1,6 @@
 $light-border: 1px solid lighten($grey, 2%);
 $dark-border: 2px solid $grey;
-.data-table {
+.o-data-table {
     /*-webkit-overflow-scrolling: touch; // scrolling shadows
     background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
     background-size: 1em 100%, 1em 100%;
@@ -14,6 +14,9 @@ $dark-border: 2px solid $grey;
     overflow-x: auto;
     white-space: nowrap;
     vertical-align: top;
+    &--xs {
+        font-size: $xs;
+    }
     &--sm {
         font-size: $sm;
     }
@@ -40,7 +43,7 @@ $dark-border: 2px solid $grey;
         border-bottom: $dark-border;
         font-weight: bold;
         text-align: left;
-        .data-table__cell {
+        .o-data-table__cell {
             background: lighten($grey, 4%);
             /*&:first-of-type {
                 background-image: linear-gradient(to right, lighten($grey, 4%) 50%, rgba(255, 255, 255, 0) 100%);
@@ -74,7 +77,7 @@ $dark-border: 2px solid $grey;
             background-position: 100% 0;
             background-size: 1.2em 100%;
         }*/
-        .data-table__cell:first-of-type {
+        .o-data-table__cell:first-of-type {
             border-right: $light-border;
         }
     }
@@ -99,7 +102,7 @@ $dark-border: 2px solid $grey;
         }*/
     }
     &__foot {
-        .data-table__cell {
+        .o-data-table__cell {
             background: darken($grey, 8%);
             font-weight: bold;
             &:first-of-type {
@@ -123,44 +126,44 @@ $dark-border: 2px solid $grey;
         display: flex;
         flex-wrap: wrap;
         overflow: hidden;
-        .data-table__caption{
+        .o-data-table__caption{
             width: 100%;
         }
-        .data-table__head{
+        .o-data-table__head{
             border-bottom: none;
             display: flex;
             flex-shrink: 0;
             min-width: min-content;
-            .data-table__cell{
+            .o-data-table__cell{
                 border-right: $dark-border;
             }
         }
-        .data-table__foot{
+        .o-data-table__foot{
             display: flex;
             flex-shrink: 0;
             min-width: min-content;
-            .data-table__row .data-table__cell:first-of-type{
+            .o-data-table__row .o-data-table__cell:first-of-type{
                 border-bottom: 1px solid darken($grey, 12%);
             }
         }
-        .data-table__body{
+        .o-data-table__body{
             display: flex;
             flex: 1;
             position: relative;
             overflow-x: auto;
             overflow-y: hidden;
         }
-        .data-table__row{
+        .o-data-table__row{
             border-bottom: 0;
             display: flex;
             flex-direction: column;
             min-width: min-content;
             flex-shrink: 0;
-            .data-table__cell:first-of-type{
+            .o-data-table__cell:first-of-type{
                 border-bottom: $light-border;
             }
         }
-        .data-table__cell{
+        .o-data-table__cell{
             border-bottom: 0;  
             background-image: none;
             display: block;

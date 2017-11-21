@@ -6,7 +6,7 @@ Description: Bootstrap style. But Flexbox. Ignoring BEM naming conventions tempo
 $grid-cols: 100% / 12;
 $gutter: margin(1,rem);
  
-.row {
+.c-row {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: $gutter;
@@ -14,7 +14,7 @@ $gutter: margin(1,rem);
   &--eq-height {
     align-items: stretch;
  
-    > .col, > *[class*="col-"] {
+    > .c-col, > *[class*="col-"] {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -27,7 +27,7 @@ $gutter: margin(1,rem);
   &--no-padding {
     margin-left: 0;
     margin-right: 0;   
-    > .col, > [class*="col-"] {
+    > .c-col, > [class*="c-col-"] {
       padding-left: 0;
       padding-right: 0;
       margin-bottom: 0;
@@ -60,11 +60,11 @@ $gutter: margin(1,rem);
     justify-content: flex-end;
   }
  
-  &.inner-row {
+  &.c-inner-row {
     margin: 0;
   }
 }
-.col {
+.c-col {
     flex: 1;
     padding-left: pad(-3,rem);
     padding-right: pad(-3,rem);
@@ -72,7 +72,7 @@ $gutter: margin(1,rem);
   }
    
   @for $i from 1 to 13 {
-    .col-#{$i} {
+    .c-col-#{$i} {
       width: $grid-cols*$i;
       max-width: $grid-cols*$i;
       min-width: $grid-cols*$i;
@@ -81,7 +81,7 @@ $gutter: margin(1,rem);
    
   @include media(">=phone","<=screen-sm") {
     @for $i from 1 to 13 {
-      .col-xs-#{$i} {
+      .c-col-xs-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;
@@ -90,7 +90,7 @@ $gutter: margin(1,rem);
   }
   @include media(">=screen-sm","<=screen-md") {
     @for $i from 1 to 13 {
-      .col-sm-#{$i} {
+      .c-col-sm-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;
@@ -100,7 +100,7 @@ $gutter: margin(1,rem);
    
   @include media(">=screen-md","<=screen-lg") {
     @for $i from 1 to 13 {
-      .col-md-#{$i} {
+      .c-col-md-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;
@@ -109,7 +109,7 @@ $gutter: margin(1,rem);
   }
   @include media(">=screen-lg","<=screen-xl") {
     @for $i from 1 to 13 {
-      .col-lg-#{$i} {
+      .c-col-lg-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;
@@ -119,7 +119,7 @@ $gutter: margin(1,rem);
    
   @include media(">=screen-xl") {
     @for $i from 1 to 13 {
-      .col-xl-#{$i} {
+      .c-col-xl-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;

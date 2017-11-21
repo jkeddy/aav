@@ -1,4 +1,4 @@
-.dialog{
+.o-dialog{
     background-color: #fff;
     box-shadow: 0 0 1rem rgba(0,0,0,.25);
     display: block;
@@ -31,8 +31,7 @@
     }
 }
 
-.scrim,
-.dialog::backdrop{
+.o-scrim{
     background: $black;
     display: block;
     height: 100%;
@@ -43,9 +42,8 @@
         bottom: 0;
         left: 0;
     width: 100%;
-    z-index: z-index(18);
-}
-/* Body Classes */
-.scrim-active{
-    overflow: hidden;
+    z-index: z-index(16);
+    &.is-open{
+        overflow: hidden;
+    }
 }

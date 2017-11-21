@@ -1,4 +1,4 @@
-.hp-main-feature{
+.c-hp-main-feature{
     overflow: hidden;
     @include media("<=screen-lg"){
         font-size: .9em;
@@ -42,7 +42,7 @@
         flex: 1;
         padding: .66rem pad(1,rem);
         &:hover{
-            background: $blue;
+            background-color: $blue;
             text-decoration: none;
         }
         @include media(">=screen-sm"){

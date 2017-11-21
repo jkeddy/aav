@@ -1,4 +1,4 @@
-.text-box {
+.o-text-box {
     border-bottom: $grey-border;
     @include font-sans(1rem, $white, 600, 1.7);
     margin-left: auto;
@@ -15,7 +15,7 @@
     &--border {
         color: $black;
         border-top: $grey-border;
-        .text-box__body {
+        .o-text-box__body {
             background: none;
         }
     }
@@ -35,35 +35,35 @@
         font-size: $xl;
     }
     &--success {
-        .text-box__body {
+        .o-text-box__body {
             background: $success;
         }
     }
     &--warning {
         color: $black;
-        .text-box__body {
+        .o-text-box__body {
             background: $warning;
         }
     }
     &--danger {
-        .text-box__body {
+        .o-text-box__body {
             background: $danger;
         }
     }
     &--info {
-        .text-box__body {
+        .o-text-box__body {
             background: $info;
         }
     }
     &--light {
         color: $dark;
-        .text-box__body {
+        .o-text-box__body {
             background: $light;
         }
     }
     &--dark {
         color: $light;
-        .text-box__body {
+        .o-text-box__body {
             background: $dark;
         }
     }

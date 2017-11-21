@@ -1,4 +1,4 @@
-.button {
+.o-button {
     background-color: #fff;
     border: .1rem solid $text-color;
     cursor: pointer;
@@ -114,7 +114,7 @@
 
 /* Arrow buttons. Used for mininav toggles currently. Can have both arrows because why not? */
 
-.button--arrow {
+.c-button--arrow {
     @include media(">=screen-sm") {
         $s: 18px !default; // Implied use is 36px tall button
         border-style: none;

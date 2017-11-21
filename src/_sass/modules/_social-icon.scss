@@ -1,4 +1,4 @@
-.social-icon{
+.c-social-icon{
     color: #fff;
     display: inline-flex;
     font-size: $default;
@@ -10,6 +10,9 @@
     z-index: z-index(4);
     > i{
         line-height: 1.3;
+    }
+    &:hover{
+        text-decoration: none;
     }
     &--xs{
         font-size: $xs;

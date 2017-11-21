@@ -1,4 +1,4 @@
-.main-content {
+.c-main-content {
     font-size: 0.875em;
     /*padding: 0 pad(-3,rem);*/
     @include media("<screen-xs") {
@@ -53,7 +53,7 @@
     }
 }
 
-.content-nav {
+.c-content-nav {
     &__title {
         @include font-serif(false, false, bold, 1.3);
     }

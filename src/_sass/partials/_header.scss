@@ -1,18 +1,18 @@
-.header {
+.c-header {
   background: #fff;
-  border-image-source: linear-gradient(to right, darken($blue,20%) 0%, lighten($blue,10%) 25%, darken($blue,20%) 50%, lighten($blue,10%) 75%, darken($blue,20%) 100%);
+  border-image-source: linear-gradient(to right, darken($blue, 20%) 0%, lighten($blue, 10%) 25%, darken($blue, 20%) 50%, lighten($blue, 10%) 75%, darken($blue, 20%) 100%);
   border-image-slice: 1;
   border-top: 1.2rem solid;
   box-shadow: 0 0.125rem 0.1875rem 0 rgba(0, 0, 0, .5);
   padding: 1rem .5rem;
   width: 100vw;
   z-index: z-index(13);
-  @include media("<=screen-sm"){
+  @include media("<=screen-sm") {
     border-top-width: 1rem;
     position: sticky;
-      top: 0;
+    top: 0;
   }
-  &__content{
+  &__content {
     max-width: 1390px;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -20,42 +20,68 @@
     grid-gap: .5rem;
     grid-template-areas: "logo header-nav search";
     align-items: center;
-    @include media(">=screen-lg"){
+    @include media(">=screen-lg") {
       margin-left: auto;
       margin-right: auto;
       justify-items: center;
     }
-    @include media(">=screen-md","<=screen-lg"){
+    @include media(">=screen-md", "<=screen-lg") {
       grid-template-columns: 1fr 1.75fr .5fr;
       grid-gap: .5rem;
     }
-    @include media("<=screen-md"){
-      grid-template-areas: 
-      "logo logo search"
-      "header-nav header-nav header-nav";
+    @include media("<=screen-md") {
+      grid-template-areas: "logo logo search" "header-nav header-nav header-nav";
       grid-template-columns: 1fr 1fr #{$space}fr;
     }
     @include media("<=screen-sm") {
-      grid-template-areas: 
-      "nav-toggle logo search";
+      grid-template-areas: "nav-toggle logo search";
       grid-template-columns: .25fr 1fr #{$space}fr;
     }
   }
-  .main-nav__toggle{
+  .c-main-nav__toggle {
     grid-area: nav-toggle;
   }
   &__logo {
     grid-area: logo;
     margin-left: 4rem;
     z-index: z-index(1);
-    @include media("<=tablet"){
+    &-img {
+      max-height: 58px;
+      max-width: 215px;
+      height: 100%;
+      width: 100%;
+    }
+    &.christmas {
+      position: relative;
+        left: 2%;
+      &:after {
+        content: '';
+        background-image: url(http://cdn.allaboutvision.com/aav-xmas-logo-hat.png);
+        background-size: cover;
+        display: block;
+        height: 130%;
+        max-height: 80px;
+        max-width: 70px;
+        position: absolute;
+          top: -46%;
+          left: -20px;
+        width: 30%;
+        @include media("<=screen-sm"){
+          left: -10%;
+          top: -40%;
+          height: 11vw;
+          width: 10vw;
+        }
+      }
+    }
+    @include media("<=tablet") {
       margin-left: 0;
     }
   }
   &__nav {
     grid-area: header-nav;
     font-size: .9em;
-    @include media("<=screen-md"){
+    @include media("<=screen-md") {
       text-align: center;
     }
     @include media("<=screen-sm") {
@@ -64,32 +90,32 @@
   }
   &__nav-item {
     color: $text-color;
-    margin: 0 margin(-3,rem);
-    i{
-      color: darken($blue,10%);
+    margin: 0 margin(-3, rem);
+    i {
+      color: darken($blue, 10%);
     }
-    &:hover{
+    &:hover {
       color: $blue;
       text-decoration: none;
-      i{
+      i {
         color: $blue;
       }
     }
   }
-  &__search-wrapper{
+  &__search-wrapper {
     grid-area: search;
     display: flex;
     justify-content: flex-end;
     max-width: 210px;
     width: 25vw;
-    @include media(">=desktop"){
+    @include media(">=desktop") {
       max-width: 270px;
     }
-    @include media("<=screen-md"){
+    @include media("<=screen-md") {
       max-width: 400px;
       width: 50vw;
     }
-    @include media("<=screen-sm"){
+    @include media("<=screen-sm") {
       max-width: none;
       width: auto;
     }
@@ -104,22 +130,22 @@
     overflow: hidden;
     position: relative;
     transition: 1.1s;
-    @include media("<=screen-md"){
+    @include media("<=screen-md") {
       margin-right: 0;
     }
-    @include media("<=screen-sm"){
+    @include media("<=screen-sm") {
       max-width: none;
     }
-    &:after{
-      content:'\f002';
-      @include font-icon(1rem,$grey,1.5);
+    &:after {
+      content: '\f002';
+      @include font-icon(1rem, $grey, 1.5);
       color: $grey;
       font-family: FontAwesome;
       font-size: 1rem;
       text-align: center;
       @include abs-center;
       transition: 570ms left 250ms ease-in;
-      @include media("<=screen-sm"){
+      @include media("<=screen-sm") {
         left: auto;
         right: 5%;
       }
@@ -128,17 +154,17 @@
     &:focus {
       max-width: 296px;
       transition: all 750ms ease-in;
-      .header__search-input{
+      .o-header__search-input {
         opacity: 1;
         transition: opacity 300ms ease-in-out;
-        @include media("<=screen-sm"){
+        @include media("<=screen-sm") {
           opacity: 1;
         }
       }
-      &:after{
+      &:after {
         left: 80%;
         transition: left 500ms ease-in-out;
-        @include media("<=screen-sm"){
+        @include media("<=screen-sm") {
           left: auto;
           right: 5%;
         }
@@ -155,7 +181,7 @@
     border: none;
     opacity: 0;
     transition: opacity 300ms ease-in-out;
-    @include media("<=screen-sm"){
+    @include media("<=screen-sm") {
       opacity: 1;
     }
   }

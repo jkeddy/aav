@@ -99,20 +99,20 @@ h6,.h6,%h6{
     color: inherit;
   }
 }
-.top{
+.c-top{
   &:after{
     content:' \2934';
     @include font-icon(false,false,false);
   }
 }
-.def{
+.c-def{
   border-bottom: 1px dashed inherit;
   &:after{
     content:' \f059';
     @include font-icon(false,false,false);
   }
 }
-.update,
+.c-update,
 small{
   font-size: $xs;
 }

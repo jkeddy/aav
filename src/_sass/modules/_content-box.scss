@@ -1,4 +1,4 @@
-.box {
+.o-box {
     @include font-sans(false, $text-color, false, 1.3);
     background: $grey;
     padding: pad(1,rem) pad(-2,rem);
@@ -14,7 +14,7 @@
         border-top: 3px solid $grey;
         border-bottom: 3px solid $grey;
         padding: 0;
-        .box__title {
+        .o-box__title {
             border-bottom: 3px solid $grey;
         }
     }

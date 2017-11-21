@@ -1,5 +1,5 @@
 $mobileNavSize: 100 / $space;
-.main-nav {
+.c-main-nav {
   background: $white;
   border-top: .05em solid $grey;
   max-width: 216px;
@@ -19,7 +19,7 @@ $mobileNavSize: 100 / $space;
   @include media("<=screen-sm") {
     display: none;
   }
-  &.active {
+  &.is-open {
     @include media("<=screen-sm") {
       $border: 2px solid $blue;
       border-top: $border;
@@ -38,7 +38,7 @@ $mobileNavSize: 100 / $space;
       left: 0;
       width: #{$mobileNavSize}vw;
       z-index: z-index(17);
-      .main-nav__list {
+      .c-main-nav__list {
         flex-direction: column;
       }
     }
@@ -86,12 +86,12 @@ $mobileNavSize: 100 / $space;
     @include media(">=screen-sm") {
       &:hover,
       &:focus {
-        background: $blue;
+        background-color: $blue;
         color: #fff;
-        .main-nav__link {
+        .c-main-nav__link {
           color: #fff;
         }
-        .main-nav__sub-nav {
+        .c-main-nav__sub-nav {
           box-shadow: 0.1em .2em .2em 0 rgba(0, 0, 0, 0.3);
           border: .35em solid $blue;
           opacity: 1;
@@ -110,9 +110,9 @@ $mobileNavSize: 100 / $space;
       justify-content: space-between;
       flex-wrap: wrap;
       padding-left: 0;
-      &.active {
+      &.is-open {
         background: $primary-color;
-        .main-nav__link {
+        .c-main-nav__link {
           color: $white;
         }
       }
@@ -161,7 +161,7 @@ $mobileNavSize: 100 / $space;
       padding: 0 .25em 0;
       position: static;
       width: 100%;
-      &.active {
+      &.is-open {
         display: block;
       }
     }
@@ -200,7 +200,7 @@ $mobileNavSize: 100 / $space;
         display: block;
         font-size: $lg;
         margin-right: .5rem;
-        &.active{
+        &.is-open{
           color: $white;
           margin-right: .4rem;
         }
@@ -212,18 +212,17 @@ $mobileNavSize: 100 / $space;
 
 /* Body class */
 
-.nav-active {
+.main-nav-is-open {
   @include media("<=screen-sm") {
-    .site-wrapper {
+    .c-site-wrapper {
       position: relative;
       left: #{$mobileNavSize}vw;
     }
   }
 }
 
-.breadcrumbs {
+.c-breadcrumbs {
   font-size: .8rem;
-  &__item {}
   &__link {
     font-weight: normal;
      :after {
@@ -232,11 +231,10 @@ $mobileNavSize: 100 / $space;
   }
 }
 
-.see-also {
+.c-see-also {
   &:before {
     content: '';
   }
-  &__item {}
   &__link {
      :after {
       content: '\#187';
