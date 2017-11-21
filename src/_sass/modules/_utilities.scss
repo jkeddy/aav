@@ -7,7 +7,7 @@ Description:    Helper classes for AAV editorial content.
 
 /* For centering, floating, and doing crazy wide hero images. Ignoring BEM for a bit */
 
-.elem {
+.u-elem {
     &-right {
         float: right;
         margin-left: margin(-2, rem);
@@ -43,7 +43,7 @@ Description:    Helper classes for AAV editorial content.
 
 /* Controls for text. Positioning, sizing, etc. Sizing is all relative. */
 
-.text {
+.u-text {
     /* Position */
     &-left {
         text-align: left;
@@ -106,7 +106,7 @@ Description:    Helper classes for AAV editorial content.
     }
 }
 /* Put a bird(bg) on it */
-.bg {
+.u-bg {
     &-black{
         background-color: $black;
     }
@@ -137,43 +137,43 @@ Description:    Helper classes for AAV editorial content.
 }
 /* Padding Assistance. Matches positive spacing values. */
 @for $j from 1 through 5 {
-    .p-#{$j} {
+    .u-p-#{$j} {
         padding: pad($j, rem);
     }
-    .p-t-#{$j}{
+    .u-p-t-#{$j}{
         padding-top: pad($j, rem);
     }
-    .p-r-#{$j}{
+    .u-p-r-#{$j}{
         padding-right: pad($j, rem);
     }
-    .p-l-#{$j}{
+    .u-p-l-#{$j}{
         padding-left: pad($j, rem);
     }
-    .p-b-#{$j}{
+    .u-p-b-#{$j}{
         padding-bottom: pad($j, rem);
     }
 }
 /* Margin assistance. Matches positive spacing values */
 @for $j from 1 through 5 {
-    .m-#{$j} {
+    .u-m-#{$j} {
         margin: margin($j, rem);
     }
-    .m-t-#{$j}{
+    .u-m-t-#{$j}{
         margin-top: margin($j, rem);
     }
-    .m-r-#{$j}{
+    .u-m-r-#{$j}{
         margin-right: margin($j, rem);
     }
-    .m-l-#{$j}{
+    .u-m-l-#{$j}{
         margin-left: margin($j, rem);
     }
-    .m-b-#{$j}{
+    .u-m-b-#{$j}{
         margin-bottom: margin($j, rem);
     }
 }
 /* 10 levels of sane z-index (1000 - 10000). Add class .z-# Can never be higher than header, fixed items, dialogs, etc */
 @for $i from 1 through 10 {
-    .z-#{$i} {
+    .u-z-#{$i} {
         z-index: z-index($i);
     }
 }
