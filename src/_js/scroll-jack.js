@@ -1,36 +1,35 @@
-/*document.querySelector('#target-of-thing-clicked-on').scrollIntoView({ 
-    behavior: 'smooth' 
-  });*/
-
 function filterPath(string) {
-    return string
-      .replace(/^\//, '')
-      .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
-      .replace(/\/$/, '');
-  }
-  // rewrite to vanilla
-  var locationPath = filterPath(location.pathname);
-  $('a[href*="#"]').each(function () {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    var hash = this.hash;
-    if ($("#" + hash.replace(/#/, '')).length) {
-      if (locationPath == thisPath && (location.hostname == this.hostname || !this.hostname) && this.hash.replace(/#/, '')) {
-        var $target = $(hash), target = this.hash;
-        if (target) {
-          $(this).click(function (event) {
-            event.preventDefault();
-            $('html, body').animate({scrollTop: $target.offset().top}, 1500, function () {
-              location.hash = target; 
-              $target.focus();
-              if ($target.is(":focus")){ //checking if the target was focused
-                return false;
-              }else{
-                $target.attr('tabindex','-1'); //Adding tabindex for elements not focusable
-                $target.focus(); //Setting focus
-              };
-            });       
-          });
-        }
+  return string
+    .replace(/^\//, '')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
+    .replace(/\/$/, '');
+}
+
+const locPath = filterPath(location.pathname);
+const links = document.querySelectorAll('a[href*="#"]');
+links.forEach(function (e) {
+  let thisPath = filterPath(e.pathname) || locPath;
+  let hashTag = e.hash;
+  let hash = hashTag.replace(/#/, '');
+  let t = document.getElementById(hash);
+  // if target and the location path stuff works out and theres a valid hash then kick in the scroll jacking
+  if (t && (locPath == thisPath && (location.hostname == e.hostname || !e.hostname))) {
+    e.addEventListener('click', function (evt) {
+      // Might need 'if scrollintoview is valid' logic
+      evt.preventDefault();
+      /* Preserve location on screen for a11y purposes */
+      let x = window.scrollX;
+      let y = window.scrollY;
+      // Focus must come after hashing path
+      location.hash = hashTag;
+      if (!t.getAttribute('tabindex')) {
+        t.setAttribute('tabindex', '-1');
       }
-    }
-  });
+      t.focus();
+      window.scrollTo(x, y);
+      t.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  }
+});
