@@ -20,6 +20,16 @@
         margin-bottom: margin(-3, rem);
         padding: pad(-3, em) pad(-3, em) pad(-2, em);
         box-shadow: 0 .2rem .3rem fade-out($black, .9);
+        &.is-invalid {
+            background-color: lighten($danger, 45%);
+            border-color: $danger;
+            transition: background-color ease-in 200ms, border-color ease-in 200ms;
+        }
+        &.is-valid {
+            border-color: $success;
+            background-color: lighten($success, 50%);
+            transition: background-color ease-in 200ms, border-color ease-in 200ms;
+        }
         .o-form__label {
             margin-right: margin(-4, rem);
         }
@@ -40,16 +50,21 @@
             box-shadow: 0 .2rem .3rem fade-out($black, .75);
             transition: box-shadow ease-in 200ms;
         }
-        &[required]:focus:invalid {
+        &.is-invalid {
+            background-color: lighten($warning, 45%);
+            border-color: darken($warning,15%);
+            transition: background-color ease-in 200ms, border-color ease-in 200ms;
+        }
+        &[required].is-invalid {
             background-color: lighten($danger, 45%);
-            transition: background-color ease-in 200ms;
+            border-color: $danger;
+            transition: background-color ease-in 200ms, border-color ease-in 200ms;
         }
-        &[required]:valid {
+        &.is-valid,
+        &.is-invalid:valid {
+            border-color: $success;
             background-color: lighten($success, 50%);
-            transition: background-color ease-in 200ms;
-        }
-        &[required] {
-
+            transition: background-color ease-in 200ms, border-color ease-in 200ms;
         }
     }
     &__submit {
@@ -202,11 +217,22 @@
             box-shadow: 0 .2rem .3rem fade-out($black, .75);
             transition: box-shadow ease-in 200ms;
         }
+        &.is-invalid{
+            background-color: lighten($danger, 45%);
+            border-color: $danger;
+            transition: background-color ease-in 200ms, border-color ease-in 200ms;
+        }
+        &.is-invalid:valid {
+            border-color: $success;
+            background-color: lighten($success, 50%);
+            transition: background-color ease-in 200ms, border-color ease-in 200ms;
+        }
         option {
             &[disabled] {
                 color: $danger;
             }
         }
+        
     }
     &__textarea {
         background: lighten($black, 95%);
@@ -218,6 +244,16 @@
         max-width: 100%;
         min-height: 8.3em;
         padding: pad(-3, rem);
+        &.is-invalid{
+            background-color: lighten($danger, 45%);
+            border-color: $danger;
+            transition: background-color ease-in 200ms, border-color ease-in 200ms;
+        }
+        &.is-invalid:valid {
+            border-color: $success;
+            background-color: lighten($success, 50%);
+            transition: background-color ease-in 200ms, border-color ease-in 200ms;
+        }
         &:focus,
         &:hover {
             box-shadow: 0 .2rem .3rem fade-out($black, .75);
@@ -229,7 +265,7 @@
         margin-bottom: 0;
         .c-col {
             margin-bottom: 0;
-            >.o-form__label {
+            > .o-form__label {
                 display: block;
             }
             .o-form__fieldset {
