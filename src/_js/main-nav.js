@@ -4,47 +4,55 @@ Date: 10/23/2017
 Description: Mobile navigation functions.
 TODO:   Add accessibility        
 */
+const mainNav = document.getElementById('main-nav');
+const navToggle = document.querySelectorAll('.c-main-nav__toggle');
+const subNavToggle = document.querySelectorAll('.c-sub-nav__toggle');
+for (let i = 0; i < navToggle.length; i++) {
+    navToggle[i].addEventListener('mouseup',toggleNav);
+}
+for (let i = 0; i < subNavToggle.length; i++) {
+    subNavToggle[i].addEventListener('click',toggleSubNav);
+}
 function toggleNav(){
-    var mainNav = document.getElementById('main-nav');
-    var navOpen = mainNav.classList.contains('active');
-    var scrim = 'nav-scrim';
+    let navOpen = mainNav.classList.contains('is-open');
+    //let currentFocus = document.activeElement;
     if(navOpen){
-        destroyScrim(scrim);
-        document.body.classList.remove('nav-active');
-        mainNav.classList.remove('active');
+        destroyScrim();
+        document.body.classList.remove('main-nav-is-open');
+        mainNav.classList.remove('is-open');
+        currentFocus.focus();
+        document.getElementById('js-scrim').removeEventListener('mouseup',toggleNav,true);
     }else{
-        createScrim(scrim);
-        document.body.classList.add('nav-active');
-        mainNav.classList.add('active');
+        createScrim();
+        document.body.classList.add('main-nav-is-open');
+        mainNav.classList.add('is-open');
+        /*let newFocus = document.querySelector('.c-main-nav__title');
+        if (!newFocus.getAttribute('tabindex'))
+            newFocus.setAttribute('tabindex', '-1');
+            
+        newFocus.focus();*/
         /* Click the scrim we made to close the nav */
-        document.getElementById(scrim).addEventListener('mouseup',toggleNav);
+        document.getElementById('js-scrim').addEventListener('mouseup',toggleNav,true);
     }
 }
 function toggleSubNav(){
-    var t = this;
-    var icon = t.firstElementChild;
-    var subNav = t.nextElementSibling;
-    var subNavOpen = subNav.classList.contains('active');
-    var parent = t.parentElement;
+    let t = this;
+    let subNav = t.nextElementSibling;
+    let subNavOpen = subNav.classList.contains('is-open');
+    let parent = t.parentElement;
+    //let currentFocus = document.activeElement;
+
     if(subNavOpen){
-        parent.classList.remove('active');
-        t.classList.remove('active');
-        icon.classList.remove('fa-caret-down');
-        icon.classList.add('fa-caret-right');
-        subNav.classList.remove('active');
+        parent.classList.remove('is-open');
+        t.classList.remove('is-open');
+        subNav.classList.remove('is-open');
+        currentFocus.focus();
     }else{
-        parent.classList.add('active');
-        t.classList.add('active');
-        icon.classList.add('fa-caret-down');
-        icon.classList.remove('fa-caret-right');
-        subNav.classList.add('active');
+        /*let newFocus = subNav.getElementsByClassName('c-main-nav__sub-nav-link')[1];
+        if (!newFocus.getAttribute('tabindex'))
+            newFocus.setAttribute('tabindex', '-1');*/
+        parent.classList.add('is-open');
+        t.classList.add('is-open');
+        subNav.classList.add('is-open');
     }
-}
-var navToggle=document.getElementsByClassName('main-nav__toggle');
-for (var i = 0; i < navToggle.length; i++) {
-    navToggle[i].addEventListener('mouseup',toggleNav);
-}
-var subNavToggle=document.getElementsByClassName('main-nav__sub-nav-toggle');
-for (var j = 0; j < subNavToggle.length; j++) {
-    subNavToggle[j].addEventListener('click',toggleSubNav);
 }
