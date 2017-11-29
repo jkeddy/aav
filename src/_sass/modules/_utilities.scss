@@ -39,6 +39,14 @@ Description:    Helper classes for AAV editorial content.
     &-circle{
         border-radius: 50%;
     }
+    @include media("<=screen-sm") {
+        &-right,
+        &-left{
+            display: block;
+            float: none;
+            margin: margin(-2, rem);
+        }
+    }
 }
 
 /* Controls for text. Positioning, sizing, etc. Sizing is all relative. */
@@ -137,37 +145,37 @@ Description:    Helper classes for AAV editorial content.
 }
 /* Padding Assistance. Matches positive spacing values. */
 @for $j from 1 through 5 {
-    .u-p-#{$j} {
+    .u-padding-#{$j} {
         padding: pad($j, rem);
     }
-    .u-p-t-#{$j}{
+    .u-padding__top-#{$j}{
         padding-top: pad($j, rem);
     }
-    .u-p-r-#{$j}{
+    .u-padding__right-#{$j}{
         padding-right: pad($j, rem);
     }
-    .u-p-l-#{$j}{
+    .u-padding__left-#{$j}{
         padding-left: pad($j, rem);
     }
-    .u-p-b-#{$j}{
+    .u-padding__bottom-#{$j}{
         padding-bottom: pad($j, rem);
     }
 }
 /* Margin assistance. Matches positive spacing values */
 @for $j from 1 through 5 {
-    .u-m-#{$j} {
+    .u-margin-#{$j} {
         margin: margin($j, rem);
     }
-    .u-m-t-#{$j}{
+    .u-margin__top-#{$j}{
         margin-top: margin($j, rem);
     }
-    .u-m-r-#{$j}{
+    .u-margin__right-#{$j}{
         margin-right: margin($j, rem);
     }
-    .u-m-l-#{$j}{
+    .u-margin__left-#{$j}{
         margin-left: margin($j, rem);
     }
-    .u-m-b-#{$j}{
+    .u-margin__bottom-#{$j}{
         margin-bottom: margin($j, rem);
     }
 }
