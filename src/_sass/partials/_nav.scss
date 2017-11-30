@@ -1,4 +1,5 @@
 $mobileNavSize: 100 / $space;
+$transSpeed: 200ms;
 .c-main-nav {
   &__inner {
     background: $white;
@@ -59,9 +60,9 @@ $mobileNavSize: 100 / $space;
       &:hover,
       &:focus {
         background-color: $blue;
-        color: #fff;
+        color: $white;
         .c-main-nav__link {
-          color: #fff;
+          color: $white;
         }
         .c-sub-nav {
           box-shadow: 0.1em .2em .2em 0 rgba(0, 0, 0, 0.3);
@@ -83,10 +84,13 @@ $mobileNavSize: 100 / $space;
       justify-content: space-between;
       flex-wrap: wrap;
       padding-left: 0;
+      transition: $transSpeed background-color ease-in;
       &.is-open {
-        background: $primary-color;
+        background-color: $primary-color;
+        transition: $transSpeed background-color ease-in;
         .c-main-nav__link {
           color: $white;
+          transition: $transSpeed color ease-in;
         }
       }
       &:last-of-type {
@@ -127,12 +131,19 @@ $mobileNavSize: 100 / $space;
         overflow-y: scroll;
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         width: #{$mobileNavSize}vw;
         z-index: z-index(17);
+        transition: $transSpeed left ease-in;
         .c-main-nav__list {
           flex-direction: column;
         }
+      }
+    }
+    &.is-anim{
+      .c-main-nav__inner {
+        left: 0;
+        transition: $transSpeed left ease-in;
       }
     }
   }
@@ -157,12 +168,18 @@ $mobileNavSize: 100 / $space;
     border: none;
     box-shadow: none;
     display: none;
+    max-height: 1px;
     opacity: 1;
     padding: 0 .25em;
     position: static;
     width: 100%;
     &.is-open {
       display: block;
+    }
+    &.is-anim{
+      max-height: 600px;
+      transition: $transSpeed max-height ease-in;
+      transition-delay: 100ms;
     }
   }
   &__item {
@@ -199,9 +216,11 @@ $mobileNavSize: 100 / $space;
       display: block;
       font-size: $lg;
       margin-right: .5rem;
+      transition: $transSpeed transform ease-in;
       &.is-open {
         color: $white;
         transform: rotate(90deg);
+        transition: $transSpeed transform ease-in;
       }
     }
   }
@@ -210,13 +229,20 @@ $mobileNavSize: 100 / $space;
 /* Body class */
 
 .main-nav-is-open {
-  // Causes an odd safari bug
+  // Causes an odd safari bug where the subnavs do not open. May not be there on physical devices.
   overflow: hidden;
   @include media("<=screen-sm") {
     .c-site-wrapper {
       position: relative;
-      left: #{$mobileNavSize}vw;
+      left: 0;
+      transition: $transSpeed left ease-in;
     }
+  }
+}
+.main-nav-is-anim{
+  .c-site-wrapper{
+    left: #{$mobileNavSize}vw;
+    transition: $transSpeed left ease-in;
   }
 }
 

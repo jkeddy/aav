@@ -4,7 +4,8 @@ Date: 10/23/2017
 Description: Mobile navigation functions.
 TODO:   Add accessibility      
 Add buttons programmatically at certain breakpoint
-Clean up subnav code.
+Clean up subnav code
+Wrap the whole thing in a media query, no reason to run this on desktop.
 */
 const mainNav = document.getElementById('main-nav');
 const navToggle = document.querySelectorAll('.c-main-nav__toggle');
@@ -20,14 +21,24 @@ function toggleNav(){
     let currentFocus = document.activeElement;
     if(navOpen){
         destroyScrim();
-        document.body.classList.remove('main-nav-is-open');
-        mainNav.classList.remove('is-open');
+        document.body.classList.remove('main-nav-is-anim');
+        mainNav.classList.remove('is-anim');
+        setTimeout(function(){
+            document.body.classList.remove('main-nav-is-open');
+            mainNav.classList.remove('is-open');
+        }, 200);
         currentFocus.focus();
         document.getElementById('js-scrim').removeEventListener('mouseup',toggleNav,true);
     }else{
         createScrim();
         document.body.classList.add('main-nav-is-open');
         mainNav.classList.add('is-open');
+
+        setTimeout(function(){
+            mainNav.classList.add('is-anim');
+            document.body.classList.add('main-nav-is-anim');
+        }, 50);
+
         let newFocus = document.querySelector('.c-main-nav__title');
         if (!newFocus.getAttribute('tabindex'))
             newFocus.setAttribute('tabindex', '-1');
@@ -46,7 +57,8 @@ function toggleSubNav(){
     if(subNavOpen){
         parent.classList.remove('is-open');
         t.classList.remove('is-open');
-        subNav.classList.remove('is-open');
+        subNav.classList.remove('is-anim');
+        setTimeout(function(){subNav.classList.remove('is-open');}, 200);
         currentFocus.focus();
     }else{
         let newFocus = subNav.getElementsByClassName('c-sub-nav__link')[1];
@@ -57,5 +69,6 @@ function toggleSubNav(){
         parent.classList.add('is-open');
         t.classList.add('is-open');
         subNav.classList.add('is-open');
+        setTimeout(function(){subNav.classList.add('is-anim');}, 50);
     }
 }
