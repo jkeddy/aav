@@ -1,46 +1,18 @@
 $mobileNavSize: 100 / $space;
 .c-main-nav {
-  background: $white;
-  border-top: .05em solid $grey;
-  max-width: 216px;
-  font-size: .9em;
-  line-height: 2;
-  z-index: z-index(17);
-  /*
-  @include media("<=tablet") {
-    max-width: none;
-    border-bottom: .05em solid $grey;
-    width: 100vw;
-  }*/
-  @include media ("<=tablet") {
-    position: sticky;
-    top: 1rem;
-  }
-  @include media("<=screen-sm") {
-    display: none;
-  }
-  &.is-open {
+  &__inner {
+    background: $white;
+    border-top: .05em solid $grey;
+    max-width: 216px;
+    font-size: .9em;
+    line-height: 2;
+    z-index: z-index(17);
+    @include media ("<=tablet") {
+      position: sticky;
+      top: .25rem;
+    }
     @include media("<=screen-sm") {
-      $border: 2px solid $blue;
-      border-top: $border;
-      border-right: $border;
-      border-bottom: $border;
-      box-shadow: 0.1em .2em .2em 0 rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #fff;
-      flex-wrap: wrap;
-      height: 100vh;
-      overflow-y: scroll;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: #{$mobileNavSize}vw;
-      z-index: z-index(17);
-      .c-main-nav__list {
-        flex-direction: column;
-      }
+      display: none;
     }
   }
   &__title {
@@ -91,7 +63,7 @@ $mobileNavSize: 100 / $space;
         .c-main-nav__link {
           color: #fff;
         }
-        .c-main-nav__sub-nav {
+        .c-sub-nav {
           box-shadow: 0.1em .2em .2em 0 rgba(0, 0, 0, 0.3);
           border: .35em solid $blue;
           opacity: 1;
@@ -107,6 +79,7 @@ $mobileNavSize: 100 / $space;
     }
     @include media("<=screen-sm") {
       display: flex;
+      align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       padding-left: 0;
@@ -120,15 +93,10 @@ $mobileNavSize: 100 / $space;
         border-bottom: none;
       }
     }
-    /*@include media("<=tablet") {
-      border: none;
-      display: inline-block;
-      padding: 0 .25em;
-    }*/
   }
   &__link {
     color: #000;
-    &:hover{
+    &:hover {
       text-decoration: none;
     }
     @include media("<=screen-sm") {
@@ -137,82 +105,113 @@ $mobileNavSize: 100 / $space;
       padding-left: .25em;
     }
   }
-  &__sub-nav {
-    background: #fff;
-    display: block;
-    font-size: .95em;
-    list-style: none;
-    line-height: 1.4;
-    margin: auto;
-    max-width: 350px;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    left: 100%;
-    top: -1rem;
-    width: 0;
-    transition: opacity 350ms ease-in-out;
-    @include media ("<=screen-sm") {
-      border: none;
-      box-shadow: none;
+  .aavd{
+    @include media("<=tablet"){
       display: none;
-      opacity: 1;
-      padding: 0 .25em 0;
-      position: static;
-      width: 100%;
-      &.is-open {
-        display: block;
-      }
     }
-    /*@include media("<=tablet") {
-      left: 0;
-      top: 100%;
-      width: 45vw
-    }*/
-    &-item {
-      color: #000;
-      margin-left: 1rem;
-      text-transform: capitalize;
-      @include media ("<=screen-sm") {
-        margin: .75rem 0;
-        &:last-of-type{
-          display: none;
-        }
-      }
-      &--title {
-        font-weight: bold;
-        margin-left: 0;
-        text-transform: uppercase;
-        @include media ("<=screen-sm") {
-          display: none;
-        }
-      }
-    }
-    &-link {
-      color: #000;
-    }
-    &-toggle {
-      display: none;
-      @include media("<=screen-sm"){
-        background: none;
-        border: none;
-        display: block;
-        font-size: $lg;
-        margin-right: .5rem;
-        &.is-open{
-          color: $white;
-          margin-right: .4rem;
+  }
+  &.is-open {
+    .c-main-nav__inner {
+      @include media("<=screen-sm") {
+        $border: 2px solid $blue;
+        border-top: $border;
+        border-right: $border;
+        border-bottom: $border;
+        box-shadow: 0.1em .2em .2em 0 rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        flex-wrap: wrap;
+        height: 100vh;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: #{$mobileNavSize}vw;
+        z-index: z-index(17);
+        .c-main-nav__list {
+          flex-direction: column;
         }
       }
     }
   }
 }
-
+.c-sub-nav {
+  background: #fff;
+  display: block;
+  font-size: .95em;
+  list-style: none;
+  line-height: 1.4;
+  margin: auto;
+  max-width: 350px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  left: 100%;
+  top: -1rem;
+  width: 0;
+  transition: opacity 350ms ease-in-out;
+  @include media ("<=screen-sm") {
+    border: none;
+    box-shadow: none;
+    display: none;
+    opacity: 1;
+    padding: 0 .25em;
+    position: static;
+    width: 100%;
+    &.is-open {
+      display: block;
+    }
+  }
+  &__item {
+    color: #000;
+    margin-left: 1rem;
+    text-transform: capitalize;
+    @include media ("<=screen-sm") {
+      margin: .75rem 0;
+      &:last-of-type {
+        display: none;
+      }
+    }
+    &--title {
+      font-weight: bold;
+      margin-left: 0;
+      text-transform: uppercase;
+      @include media ("<=screen-sm") {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: #000;
+    @include media("<=screen-sm") {
+      display: block;
+      padding: 0 .25em 0 .75em;
+    }
+  }
+  &__toggle {
+    display: none;
+    @include media("<=screen-sm") {
+      background: none;
+      border: none;
+      display: block;
+      font-size: $lg;
+      margin-right: .5rem;
+      &.is-open {
+        color: $white;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
 
 /* Body class */
 
 .main-nav-is-open {
+  // Causes an odd safari bug
+  overflow: hidden;
   @include media("<=screen-sm") {
     .c-site-wrapper {
       position: relative;
