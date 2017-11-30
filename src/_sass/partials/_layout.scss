@@ -77,16 +77,28 @@
         }
         @include media("<=screen-md") {
             grid-template-columns: minmax(180px,1fr) 2fr minmax(280px,.6fr);
-            grid-template-areas: "header header header" "main-nav article aside" "footer footer footer";
+            grid-template-areas: 
+            "header header header" 
+            "main-nav article aside" 
+            "footer footer footer";
         }
         @include media("<=layout") {
             grid-template-columns: minmax(230px,1fr) auto;
-            grid-template-areas: "header header" "main-nav article" "main-nav aside" "footer footer";
+            grid-template-areas: 
+            "header header" 
+            "main-nav article" 
+            "main-nav aside" 
+            "footer footer";
         }
         @include media("<=screen-sm") {
             grid-gap: .25em;
             grid-template-columns: 1fr;
-            grid-template-areas: "header" "main-nav" "article" "aside" "footer";
+            grid-template-areas: 
+            "header" 
+            "main-nav" 
+            "article" 
+            "aside" 
+            "footer";
         }
     }
     .c-header {
