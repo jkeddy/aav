@@ -33,7 +33,7 @@
 
 .o-scrim{
     background: $black;
-    display: block;
+    display: none;
     height: 100%;
     opacity: .7;
     position: fixed;
@@ -44,6 +44,7 @@
     width: 100%;
     z-index: z-index(16);
     &.is-open{
+        display: block;
         overflow: hidden;
     }
 }

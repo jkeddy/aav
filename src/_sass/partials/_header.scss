@@ -22,7 +22,6 @@
     display: flex;
     flex-wrap: nowrap;
     max-width: 1390px;
-    
     @supports (display: grid) {
       display: grid;
       grid-template-columns: 1fr 3fr 1fr;
@@ -107,18 +106,18 @@
     @include media("<=screen-sm") {
       display: none;
     }
-  }
-  &__nav-item {
-    color: $text-color;
-    margin: 0 margin(-3, rem);
-    i {
-      color: darken($blue, 10%);
-    }
-    &:hover {
-      color: $blue;
-      text-decoration: none;
+    &-item {
+      color: $text-color;
+      margin: 0 margin(-3, rem);
       i {
+        color: darken($blue, 10%);
+      }
+      &:hover {
         color: $blue;
+        text-decoration: none;
+        i {
+          color: $blue;
+        }
       }
     }
   }

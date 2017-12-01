@@ -229,7 +229,7 @@ $transSpeed: 200ms;
 /* Body class */
 
 .main-nav-is-open {
-  // Causes an odd safari bug where the subnavs do not open. May not be there on physical devices.
+  // Causes an odd small screen safari bug where the subnavs do not open. May not be there on physical devices.
   overflow: hidden;
   @include media("<=screen-sm") {
     .c-site-wrapper {

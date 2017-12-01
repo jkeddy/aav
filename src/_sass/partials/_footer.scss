@@ -8,11 +8,11 @@
     font-size: .83em;
     margin-top: margin(1, rem);
     padding: pad(2, em) pad(-2, em);
-    a {
-        color: #fff;
-    }
     @include media("<=tablet") {
         padding: pad(1, rem) pad(-2, rem);
+    }
+    a {
+        color: #fff;
     }
     &__content {
         display: flex;

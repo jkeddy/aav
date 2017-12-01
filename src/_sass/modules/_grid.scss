@@ -1,7 +1,7 @@
 /*
 Author: Jeff Keddy
 Date: 10/26/2017
-Description: Bootstrap style. But Flexbox. Ignoring BEM naming conventions temporarily.
+Description: Bootstrap style. But Flexbox.
 */
 $grid-cols: 100% / 12;
 $gutter: margin(1,rem);
@@ -14,7 +14,7 @@ $gutter: margin(1,rem);
   &--eq-height {
     align-items: stretch;
  
-    > .c-col, > *[class*="col-"] {
+    > .c-col, > *[class*="col__"] {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -27,7 +27,7 @@ $gutter: margin(1,rem);
   &--no-padding {
     margin-left: 0;
     margin-right: 0;   
-    > .c-col, > [class*="c-col-"] {
+    > .c-col, > [class*="c-col__"] {
       padding-left: 0;
       padding-right: 0;
       margin-bottom: 0;
@@ -81,7 +81,7 @@ $gutter: margin(1,rem);
    
   @include media(">=phone","<=screen-sm") {
     @for $i from 1 to 13 {
-      .c-col-xs-#{$i} {
+      .c-col__xs-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;
@@ -90,7 +90,7 @@ $gutter: margin(1,rem);
   }
   @include media(">=screen-sm","<=screen-md") {
     @for $i from 1 to 13 {
-      .c-col-sm-#{$i} {
+      .c-col__sm-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;
@@ -100,7 +100,7 @@ $gutter: margin(1,rem);
    
   @include media(">=screen-md","<=screen-lg") {
     @for $i from 1 to 13 {
-      .c-col-md-#{$i} {
+      .c-col__md-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;
@@ -109,7 +109,7 @@ $gutter: margin(1,rem);
   }
   @include media(">=screen-lg","<=screen-xl") {
     @for $i from 1 to 13 {
-      .c-col-lg-#{$i} {
+      .c-col__lg-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;
@@ -119,7 +119,7 @@ $gutter: margin(1,rem);
    
   @include media(">=screen-xl") {
     @for $i from 1 to 13 {
-      .c-col-xl-#{$i} {
+      .c-col__xl-#{$i} {
         width: $grid-cols*$i;
         max-width: $grid-cols*$i;
         min-width: $grid-cols*$i;

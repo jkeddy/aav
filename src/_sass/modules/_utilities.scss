@@ -5,30 +5,30 @@ Description:    Helper classes for AAV editorial content.
 */
 
 
-/* For centering, floating, and doing crazy wide hero images. Ignoring BEM for a bit */
+/* For centering, floating, and doing crazy wide hero images. */
 
 .u-elem {
-    &-right {
+    &--right {
         float: right;
         margin-left: margin(-2, rem);
     }
-    &-left {
+    &--left {
         float: left;
         margin-right: margin(-2, rem);
     }
-    &-center {
+    &--center {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-    &-full {
+    &--full {
         /* Strange */
         margin-left: calc(-48vw + 50%);
         margin-right: calc(-52vw + 50%);
         max-width: none;
         width: 100vw;
     }
-    &-darken{
+    &--darken{
         transition: filter 250ms ease-in-out;
         &:hover{
             -webkit-filter: brightness(0.45) contrast(1.05);
@@ -36,12 +36,12 @@ Description:    Helper classes for AAV editorial content.
             transition: filter 250ms ease-in-out
         }
     }
-    &-circle{
+    &--circle{
         border-radius: 50%;
     }
     @include media("<=screen-sm") {
-        &-right,
-        &-left{
+        &--right,
+        &--left{
             display: block;
             float: none;
             margin: margin(-2, rem);
@@ -53,93 +53,93 @@ Description:    Helper classes for AAV editorial content.
 
 .u-text {
     /* Position */
-    &-left {
+    &--left {
         text-align: left;
     }
-    &-center {
+    &--center {
         text-align: center;
     }
-    &-right {
+    &--right {
         text-align: right;
     }
     /* Size */
-    &-xs {
+    &--xs {
         font-size: .6em;
     }
-    &-sm {
+    &--sm {
         font-size: .8em;
     }
-    &-md {
+    &--md {
         font-size: 1.1em;
     }
-    &-lg {
+    &--lg {
         font-size: 1.2em;
     }
-    &-xl {
+    &--xl {
         font-size: 1.4em;
     }
     /* Color */
-    &-white {
+    &--white {
         color: $white;
     }
-    &-black {
+    &--black {
         color: $black;
     }
-    &-orange {
+    &--orange {
         color: $orange;
     }
-    &-primary {
+    &--primary {
         color: $primary-color;
     }
-    &-secondary {
+    &--secondary {
         color: $secondary-color;
     }
-    &-info {
+    &--info {
         color: $link;
     }
-    &-success {
+    &--success {
         color: $success;
     }
-    &-warning {
+    &--warning {
         color: $warning;
     }
-    &-danger {
+    &--danger {
         color: $danger;
     }
-    &-light{
+    &--light{
         color: $light;
     }
-    &-dark{
+    &--dark{
         color: $dark;
     }
 }
 /* Put a bird(bg) on it */
 .u-bg {
-    &-black{
+    &--black{
         background-color: $black;
     }
-    &-white{
+    &--white{
         background-color: $white;
     }
-    &-grey{
+    &--grey{
         background-color: $grey;
     }
-    &-primary {
+    &--primary {
         background-color: $primary-color;
     }
-    &-secondary {
+    &--secondary {
         background-color: $secondary-color;
     }
-    &-info {
+    &--info {
         background-color: $info;
     }
-    &-success {
+    &--success {
         background-color: $success;
     }
-    &-warning {
+    &--warning {
         background-color: $warning;
     }
-    &-danger {
+    &--danger {
         background-color: $danger;
     }
 }
@@ -148,16 +148,16 @@ Description:    Helper classes for AAV editorial content.
     .u-padding-#{$j} {
         padding: pad($j, rem);
     }
-    .u-padding__top-#{$j}{
+    .u-padding--top-#{$j}{
         padding-top: pad($j, rem);
     }
-    .u-padding__right-#{$j}{
+    .u-padding--right-#{$j}{
         padding-right: pad($j, rem);
     }
-    .u-padding__left-#{$j}{
+    .u-padding--left-#{$j}{
         padding-left: pad($j, rem);
     }
-    .u-padding__bottom-#{$j}{
+    .u-padding--bottom-#{$j}{
         padding-bottom: pad($j, rem);
     }
 }
@@ -166,16 +166,16 @@ Description:    Helper classes for AAV editorial content.
     .u-margin-#{$j} {
         margin: margin($j, rem);
     }
-    .u-margin__top-#{$j}{
+    .u-margin--top-#{$j}{
         margin-top: margin($j, rem);
     }
-    .u-margin__right-#{$j}{
+    .u-margin--right-#{$j}{
         margin-right: margin($j, rem);
     }
-    .u-margin__left-#{$j}{
+    .u-margin--left-#{$j}{
         margin-left: margin($j, rem);
     }
-    .u-margin__bottom-#{$j}{
+    .u-margin--bottom-#{$j}{
         margin-bottom: margin($j, rem);
     }
 }

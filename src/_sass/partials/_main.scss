@@ -20,22 +20,22 @@
             padding: 0;
         }
         > * {
+            margin-bottom: margin(1, rem);
+            margin-top: 0;
             @supports (display: grid) {
                 grid-column: article-start/content-end;
             }
-            margin-bottom: margin(1, rem);
-            margin-top: 0;
         }
         p {
             a {
                 color: $link;
                 /*background-image: linear-gradient(to top, $link 0, $link 2px, hsla(208, 72%, 50%,0) 2px, hsla(208, 72%, 50%,0) 100%);
-            transition: 250ms color ease-out;
-            &:hover{
-                color: $link;
-                text-decoration: none;
-                transition: 250ms color ease-in;
-            }*/
+                transition: 250ms color ease-out;
+                &:hover{
+                    color: $link;
+                    text-decoration: none;
+                    transition: 250ms color ease-in;
+                }*/
             }
         }
     }
