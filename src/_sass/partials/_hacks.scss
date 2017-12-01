@@ -2,5 +2,120 @@
     display: none;
 }
 #pollHome, .PDS_Poll{
-    max-width: 300px;
+    max-width: 280px;
+}
+#PDI_container8255166 .pds-box{
+    background: unset !important;
+    margin: 0 auto !important;
+}
+#PDI_container8255166 .pds-question-top{
+    background: unset !important;
+}
+/* <=ie9 */
+.is-oldie {
+    .c-header,
+    .c-footer {
+        display: block;
+    }
+    .c-main-nav,
+    .c-main-content,
+    .c-side-content {
+        display: inline-block;
+        margin-right: -4px;
+        vertical-align: top;
+    }
+    .c-main-nav {
+        margin-left: #{$space}rem;
+    }
+    .c-main-content {
+    }
+    .c-side-content {
+    }
+    @include media("<=layout") {
+        .c-main-nav {
+            width: 25%;
+        }
+        .c-main-content {
+            width: 70%;
+        }
+        .c-side-content {
+            display: block;
+            width: 100%;
+        }
+    }
+    @include media("<=screen-md") {
+        .c-main-content {
+            width: 65%;
+        }
+        .c-side-content {
+            width: 100%;
+        }
+    }
+    @include media("<=screen-sm") {
+        .c-main-nav {
+            width: 100%;
+        }
+        .c-main-content {
+            width: 100%;
+        }
+        .c-side-content {
+            width: 100%;
+        }
+    }
+    .c-header__logo,
+    .c-header__nav,
+    .c-header__search-wrapper{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .c-header__content{
+        display: block;
+    }
+    .c-header__nav{
+        width: 48%;
+        @include media("<=screen-md"){
+            max-width: 310px;
+            .c-header__nav-item:last-of-type{
+                display: block;
+            }
+        }
+    }
+    .c-header__search-wrapper{
+        @extend %clear;
+        width: 23%;
+    }
+    .c-header__search{
+        float: right;
+        margin-right: 0;
+        
+    }
+    .c-footer__content{
+        display: table;
+        margin: 0 auto;
+    }
+    .c-footer__nav,
+    .c-footer__copyright,
+    .c-footer__extra{
+        display: table-cell;
+        vertical-align: top;
+    }
+    @include media("<=600px") {
+        .c-footer__content{
+            display: block;
+        }
+        .c-footer__nav{
+            display: block;
+            width: 100%;
+        }
+    }
+    @include media("<=screen-sm") {
+        .c-footer__copyright,
+        .c-footer__extra{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 320px;
+            width: 100%;
+        }
+    }
 }
