@@ -1,13 +1,13 @@
 @function pad($num,$type) {
     $val: map-get($spacing, $num);
     @if $type==rem or $type==false {
-        $val:#{$val}rem;
+        $val: #{$val}rem;
     }@else if $type==em{
-        $val:#{$val}em;
+        $val: #{$val}em;
     }@else if $type==px{
-        $val:($val * 16);
-        $val:round($val);
-        $val:#{$val}px;
+        $val: ($val * 16);
+        $val: round($val);
+        $val: #{$val}px;
     }
     @return $val;
   }
