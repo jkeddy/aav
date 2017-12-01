@@ -4,6 +4,7 @@ Date: 11/28/2017
 Description: Form validation. Based on https://codepen.io/davatron5000/pen/YErprg by Dave Rupert.
 TODO: 
 Suppress default browser warnings (unless they get better about it)
+Build a submit check for invalid scroll to top thing. - let y = findAncestor(input,"o-form").id.scrollIntoView;
 */
 
 const inputs = document.querySelectorAll('input, select, textarea');
