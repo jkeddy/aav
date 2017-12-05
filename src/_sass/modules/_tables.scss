@@ -30,10 +30,10 @@ $dark-border: 2px solid $grey;
         font-size: $xl;
     }
     &__caption {
+        display: block;
         font-size: 1.2em;
         margin-bottom: margin(-3, rem);
         text-align: left;
-
         /*background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
         background-repeat: no-repeat;
         background-position: 100% 0;
