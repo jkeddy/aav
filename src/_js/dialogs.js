@@ -60,7 +60,7 @@ function createScrim(){
 
     scrim.id="js-scrim";
     
-    scrim.classList.add('o-scrim');
+    scrim.classList.add('o-scrim','is-open');
     document.body.appendChild(scrim);
     document.body.classList.add('scrim-is-open');
     return console.log('scrim created')
