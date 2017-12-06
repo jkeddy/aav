@@ -16,6 +16,9 @@
     position: sticky;
     top: 0;
     width: 100%;
+    &._sticky{
+      position: fixed;
+    }
   }
   &__content {
     align-items: center;

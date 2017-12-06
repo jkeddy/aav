@@ -1,43 +1,46 @@
-.c-side-content{
-    &__wrapper{
+.c-side-content {
+    &__wrapper {
         display: flex;
         flex-direction: column;
         height: 100%;
         align-items: start;
         justify-content: start;
         flex-wrap: wrap;
-        @include media("<=layout"){
+        @include media("<=layout") {
             flex-direction: row;
             justify-content: space-evenly;
-            padding-left: pad(-2,rem);
-            padding-right: pad(-2,rem);
+            padding-left: pad(-2, rem);
+            padding-right: pad(-2, rem);
         }
     }
-    &__inner{
-        @include media(">=layout"){
+    &__inner {
+        @include media(">=layout") {
             background-color: #fff;
             position: sticky;
             top: 0;
             z-index: z-index(4);
+            &._sticky {
+                position: fixed;
+            }
         }
     }
-    &__social-icons{
-        margin-top: margin(-2,rem);
-        margin-bottom: margin(-2,rem);
-        @include media("<=tablet"){
+    &__social-icons {
+        margin-top: margin(-2, rem);
+        margin-bottom: margin(-2, rem);
+        @include media("<=tablet") {
             display: flex;
             justify-content: space-evenly;
             flex-basis: 40%;
         }
     }
-    &__poll{
-        @include media("<=tablet"){
+    &__poll {
+        @include media("<=tablet") {
             display: flex;
             flex-basis: 100%;
             justify-content: center;
         }
-        .box{
-            @include media("<=screen-xs"){
+        .box {
+            @include media("<=screen-xs") {
                 max-width: 300px;
             }
         }
