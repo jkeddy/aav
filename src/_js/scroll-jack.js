@@ -1,3 +1,10 @@
+/*
+Author: Jeff Keddy
+Date: 11/20/2017
+Description: Smooth scrolls to internal page links.
+TODO: Maybe add fallbacks
+*/
+
 function filterPath(string) {
   return string
     .replace(/^\//, '')
