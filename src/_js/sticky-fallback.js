@@ -3,8 +3,8 @@ Author: Aurelio De Rosa
 Edited by: Jeff Keddy
 Date: 12/06/2017
 Description: A falback method for browsers that do not support CSS sticky. See article: http://www.sitepoint.com/css-position-sticky-introduction-polyfills/
-TODO:   Add throttling to scroll event
-        Look into better placeholder method. This cannot be the best way to handle this.
+TODO:   Add throttling to scroll event.
+        Need to figure out a way to turn on place holder based on screen size and relevant parent node.
 */
 
 function posStickySupported() {
