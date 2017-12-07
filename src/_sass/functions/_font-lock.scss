@@ -1,0 +1,11 @@
+/*
+Author: Mike Riethmuller & Jeff Keddy
+Date: 12/07/2017
+Description: CSS lock font-size typography mixin. To be used on individual elements, though moving to root is a good idea.
+https://madebymike.com.au/writing/precise-control-responsive-typography/
+TODO: Needs media query support using @include media. That should be fun.
+*/
+
+@function font-lock($minFont,$maxFont,$minVp,$maxVp) {
+  @return calc( #{$minFont}px + ( #{$maxFont} - #{$minFont} ) * ( (100vw - #{$minVp}px) / (#{$maxVp} - #{$minVp}) ) );
+}
