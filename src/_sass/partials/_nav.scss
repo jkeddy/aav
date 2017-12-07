@@ -8,7 +8,7 @@ $transSpeed: 200ms;
     font-size: .9em;
     line-height: 2;
     z-index: z-index(17);
-    @include media ("<=tablet","height>=600px") {
+    @include media ("<=tablet",">=screen-sm","height>=600px") {
       position: sticky;
       top: .25rem;
       &._sticky{
