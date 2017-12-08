@@ -23,6 +23,7 @@
     "watchify": "^3.9.0"
   },
   "scripts": {
+    "lint": "eslint --fix dist/assets/js/main.js",
     "build:clean": "rimraf dist/assets/css/, /dist/assets/js/_js/",
     "build:css": "node-sass --source-map true src/_sass/style.scss -o dist/assets/css/ && postcss dist/assets/css/style.css --use autoprefixer -d dist/assets/css/",
     "build:bundle": "browserify ./src/_js/*.js | uglifyjs -c --source-map -o ./dist/assets/js/main.js",
@@ -37,6 +38,11 @@
     "port": "8080"
   },
   "devDependencies": {
-    "eslint-config-google": "^0.9.1"
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
