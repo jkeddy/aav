@@ -44,3 +44,4 @@ _site
 dist
 .log
 node_modules
+src/_partials
