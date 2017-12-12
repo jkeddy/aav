@@ -7,24 +7,47 @@ Description: http://www.stubbornella.org/content/2010/06/25/the-media-object-sav
 .o-media-block {
     display: flex;
     align-items: flex-start;
-    padding: pad(-2,rem);
-    &--tall,&--vertical{
+    padding: pad(-2, rem);
+    &--tall,
+    &--vertical {
         align-items: center;
         flex-direction: column;
     }
-    &--right, &--reverse{
+    &--right,
+    &--reverse {
         flex-direction: row-reverse;
     }
-    &--center{
+    &--center {
         align-items: center;
     }
-    &__img{
-        margin-right: margin(-2,rem);
-        &--sm{
+    &__img {
+        margin-right: margin(-2, rem);
+        &--sm {
             max-width: 56px;
         }
     }
-    &__body{
+    &__body {
         flex: 1;
-    } 
+    }
+    &--advertorial-button {
+        .o-media-block__img {
+            font-size: 3em;
+        }
+        .o-media-block__body {
+            font-family: "Bitter", serif;
+            font-size: .8rem;
+            line-height: 1.3;
+            text-transform: uppercase;
+            a {
+                color: #000;
+            }
+        }
+        .o-media-block__product-name {
+            display: block;
+            font-size: 1.5em;
+        }
+        &+& {
+            border-top: 1px solid hsl(0, 0%, 66.7%);
+        }
+    }
 }
