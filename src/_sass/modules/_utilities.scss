@@ -62,6 +62,13 @@ Description:    Helper classes for AAV editorial content.
     &--right {
         text-align: right;
     }
+    /* */
+    &--uppercase{
+        text-transform: uppercase;
+    }
+    &--capitalize{
+        text-transform: capitalize;
+    }
     /* Size */
     &--xs {
         font-size: .6em;
