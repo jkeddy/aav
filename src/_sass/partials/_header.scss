@@ -166,12 +166,8 @@
         font-family: FontAwesome;
         font-size: 1rem;
         text-align: center;
-        @include abs-center;
-        transition: 570ms left 250ms ease-in;
-        @include media("<=screen-sm") {
-          left: auto;
-          right: 5%;
-        }
+        @include abs-vert-center;
+        right: 5px;
       }
       &:hover,
       &:focus {
@@ -184,17 +180,10 @@
             opacity: 1;
           }
         }
-        &:after {
-          left: 80%;
-          transition: left 500ms ease-in-out;
-          @include media("<=screen-sm") {
-            left: auto;
-            right: 5%;
-          }
-        }
       }
     }
     &-input {
+      background-color: transparent
       color: $text-color;
       font-size: $sm;
       line-height: 2;
