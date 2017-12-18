@@ -3,7 +3,7 @@
     background: $grey;
     padding: pad(1,rem) pad(-2,rem);
     &__title {
-        @include font-serif(1.8rem,false,false,false);
+        @include font-sans(1.4rem,false,false,false);
         margin: 0 0 margin(-2,rem);
     }
     &__subtitle {
