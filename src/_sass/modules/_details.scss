@@ -44,13 +44,15 @@ Description:    Simple toggle for boxes. Named details after the default element
             margin-bottom: margin(-3,rem);
         }
     }
-    &__link{
-        margin-bottom: margin(-3,rem);
-    }
     &--mininav{
         position: relative;
         .o-toggle__link{
             display: block;
+            margin-bottom: margin(-3,rem);
+        }
+        .o-toggle__subhead{
+            display: block;
+            margin-bottom: margin(-2,rem);
         }
         .o-toggle__content{
             @include media(">=screen-sm"){
