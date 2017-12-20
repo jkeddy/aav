@@ -37,16 +37,13 @@ if (!posStickySupported()) {
   // Side content >=layout
   if (window.matchMedia('(min-width: 850px)').matches) {
     posStickyFallback('.c-side-content__inner.js-sticky-fallback')
-    console.log('side')
   }
   // Nav <=tablet","height>=600px"
   if (window.matchMedia('(max-width: 768px) and (min-width: 550px) and (min-height: 600px)').matches) {
     posStickyFallback('.c-main-nav__inner.js-sticky-fallback')
-    console.log('nav')
   }
   // Header <=screen-sm
   if (window.matchMedia('(max-width: 550px)').matches) {
     posStickyFallback('.c-header.js-sticky-fallback')
-    console.log('header')
   }
 }
