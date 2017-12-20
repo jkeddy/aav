@@ -7,8 +7,22 @@ Add buttons programmatically at certain breakpoint
 Clean up subnav code
 */
 const mainNav = document.getElementById('main-nav')
+const mainNavItem = document.querySelectorAll('.c-main-nav__item')
+const subNav = document.querySelectorAll('.c-sub-nav')
 const navToggle = document.querySelectorAll('.c-main-nav__toggle')
 const subNavToggle = document.querySelectorAll('.c-sub-nav__toggle')
+for (let i = 0, len = mainNavItem.length; i < len; i++) {
+  mainNavItem[i].addEventListener('mouseenter', function () {
+    let overflowItem = this.querySelector('.c-sub-nav')
+    overflowItem.style.top = '-1rem'
+    let bound = overflowItem.getBoundingClientRect()
+    if (bound.bottom >= (window.innerHeight || document.documentElement.clientHeight)) {
+      let y = Math.round((bound.bottom - (window.innerHeight || document.documentElement.clientHeight))+20)
+      //console.log(y)
+      overflowItem.style.top = '-' + y + 'px'
+    }
+  })
+}
 // <=screen-sm
 if (window.matchMedia('(max-width: 550px)').matches) {
   for (let i = 0; i < navToggle.length; i++) {
