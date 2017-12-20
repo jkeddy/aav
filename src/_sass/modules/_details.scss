@@ -17,13 +17,14 @@ Description:    Simple toggle for boxes. Named details after the default element
         }
         &[aria-hidden=true] {
             @include visually-hidden;
-            max-height: 0;
+            max-height: 1px;
+            max-width: 1px;
             opacity: 1;
             visibility: hidden;
             transition:
-            visibility 1s ease,
-            max-height 1s ease,
-            opacity    1s ease;
+              max-height 1250ms ease,
+              max-width 1250ms ease,
+              opacity    500ms ease;
         }
         &[aria-hidden=false] {
             position: relative;
@@ -33,12 +34,13 @@ Description:    Simple toggle for boxes. Named details after the default element
             clip: none;
             overflow: hidden;
             opacity: 1;
-            max-height: 80em;
+            max-height: 40em;
+            max-width: 80em;
             visibility: visible;
             transition:
-              visibility 1s ease,
-              max-height 1s ease,
-              opacity    1s ease;
+              max-height 1250ms ease,
+              max-width 1250ms ease,
+              opacity    500ms ease;
         }
         > *:not(.row){
             margin-bottom: margin(-3,rem);
@@ -46,23 +48,29 @@ Description:    Simple toggle for boxes. Named details after the default element
     }
     &--mininav{
         position: relative;
-        .o-toggle__link{
-            display: block;
-            margin-bottom: margin(-3,rem);
-        }
-        .o-toggle__subhead{
-            display: block;
-            margin-bottom: margin(-2,rem);
-        }
         .o-toggle__content{
             @include media(">=screen-sm"){
                 padding-top:pad(5,rem);
             }
-            &[aria-hidden=false]{
+            &[aria-hidden=false] {
+                .o-toggle__link{
+                    opacity: 1;
+                    transition: opacity 300ms ease-in;
+                    transition-delay: 300ms;
+                }
                 .c-row,.c-col{
                     margin-bottom: 0;
                 }
             }
+        }
+        .o-toggle__link{
+            display: block;
+            margin-bottom: margin(-3,rem);
+            opacity: 0;
+        }
+        .o-toggle__subhead{
+            display: block;
+            margin-bottom: margin(-2,rem);
         }
     }
 }
