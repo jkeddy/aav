@@ -47,6 +47,34 @@ Description:    Helper classes for AAV editorial content.
             margin: margin(-2, rem) auto;
         }
     }
+    &--hide{
+        display: none;
+        @include media("<=screen-xl"){
+            &-xl{
+                display: none;
+            }
+        }
+        @include media("<=screen-lg"){
+            &-lg{
+                display: none;
+            }
+        }
+        @include media("<=screen-md"){
+            &-md{
+                display: none;
+            }
+        }
+        @include media("<=screen-sm"){
+            &-sm{
+                display: none;
+            }
+        }
+        @include media("<=screen-xs"){
+            &-xs{
+                display: none;
+            }
+        }
+    }
 }
 
 /* Controls for text. Positioning, sizing, etc. Sizing is all relative. */
