@@ -46,6 +46,10 @@
     &__aside{
         max-width: 380px;
         width: 45%;
+        @include media("<=screen-sm"){
+            max-width: 330px;
+            width: auto;
+        }
     }
     &__social {
         border-top: 1px solid $grey;
@@ -58,16 +62,10 @@
         @include media("<=1105px") {
             text-align: center;
         }
-        &-text {
-            @include media("<=1105px") {
-                display: block;
-                margin-top: margin(-2, rem);
-            }
-        }
     }
 }
 .c-breadcrumb-nav{
-    
+    margin-bottom: margin(-3, rem);
 }
 .c-content-nav {
     &__title {

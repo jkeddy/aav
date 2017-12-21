@@ -1,16 +1,3 @@
-#skipNav{
-    display: none;
-}
-#pollHome, .PDS_Poll{
-    max-width: 280px;
-}
-.PDS_Poll .pds-box{
-    background: unset !important;
-    margin: 0 auto !important;
-}
-.PDS_Poll .pds-question-top{
-    background: unset !important;
-}
 /* <=ie9 */
 .is-oldie {
     .c-header,
@@ -119,10 +106,25 @@
         }
     }
 }
-/* Author Photos */
+
+#pollHome, .PDS_Poll{
+    max-width: 280px;
+    @include media("<=screen-sm"){
+        max-width: 240px;
+    }
+}
+.PDS_Poll .pds-box{
+    background: unset !important;
+    margin: 0 auto !important;
+}
+.PDS_Poll .pds-question-top{
+    background: unset !important;
+}
 
 ._author__photo{
+    float: left;
     max-width: 72px;
+    margin: 0 margin(-2,rem) 0 0;
 }
 ._img-56px{
     max-width: 56px;
