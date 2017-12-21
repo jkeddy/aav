@@ -1,27 +1,27 @@
 /*
 Author: Jeff Keddy
 Date: 10/23/2017
-Description: Mobile navigation functions.
-TODO:   Add accessibility
-Add buttons programmatically at certain breakpoint
-Clean up subnav code
+Description: Navigation functions.
+TODO:   improve accessibility
+Add toggle buttons programmatically
 */
 const mainNav = document.getElementById('main-nav')
 const mainNavItem = document.querySelectorAll('.c-main-nav__item')
-const subNav = document.querySelectorAll('.c-sub-nav')
 const navToggle = document.querySelectorAll('.c-main-nav__toggle')
 const subNavToggle = document.querySelectorAll('.c-sub-nav__toggle')
-for (let i = 0, len = mainNavItem.length; i < len; i++) {
-  mainNavItem[i].addEventListener('mouseenter', function () {
-    let overflowItem = this.querySelector('.c-sub-nav')
-    overflowItem.style.top = '-1rem'
-    let bound = overflowItem.getBoundingClientRect()
-    if (bound.bottom >= (window.innerHeight || document.documentElement.clientHeight)) {
-      let y = Math.round((bound.bottom - (window.innerHeight || document.documentElement.clientHeight))+20)
-      //console.log(y)
-      overflowItem.style.top = '-' + y + 'px'
-    }
-  })
+// >=screen-sm
+if (window.matchMedia('(min-width: 550px)').matches) {
+  for (let i = 0, len = mainNavItem.length; i < len; i++) {
+    mainNavItem[i].addEventListener('mouseenter', function () {
+      let overflowItem = this.querySelector('.c-sub-nav')
+      overflowItem.style.top = '-1rem' // default css top value
+      let bound = overflowItem.getBoundingClientRect()
+      if (bound.bottom >= (window.innerHeight || document.documentElement.clientHeight)) {
+        let y = Math.round((bound.bottom - (window.innerHeight || document.documentElement.clientHeight)) + 20) // 20 pixel addition for padding/boxshadow
+        overflowItem.style.top = '-' + y + 'px'
+      }
+    })
+  }
 }
 // <=screen-sm
 if (window.matchMedia('(max-width: 550px)').matches) {
@@ -81,7 +81,7 @@ function toggleSubNav () {
     }, 200)
     currentFocus.focus()
   } else {
-    let newFocus = subNav.getElementsByClassName('c-sub-nav__link')[1]
+    let newFocus = subNav.querySelectorAll('.c-sub-nav__link')[1]
     // Not sure if this is needed.
     // if (!newFocus.getAttribute('tabindex'))
     //    newFocus.setAttribute('tabindex', '-1');
