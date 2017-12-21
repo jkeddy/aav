@@ -11,6 +11,11 @@
     @include media("<=tablet") {
         padding: pad(1, rem) pad(-2, rem);
     }
+    .slide-up-is-active &{
+        @include media(">=screen-sm"){
+            padding-bottom: 7rem;
+        }
+    }
     a {
         color: #fff;
     }
