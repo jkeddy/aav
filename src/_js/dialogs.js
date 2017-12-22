@@ -36,7 +36,7 @@ function createDialogNode (e, i) {
   }
   createScrim()
   listenDialog()
-  console.log('dialog created')
+  //console.log('dialog created')
   return dialogID
 }
 function listenDialog () {
@@ -64,11 +64,11 @@ function createScrim () {
   scrim.classList.add('o-scrim', 'is-open')
   document.body.appendChild(scrim)
   document.body.classList.add('scrim-is-open')
-  return console.log('scrim created')
+  return true
 }
 function destroyScrim () {
   let scrim = document.getElementById('js-scrim')
   scrim.parentNode.removeChild(scrim)
   document.body.classList.remove('scrim-is-open')
-  return console.log('scrim destroyed')
+  return true
 }
