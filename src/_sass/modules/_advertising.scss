@@ -42,4 +42,7 @@
     @include media(">=screen-sm"){
         display: block;
     }
+    @include media(">=screen-sm","<=tablet","landscape"){
+        display: none;
+    }
 }
