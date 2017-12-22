@@ -36,6 +36,7 @@ function toggleNav () {
   let navOpen = mainNav.classList.contains('is-open')
   let currentFocus = document.activeElement
   if (navOpen) {
+    document.getElementById('js-scrim').removeEventListener('mouseup', toggleNav, true)
     destroyScrim()
     document.body.classList.remove('main-nav-is-anim')
     mainNav.classList.remove('is-anim')
@@ -44,7 +45,6 @@ function toggleNav () {
       mainNav.classList.remove('is-open')
     }, 200)
     currentFocus.focus()
-    document.getElementById('js-scrim').removeEventListener('mouseup', toggleNav, true)
   } else {
     createScrim()
     document.body.classList.add('main-nav-is-open')
