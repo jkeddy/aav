@@ -12,6 +12,7 @@
         }
     }
     &__article {
+        flex: 1;
         padding: 0 pad(-2,em);
         justify-content: start;
         > * {

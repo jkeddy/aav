@@ -106,7 +106,18 @@
         }
     }
 }
-
+/* ie-11 */
+.ie-11{
+    .c-header__nav{
+        flex: 0 1 auto;
+    }  
+    .c-header__content{
+        width: 100%;
+    }
+    .c-footer__content{
+        width: 100%;
+    }
+}
 #pollHome, .PDS_Poll{
     max-width: 280px;
     @include media("<=screen-sm"){
