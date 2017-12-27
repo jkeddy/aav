@@ -1,16 +1,22 @@
 .c-site-wrapper {
     display: flex;
+    flex-basis: 100%;
     justify-content: center;
+    width: 100%;
 }
 .c-container{
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 100%;
     justify-content: center;
+    width: 100%;
 }
 .c-header,
 .c-footer {
+    display: flex;
     flex: 1;
     flex-basis: 100%;
+    width: 100%;
 }
 .c-header {
     margin-bottom: #{$space}rem;
@@ -20,10 +26,12 @@
     flex-basis: 10%;
 }
 .c-main-content {
+    display: flex;
     flex: 1;
     flex-basis: 51.333%;
 }
 .c-side-content {
+    display: flex;
     flex: 1;
     flex-basis: 25%;
 }

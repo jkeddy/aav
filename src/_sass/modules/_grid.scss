@@ -8,6 +8,7 @@ $gutter: margin(1,rem);
  
 .c-row {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: $gutter;
  
@@ -65,10 +66,11 @@ $gutter: margin(1,rem);
   }
 }
 .c-col {
+    display: inline-block;
     flex: 1;
     padding-left: pad(-3,rem);
     padding-right: pad(-3,rem);
-    margin-bottom: $gutter;
+    margin-bottom: margin(1,rem);
   }
    
   @for $i from 1 to 13 {
