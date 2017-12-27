@@ -118,6 +118,12 @@
         width: 100%;
     }
 }
+/* edge-15 */
+.edge-15{
+    .c-header__content{
+        width: 100%;
+    }
+}
 #pollHome, .PDS_Poll{
     max-width: 280px;
     @include media("<=screen-sm"){
