@@ -140,3 +140,14 @@
 ._img-56px{
     max-width: 56px;
 }
+//iphone 6/samsung internet hack/fix
+@include media(">=phone","<=screen-sm") {
+    .c-container{
+        flex-direction: column;
+    }
+    .c-col{
+        flex: 0 0 auto;
+        &__xs-12{
+        }
+    }
+}
