@@ -52,8 +52,13 @@ Description:    Simple toggle for boxes. Named details after the default element
             @include media(">=screen-sm"){
                 padding-top:pad(5,rem);
             }
+            &[aria-hidden=true]{
+                > *{
+                    opacity: 0;
+                }
+            }
             &[aria-hidden=false] {
-                .o-toggle__link{
+                > *{
                     opacity: 1;
                     transition: opacity 300ms ease-in;
                     transition-delay: 300ms;
@@ -66,7 +71,6 @@ Description:    Simple toggle for boxes. Named details after the default element
         .o-toggle__link{
             display: block;
             margin-bottom: margin(-3,rem);
-            opacity: 0;
         }
         .o-toggle__subhead{
             display: block;
