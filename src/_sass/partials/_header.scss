@@ -3,6 +3,7 @@
   border-image-source: linear-gradient(to right, darken($blue, 20%) 0%, lighten($blue, 10%) 25%, darken($blue, 20%) 50%, lighten($blue, 10%) 75%, darken($blue, 20%) 100%);
   border-image-slice: 1;
   border-top: 1.2rem solid;
+  border-top-color: darken($blue, 20%);
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
