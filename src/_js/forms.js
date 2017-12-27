@@ -8,28 +8,28 @@ Build a submit check for invalid scroll to top thing. - let y = findAncestor(inp
 */
 const inputs = document.querySelectorAll('input, select, textarea')
 
-for (let input of inputs) {
+for (let i = 0, len = inputs.length; i < len; i++) {
   let radioWrap = 'js-form__radio-validation'
   let invalid = 'is-invalid'
   // Just before submit, the invalid event will fire, let's apply our class there
-  input.addEventListener('invalid', (e) => {
-    input.classList.add(invalid)
-    if (input.type == 'email') {
-      if (input.attributes.required) { input.setCustomValidity('Please enter a valid email address ex. name@domain.com') } else { input.setCustomValidity('Please enter a valid email address or leave blank ex. name@domain.com') }
-    } else if (input.type == 'tel') {
-      if (input.attributes.required) { input.setCustomValidity('Please enter a valid phone number ex. 555-555-5555') } else { input.setCustomValidity('Please enter a valid phone number or leave blank ex. 555-555-5555') }
-    } else if (input.type == 'radio' || input.type == 'checkbox') {
-      findAncestor(input, radioWrap).classList.add(invalid)
+  inputs[i].addEventListener('invalid', function (e) {
+    inputs[i].classList.add(invalid)
+    if (inputs[i].type == 'email') {
+      if (inputs[i].attributes.required) { inputs[i].setCustomValidity('Please enter a valid email address ex. name@domain.com') } else { inputs[i].setCustomValidity('Please enter a valid email address or leave blank ex. name@domain.com') }
+    } else if (inputs[i].type == 'tel') {
+      if (inputs[i].attributes.required) { inputs[i].setCustomValidity('Please enter a valid phone number ex. 555-555-5555') } else { inputs[i].setCustomValidity('Please enter a valid phone number or leave blank ex. 555-555-5555') }
+    } else if (inputs[i].type == 'radio' || inputs[i].type == 'checkbox') {
+      findAncestor(inputs[i], radioWrap).classList.add(invalid)
     }
   }, false)
   // Check validity on blur
-  input.addEventListener('blur', (e) => {
+  inputs[i].addEventListener('blur', function (e) {
     // Reset. Assumes the user is changing the invalid areas.
-    input.setCustomValidity('')
-    if (input.type == 'radio' || input.type == 'checkbox') {
-      let x = findAncestor(input, radioWrap)
+    inputs[i].setCustomValidity('')
+    if (inputs[i].type == 'radio' || inputs[i].type == 'checkbox') {
+      let x = findAncestor(inputs[i], radioWrap)
       x.classList.remove(invalid)
     }
-    input.checkValidity()
+    inputs[i].checkValidity()
   })
 }

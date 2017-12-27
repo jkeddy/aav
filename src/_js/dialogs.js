@@ -36,7 +36,7 @@ function createDialogNode (e, i) {
   }
   createScrim()
   listenDialog()
-  //console.log('dialog created')
+  // console.log('dialog created')
   return dialogID
 }
 function listenDialog () {
