@@ -34,10 +34,6 @@
       grid-gap: .5rem;
       grid-template-areas: "logo header-nav search";
       align-items: center;
-      @include media(">=screen-md", "<=screen-lg") {
-        grid-template-columns: 1fr 1.75fr .5fr;
-        grid-gap: .5rem;
-      }
       @include media("<=screen-md") {
         grid-template-areas: "logo logo search" "header-nav header-nav header-nav";
         grid-template-columns: 1fr 1fr #{$space}fr;
@@ -103,9 +99,9 @@
   }
   &__nav {
     grid-area: header-nav;
-    flex-basis: 60%;
+    flex-basis: 90%;
     font-size: .9em;
-    width: 60%;
+    width: 90%;
     @include media("<=screen-md") {
       flex-basis: 100%;
       order: 3;
