@@ -98,6 +98,7 @@
     @include media("<=screen-sm"){
       flex-basis: 35%;
       width: 35%;
+      min-width: 105px;
     }
   }
   &__nav {
@@ -203,6 +204,7 @@
       opacity: 0;
       transition: opacity 300ms ease-in-out;
       @include media("<=screen-sm") {
+        line-height: 1.75;
         opacity: 1;
       }
     }
