@@ -6,8 +6,7 @@ Description: Slides AAV slide up ad into view when scrolled 5% down screen
 // >=screen-sm
 if (window.matchMedia('(min-width: 550px)').matches) {
   const adBottom = document.getElementById('sLd_exp')
-
-  window.onload = function () {
+  setTimeout(function () {
     let path = window.location.pathname.split('/')
     let l = path.length
     let fileName = path[l - 2]
@@ -33,5 +32,5 @@ if (window.matchMedia('(min-width: 550px)').matches) {
         }
       })
     }
-  }
+  }, 1000)
 }
