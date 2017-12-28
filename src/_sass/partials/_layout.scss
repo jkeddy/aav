@@ -19,21 +19,24 @@
     width: 100%;
 }
 .c-header {
-    margin-bottom: #{$space}rem;
+    margin-bottom: margin(1,rem);
 }
 .c-main-nav {
     flex: 1;
     flex-basis: 10%;
+    width: 10%;
 }
 .c-main-content {
     display: flex;
     flex: 1;
     flex-basis: 51.333%;
+    width: 51.333%;
 }
 .c-side-content {
     display: flex;
     flex: 1;
     flex-basis: 25%;
+    width: 25%;
 }
 @include media(">=screen-lg") {
     .c-main-nav { max-width: 216px; }
@@ -43,28 +46,35 @@
 @include media("<=1120px") {
     .c-main-nav {
         flex-basis: 20%;
+        width: 20%;
     }
     .c-main-content {
         flex-basis: 49%;
+        width: 49%;
     }
 }
 @include media("<=screen-md") {
     .c-main-content {
         flex-basis: 65%;
+        width: 65%;
     }
     .c-side-content {
         flex-basis: 100%;
+        width: 100%;
     }
 }
 @include media("<=screen-sm") {
     .c-main-nav {
         flex-basis: 100%;
+        width: 100%;
     }
     .c-main-content {
         flex-basis: 100%;
+        width: 100%;
     }
     .c-side-content {
         flex-basis: 100%;
+        width: 100%;
     }
 }
 @supports (display: grid) {

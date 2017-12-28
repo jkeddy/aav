@@ -97,16 +97,19 @@
     }
     @include media("<=screen-sm"){
       flex-basis: 35%;
+      width: 35%;
     }
   }
   &__nav {
     grid-area: header-nav;
     flex-basis: 60%;
     font-size: .9em;
+    width: 60%;
     @include media("<=screen-md") {
       flex-basis: 100%;
       order: 3;
       text-align: center;
+      width: 100%;
     }
     @include media("<=screen-sm") {
       display: none;
@@ -145,6 +148,9 @@
       background: hsl(0,0,100%);
       max-width: none;
       width: auto;
+    }
+    @include media("<=screen-xs") {
+      max-width: 140px;
     }
     &-inner {
       $s: 32px;

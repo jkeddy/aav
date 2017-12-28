@@ -66,6 +66,9 @@ $gutter: margin(1,rem);
   }
 }
 .c-col {
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: middle;
     flex: 1;
     padding-left: pad(-3,rem);
     padding-right: pad(-3,rem);

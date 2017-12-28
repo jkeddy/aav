@@ -5,6 +5,9 @@
     &__title {
         @include font-sans(1.4rem,false,false,false);
         margin: 0 0 margin(-2,rem);
+        &--poll{
+            @include font-serif(1.7rem,false,false,false);
+        }
     }
     &__subtitle {
         font-weight: bold;
