@@ -7,16 +7,17 @@ $transSpeed: 200ms;
     max-width: 216px;
     font-size: .9em;
     line-height: 2;
-    z-index: z-index(17);
-    @include media ("<=tablet",">=screen-sm","height>=600px") {
+    z-index: z-index(15);
+    @include media ("<=layout",">=screen-sm","height>=700px") {
       position: sticky;
-      top: .25rem;
+      top: 14%;
       &._sticky{
         position: fixed;
       }
     }
     @include media("<=screen-sm") {
       display: none;
+      z-index: z-index(18);
     }
   }
   &__title {
@@ -59,7 +60,7 @@ $transSpeed: 200ms;
     border-bottom: 1px solid $grey;
     padding-left: .25em;
     position: relative;
-    z-index: z-index(17);
+    z-index: z-index(15);
     @include media(">=screen-sm") {
       &:hover,
       &:focus {
@@ -134,7 +135,6 @@ $transSpeed: 200ms;
         top: 0;
         left: -100%;
         width: #{$mobileNavSize}vw;
-        z-index: z-index(17);
         transition: $transSpeed left ease-in;
         .c-main-nav__list {
           flex-direction: column;

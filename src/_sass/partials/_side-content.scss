@@ -12,16 +12,22 @@
             padding-left: pad(-2, rem);
             padding-right: pad(-2, rem);
         }
+        @include media("<=screen-sm"){
+            justify-content: center;
+        }
     }
     &__inner {
         @include media(">=layout") {
             background-color: #fff;
             position: sticky;
-            top: 0;
+            top: 1rem;
             z-index: z-index(4);
             &._sticky {
                 position: fixed;
             }
+        }
+        @include media(">=screen-sm","<=desktop") {
+            top: 15%;
         }
     }
     &__social-icons {
@@ -29,11 +35,6 @@
         margin-bottom: margin(-2, rem);
         @include media("<=tablet") {
             display: flex;
-            justify-content: space-evenly;
-            flex-basis: 40%;
-            width: 40%;
-        }
-        @include media("<=screen-sm") {
             flex-basis: 100%;
             width: 100%;
         }

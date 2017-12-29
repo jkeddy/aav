@@ -28,7 +28,7 @@
         right: 5%;
     transition: 400ms all ease-in;
     width: 100%;
-    z-index: z-index(14);
+    z-index: z-index(17);
     &.is-open{
         bottom: 0;
         opacity: 1;
@@ -42,7 +42,7 @@
     @include media(">=screen-sm"){
         display: block;
     }
-    @include media(">=screen-sm","<=tablet","landscape"){
+    @include media("<=layout",">=screen-sm","landscape"){
         display: none;
     }
 }

@@ -1,6 +1,5 @@
 .c-main-content {
     font-size: 0.875em;
-    /*padding: 0 pad(-3,rem);*/
     @include media("<screen-xs") {
         padding: 0 pad(-2, rem)
     }
@@ -15,6 +14,9 @@
         flex: 1;
         padding: 0 pad(-2,em);
         justify-content: start;
+        @include media("<screen-xs") {
+            padding: 0;
+        }
         > * {
             margin-bottom: margin(1, rem);
             margin-top: 0;

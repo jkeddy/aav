@@ -151,14 +151,40 @@
 ._img-56px{
     max-width: 56px;
 }
+
 //iphone 6/samsung internet hack/fix
 @include media(">=phone","<=screen-sm") {
-    .c-container{
-        flex-direction: column;
+    .c-container, .c-side-content__wrapper {
+        flex-direction: row;
+        -webkit-box-orient: vertical;
     }
     .c-col{
         flex: 0 0 auto;
         &__xs-12{
         }
+    }
+}
+// Galaxy Note 4 hacks. very specific.
+@include media("<=1280px","height<=800px","landscape"){
+    .c-container{
+        -webkit-box-orient: vertical;
+    }
+    .c-main-nav,
+    .c-main-content,
+    .c-side-content{
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+}
+@include media("<=800px","height<=1280px","portrait"){
+    .c-container{
+        -webkit-box-orient: vertical;
+    }
+    .c-main-nav,
+    .c-main-content,
+    .c-side-content{
+        display: inline-block;
+        vertical-align: top;
     }
 }
