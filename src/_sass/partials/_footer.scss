@@ -102,8 +102,9 @@
             max-width: none;
         }
         @include media("<=600px") {
-            flex-basis: 50%;
-            width: 50%;
+            max-width: 280px;
+            flex-basis: 100%;
+            width: 100%;
         }
         @include media("<=screen-sm") {
             flex-basis: 100%;
@@ -132,8 +133,9 @@
             max-width: none;
         }
         @include media("<=600px") {
-            flex-basis: 50%;
-            width: 50%;
+            max-width: 280px;
+            flex-basis: 100%;
+            width: 100%;
         }
         @include media("<=screen-sm") {
             flex-basis: 100%;

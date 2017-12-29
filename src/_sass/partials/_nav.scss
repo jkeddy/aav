@@ -8,13 +8,13 @@ $transSpeed: 200ms;
     font-size: .9em;
     line-height: 2;
     z-index: z-index(15);
-    @include media ("<=layout",">=screen-sm","height>=700px") {
+    /*@include media ("<=layout",">=screen-sm","height>=700px") {
       position: sticky;
       top: 14%;
       &._sticky{
         position: fixed;
       }
-    }
+    }*/
     @include media("<=screen-sm") {
       display: none;
       z-index: z-index(18);
