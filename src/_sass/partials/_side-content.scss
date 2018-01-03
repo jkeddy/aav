@@ -20,7 +20,7 @@
         @include media(">=layout") {
             background-color: #fff;
             position: sticky;
-            top: 1rem;
+            top: 0;
             z-index: z-index(4);
             &._sticky {
                 position: fixed;
