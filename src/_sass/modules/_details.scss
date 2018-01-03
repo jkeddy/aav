@@ -19,12 +19,11 @@ Description:    Simple toggle for boxes. Named details after the default element
             @include visually-hidden;
             max-height: 1px;
             max-width: 1px;
-            opacity: 1;
+            opacity: 0;
             visibility: hidden;
-            transition:
-              max-height 1250ms ease,
-              max-width 1250ms ease,
-              opacity    500ms ease;
+            > *{
+                opacity: 0;
+            }
         }
         &[aria-hidden=false] {
             position: relative;
@@ -33,37 +32,39 @@ Description:    Simple toggle for boxes. Named details after the default element
             overflow: visible;
             clip: none;
             opacity: 1;
-            max-height: 40em;
-            max-width: 80em;
+            max-height: 28em;
+            max-width: 50em;
             visibility: visible;
-            transition:
-              max-height 1250ms ease,
-              max-width 1250ms ease,
-              opacity    500ms ease;
+            > *{
+                opacity: 1;
+            }
         }
         > *:not(.row){
             margin-bottom: margin(-3,rem);
         }
     }
     &--mininav{
+        $anim: 1250;
         position: relative;
         .o-toggle__content{
             @include media(">=screen-sm"){
                 padding-top:pad(5,rem);
             }
-            &[aria-hidden=true]{
-                > *{
-                    opacity: 0;
-                }
-            }
             &[aria-hidden=false] {
-                > *{
-                    opacity: 1;
-                    transition: opacity 300ms ease-in;
-                    transition-delay: 300ms;
+                animation-duration: #{$anim - 150}ms;
+                animation-name: mininav-is-open;
+                > * {
+                    transition: #{$anim - 150}ms opacity ease-in 150ms;
                 }
                 .c-row,.c-col{
                     margin-bottom: 0;
+                }
+            }
+            &[aria-hidden=true] {
+                animation-duration: #{$anim}ms;
+                animation-name: mininav-is-closed;
+                > * {
+                    transition: opacity ease-in 150ms;
                 }
             }
         }
