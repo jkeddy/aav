@@ -19,6 +19,11 @@
             transition: border-color 250ms ease-in-out;
         }
     }
+    &--none{
+        border: none;
+        padding: none;
+        text-transform: none;
+    }
     &--xs {
         font-size: $xs;
     }

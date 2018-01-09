@@ -59,10 +59,22 @@
         border-bottom: 1px solid $grey;
         @include font-serif(1rem, false, bold, false);
         padding: pad(-2, rem) pad(-3, rem);
-        .social-icon {
-            margin-right: margin(-2, rem);
+        &-text{
+            @include media ("<=1008px", ">=layout"){
+                display: block;
+                margin-top: margin(-5, rem)
+            }
+            @include media ("<=675px"){
+                display: block;
+                margin-top: margin(-5, rem)
+            }
+        }
+        .c-social-icon {
+            margin-right: margin(-4, rem);
         }
         @include media("<=1105px") {
+            padding-left: 0;
+            padding-right: 0;
             text-align: center;
         }
     }
