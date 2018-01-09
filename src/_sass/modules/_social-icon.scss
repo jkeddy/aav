@@ -6,12 +6,9 @@
     height: 1.75em;
     justify-content: center;
     margin-right: margin(-4,em);
-    padding-top: .23em;
+    padding-top: .45em;
     width: 1.75em;
     z-index: z-index(4);
-    > i{
-        line-height: 1.3;
-    }
     &:hover{
         text-decoration: none;
     }
