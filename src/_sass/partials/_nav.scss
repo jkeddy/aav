@@ -262,11 +262,17 @@ $transSpeed: 200ms;
 }
 
 .c-breadcrumbs {
-  font-size: .8rem;
+  font-size: $sm;
+  margin-bottom: margin(-3, rem);
   &__link {
+    color: $link;
     font-weight: normal;
-     :after {
-      content: '\#187';
+    &:after {
+      color: $black;
+      content: ' »';
+    }
+    &:last-of-type:after{
+      content:'';
     }
   }
 }
