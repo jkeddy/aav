@@ -17,7 +17,7 @@
         @include media("<screen-xs") {
             padding: 0;
         }
-        > * {
+        > *:not(.clear) {
             margin-bottom: margin(1, rem);
             margin-top: 0;
         }

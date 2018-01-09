@@ -49,22 +49,22 @@ Description:    Helper classes for AAV editorial content.
     }
     &--hide{
         display: none;
-        @include media("<=screen-xl"){
+        @include media("<=screen-xl", ">screen-lg"){
             &-xl{
                 display: none;
             }
         }
-        @include media("<=screen-lg"){
+        @include media("<=screen-lg",">layout"){
             &-lg{
                 display: none;
             }
         }
-        @include media("<=screen-md"){
+        @include media("<=layout",">screen-sm"){
             &-md{
                 display: none;
             }
         }
-        @include media("<=screen-sm"){
+        @include media("<=screen-sm",">screen-xs"){
             &-sm{
                 display: none;
             }
@@ -147,6 +147,9 @@ Description:    Helper classes for AAV editorial content.
     &--dark{
         color: $dark;
     }
+    &--gplus{
+        color: $googleplus;
+    }
 }
 /* Put a bird(bg) on it */
 .u-bg {
@@ -179,7 +182,7 @@ Description:    Helper classes for AAV editorial content.
     }
 }
 /* Padding Assistance. Matches positive spacing values. */
-@for $j from 1 through 5 {
+@for $j from 0 through 5 {
     .u-padding-#{$j} {
         padding: pad($j, rem);
     }
@@ -197,7 +200,7 @@ Description:    Helper classes for AAV editorial content.
     }
 }
 /* Margin assistance. Matches positive spacing values */
-@for $j from 1 through 5 {
+@for $j from 0 through 5 {
     .u-margin-#{$j} {
         margin: margin($j, rem);
     }
