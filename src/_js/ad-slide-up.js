@@ -18,7 +18,7 @@ if (window.matchMedia('(min-width: 550px)').matches) {
       e.classList.add('aavd__close')
       adBottom.appendChild(e)
       e.addEventListener('click', function () {
-        createCookie(fileName, 'allaboutvision.com', 1)
+        createCookie(fileName, 'slide-ad', '1')
         document.body.classList.remove('slide-up-is-active')
         adBottom.parentNode.removeChild(adBottom)
       })
