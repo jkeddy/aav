@@ -12,17 +12,16 @@ function detectPage () {
   let l = path.length
   let fileName
   let directory
-  let addClass
   if (l >= 3) {
     fileName = path[l - 1].substring(0, path[l - 1].indexOf('.')) // Hacky, but fine for our purposes.
     directory = path[l - 2]
-    addClass = ' ' + fileName + ' ' + directory
-    b.className += addClass
+    // Twice for ie10
+    b.classList.add(fileName)
+    b.classList.add(directory)
   } else if (path.length < 3) {
     fileName = path[l - 1].substring(0, path[l - 1].indexOf('.'))
-    addClass = ' ' + fileName
-    b.className += addClass
+    b.classList.add(fileName)
   } else {
-    b.className += ' home'
+    b.classList.add('home')
   }
 }
