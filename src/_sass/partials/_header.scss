@@ -11,10 +11,10 @@
   max-width: 100%;
   padding: pad(-2,rem) pad(-4,rem);
   width: 100vw;
-  z-index: z-index(16);
   @include media(">=screen-sm","<=desktop") {
     position: sticky;
     top: 0;
+    z-index: z-index(16);
     &._sticky{
       position: fixed;
     }
@@ -24,6 +24,7 @@
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: z-index(16);
     &._sticky{
       position: fixed;
     }
