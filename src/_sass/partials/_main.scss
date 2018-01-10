@@ -17,7 +17,7 @@
         @include media("<screen-xs") {
             padding: 0;
         }
-        > *:not(.clear) {
+        > *:not(.clear):not(.c-main-content__aside) {
             margin-bottom: margin(1, rem);
             margin-top: 0;
         }
@@ -48,12 +48,26 @@
     }
     &__aside{
         max-width: 380px;
+        margin-bottom: .5rem;
         width: 45%;
+        a{
+            color: $link;
+        }
         @include media("<=screen-sm"){
             max-width: 330px;
             width: auto;
         }
     }
+    &__quote{
+        @include font-serif(1.5em, $link, false, 1.5);
+        border-top: 3px solid $grey;
+        border-bottom: 3px solid $grey;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: margin(1,rem);
+        padding-top: .5em;
+        padding-bottom: .5em;
+      }
     &__social {
         border-top: 1px solid $grey;
         border-bottom: 1px solid $grey;
