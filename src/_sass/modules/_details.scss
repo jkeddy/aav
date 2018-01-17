@@ -8,40 +8,38 @@ Description:    Simple toggle for boxes. Named details after the default element
 .o-toggle {
     @include font-sans(1em, false, false, 1.3);
     &__content {
-        padding: pad(-2,rem) 0;
+        margin: margin(-2,rem) 0;
         &--border{
             border: 3px solid $primary-color;
-            padding: pad(1,rem);
+            margin: margin(1,rem);
             @include media(">=screen-sm"){
-                padding-top: pad(2,rem);
+                margin-top: margin(2,rem);
                 position: relative;
                     top: -36px;
             }
         }
         &[aria-hidden=true] {
-            @include visually-hidden;
             max-height: 1px;
             max-width: 1px;
             opacity: 0;
             visibility: hidden;
-            transition: max-height ease-in 200ms;
+            transition: opacity ease-in 500ms, max-height ease-in 400ms, 1000ms max-width ease-in 250ms, 1000ms visibility ease-in 250ms;
             > *{
                 opacity: 0;
+                transition: opacity ease-in 500ms
             }
         }
         &[aria-hidden=false] {
-            position: relative;
             height: auto;
             width: auto;
-            overflow: visible;
-            clip: none;
             opacity: 1;
             max-height: 28em;
             max-width: 50em;
             visibility: visible;
-            transition: max-height ease-in 200ms;
+            transition: opacity ease-in 500ms, max-height ease-in 500ms, max-width ease-in 50ms;
             > *{
                 opacity: 1;
+                transition: opacity ease-in 500ms
             }
         }
         > *:not(.row){
@@ -53,7 +51,7 @@ Description:    Simple toggle for boxes. Named details after the default element
         position: relative;
         .o-toggle__content{
             @include media(">=screen-sm"){
-                padding-top:pad(5,rem);
+                margin-top: margin(5,rem);
             }
             &[aria-hidden=false] {
                 animation-duration: #{$anim - 150}ms;
