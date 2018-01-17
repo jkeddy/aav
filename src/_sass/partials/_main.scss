@@ -41,7 +41,10 @@
         @extend %h4;
     }
     &__byline {
-        @include font-serif(.9rem, false, false, 1.3);
+        @include font-serif(.9rem, false, 600, 1.3);
+        a{
+            font-weight: normal;
+        }
     }
     &__headline {
         @extend %h5;
@@ -67,6 +70,12 @@
         margin-bottom: margin(1,rem);
         padding-top: .5em;
         padding-bottom: .5em;
+        &.u-elem--right{
+            margin-right: -8%;
+        }
+        &.u-elem--left{
+            margin-left: -8%;
+        }
       }
     &__social {
         border-top: 1px solid $grey;
