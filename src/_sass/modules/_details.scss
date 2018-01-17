@@ -11,9 +11,10 @@ Description:    Simple toggle for boxes. Named details after the default element
         margin: margin(-2,rem) 0;
         &--border{
             border: 3px solid $primary-color;
-            margin: margin(1,rem);
+            margin: 0;
+            padding: pad(1,rem);
             @include media(">=screen-sm"){
-                margin-top: margin(2,rem);
+                padding-top: pad(2,rem);
                 position: relative;
                     top: -36px;
             }
@@ -51,7 +52,15 @@ Description:    Simple toggle for boxes. Named details after the default element
         position: relative;
         .o-toggle__content{
             @include media(">=screen-sm"){
-                margin-top: margin(5,rem);
+                padding-top: margin(5,rem);
+            }
+            &[aria-hidden=true] {
+                animation-duration: #{$anim}ms;
+                animation-name: mininav-is-closed;
+                padding: 0;
+                > * {
+                    transition: opacity ease-in 150ms;
+                }
             }
             &[aria-hidden=false] {
                 animation-duration: #{$anim - 150}ms;
@@ -61,13 +70,6 @@ Description:    Simple toggle for boxes. Named details after the default element
                 }
                 .c-row,.c-col{
                     margin-bottom: 0;
-                }
-            }
-            &[aria-hidden=true] {
-                animation-duration: #{$anim}ms;
-                animation-name: mininav-is-closed;
-                > * {
-                    transition: opacity ease-in 150ms;
                 }
             }
         }

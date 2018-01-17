@@ -3,7 +3,8 @@
     background: $grey;
     padding: pad(1,rem) pad(-2,rem);
     &__title {
-        @include font-sans(1.4rem,false,false,false);
+        @include font-sans(1.1rem,false,false,false);
+        color: $info;
         margin: 0 0 margin(-2,rem);
         &--poll{
             @include font-serif(1.7rem,false,false,false);
