@@ -4,6 +4,7 @@ Date: 10/23/2017
 Description: Navigation functions.
 TODO:   improve accessibility
 Add toggle buttons programmatically
+When large menu is bigger than screen, hook to the top more gooder.
 */
 const mainNav = document.getElementById('main-nav')
 const mainNavItem = document.querySelectorAll('.c-main-nav__item')
@@ -13,11 +14,15 @@ const subNavToggle = document.querySelectorAll('.c-sub-nav__toggle')
 if (window.matchMedia('(min-width: 550px)').matches) {
   for (let i = 0, len = mainNavItem.length; i < len; i++) {
     mainNavItem[i].addEventListener('mouseenter', function () {
+      let windowHeight = window.innerHeight || document.documentElement.clientHeight
       let overflowItem = this.querySelector('.c-sub-nav')
       overflowItem.style.top = '-1rem' // default css top value
       let bound = overflowItem.getBoundingClientRect()
-      if (bound.bottom >= (window.innerHeight || document.documentElement.clientHeight)) {
-        let y = Math.round((bound.bottom - (window.innerHeight || document.documentElement.clientHeight)) + 20) // 20 pixel addition for padding/boxshadow
+      if (overflowItem.scrollHeight >= windowHeight) {
+        overflowItem.style.top = '-20vh'
+      } else if (bound.bottom >= windowHeight) {
+        console.log('small subnav')
+        let y = Math.round((bound.bottom - windowHeight) + 20) // 20 pixel addition for padding/boxshadow
         overflowItem.style.top = '-' + y + 'px'
       }
     })
