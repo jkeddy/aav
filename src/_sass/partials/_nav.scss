@@ -31,6 +31,14 @@ $transSpeed: 200ms;
       display: flex;
     }
   }
+  &__logo {
+    display: none;
+    margin-left: .15em;
+    margin-top: .15em;
+    @include media("<=screen-sm") {
+      display: flex;
+    }
+  }
   &__toggle {
     display: none;
     @include media("<=screen-sm") {
@@ -246,19 +254,19 @@ $transSpeed: 200ms;
 .main-nav-is-open {
   // Causes an odd small screen safari bug where the subnavs do not open. May not be there on physical devices.
   overflow: hidden;
-  @include media("<=screen-sm") {
+  /*@include media("<=screen-sm") {
     .c-site-wrapper {
       position: relative;
       left: 0;
       transition: $transSpeed left ease-in;
     }
-  }
+  }*/
 }
 .main-nav-is-anim{
-  .c-site-wrapper{
+  /*.c-site-wrapper{
     left: #{$mobileNavSize}vw;
     transition: $transSpeed left ease-in;
-  }
+  }*/
 }
 
 .c-breadcrumbs {
