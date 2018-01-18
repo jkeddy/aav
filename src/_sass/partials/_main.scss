@@ -17,7 +17,7 @@
         @include media("<screen-xs") {
             padding: 0;
         }
-        > *:not(.clear):not(.c-main-content__aside) {
+        > *:not(.clear):not(.c-main-content__aside):not([id*="gpt-ad"]) {
             margin-bottom: margin(1, rem);
             margin-top: 0;
         }
@@ -70,11 +70,13 @@
         margin-bottom: margin(1,rem);
         padding-top: .5em;
         padding-bottom: .5em;
-        &.u-elem--right{
-            margin-right: -8%;
-        }
-        &.u-elem--left{
-            margin-left: -8%;
+        @include media(">=layout"){
+            &.u-elem--right{
+                margin-right: -5%;
+            }
+            &.u-elem--left{
+                margin-left: -5%;
+            }
         }
       }
     &__social {
