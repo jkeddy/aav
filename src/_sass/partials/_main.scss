@@ -78,6 +78,9 @@
                 margin-left: -5%;
             }
         }
+        @include media("<=screen-sm"){
+            margin-right: auto;
+        }
       }
     &__social {
         border-top: 1px solid $grey;
