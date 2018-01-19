@@ -139,3 +139,83 @@
         width: auto;
     }
 }
+/* Hiding side content for large pages like MCJ or MLJ */
+.c-side-content--is-hidden{
+    .c-main-nav {
+        flex: 1;
+        flex-basis: 10%;
+        width: 10%;
+    }
+    .c-main-content {
+        display: flex;
+        flex: 1;
+        flex-basis: 76.333%;
+        width: 76.333%;
+    }
+    .c-side-content {
+        display: none;
+    }
+    @include media(">=screen-lg") {
+        .c-main-content{max-width: 1000px; }
+    }
+    @include media("<=1120px") {
+        .c-main-content {
+            flex-basis: 69%;
+            width: 69%;
+        }
+    }
+    @include media("<=screen-md") {
+        .c-main-content {
+            flex-basis: 85%;
+            width: 85%;
+        }
+    }
+    @include media("<=screen-sm") {
+        .c-main-content {
+            flex-basis: 100%;
+            width: 100%;
+        }
+    }
+    @supports (display: grid) {
+        .c-container {
+            grid-template-areas: 
+            "header header header header header" 
+            ". main-nav article article ." 
+            "footer footer footer footer footer";
+            @include media(">=screen-lg") {
+                grid-template-areas: 
+                "header header header header header" 
+                ". main-nav article article ." 
+                "footer footer footer footer footer";
+            }
+            @include media("<=screen-md") {
+                grid-template-areas: 
+                "header header header" 
+                "main-nav article article" 
+                "footer footer footer";
+            }
+            @include media("<=layout") {
+                grid-template-areas: 
+                "header header" 
+                "main-nav article"
+                "footer footer";
+            }
+            @include media("<=screen-sm") {
+                grid-template-areas: 
+                "header" 
+                "main-nav" 
+                "article"
+                "footer";
+            }
+        }
+        .c-main-nav {
+            width: auto;
+        }
+        .c-main-content {
+            width: auto;
+        }
+        .c-side-content {
+            width: auto;
+        }
+    }
+}
