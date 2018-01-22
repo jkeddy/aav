@@ -47,7 +47,7 @@
         grid-template-columns: 1.5fr 1.5fr #{$space}fr;
       }
       @include media("<=screen-sm") {
-        grid-template-areas: "nav-toggle logo search";
+        grid-template-areas: "nav-toggle logo header-nav";
         grid-template-columns: .25fr 1fr #{$space}fr;
       }
     }
@@ -122,8 +122,11 @@
       }
     }
     @include media("<=screen-sm") {
-      display: none;
+      font-size: .8rem;
     }
+    /*@include media("<=screen-sm") {
+      display: none;
+    }*/
     &-item {
       color: $text-color;
       margin: 0 margin(-3, rem);
@@ -154,13 +157,16 @@
       max-width: 400px;
       width: 35vw;
     }
-    @include media("<=screen-sm") {
+    @include media("<=screen-sm"){
+      display :none;
+    }
+    /*@include media("<=screen-sm") {
       max-width: none;
       width: auto;
     }
     @include media("<=screen-xs") {
       max-width: 140px;
-    }
+    }*/
     &-inner {
       background: $white;
       $s: 32px;
